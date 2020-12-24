@@ -1,0 +1,3899 @@
+// ==UserScript==
+// @name         Deppressed Mod
+// @namespace    Legit
+// @version      v1
+// @description  Let Insta People.!Crash for crash Server.Numpad 1 for Lag server.
+// @author         Veggie
+// @match          *://moomoo.io/*
+// @match          *://dev.moomoo.io/*
+// @match          *://*sandbox.moomoo.io/*
+// @require https://greasyfork.org/scripts/368273-msgpack/code/msgpack.js?version=598723
+// @require http://code.jquery.com/jquery-3.3.1.min.js
+// @require https://code.jquery.com/ui/1.12.0/jquery-ui.min.js
+// @require https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.0/jquery-confirm.min.js
+// @icon    https://media.discordapp.net/attachments/759094121339158582/762938586726400020/a1479853846_5.png?width=427&height=427
+// ==/UserScript==
+
+
+var autoreloadloop;
+var autoreloadenough = 0;
+
+autoreloadloop = setInterval(function () {
+    if (autoreloadenough < 200) {
+        document.title = "T_T";
+        if (document.getElementById("loadingText").innerHTML == `disconnected<a href="javascript:window.location.href=window.location.href" class="ytLink">reloadings</a>`) {
+          document.title = "StartReload";
+            clearInterval(autoreloadloop);
+            setTimeout(function () {document.title = "Moo Moo";}, 1000)
+            location.reload();
+        }
+        autoreloadenough++;
+    }
+    else if (autoreloadenough >= 300) {
+        clearInterval(autoreloadloop);
+        document.title = "DoneReload";
+        setTimeout(function () {document.title = "Moo Moo";}, 1000)
+    }
+}, 50);
+
+var TOR=0x1,TESTRRR=!![],ASBMsg='AntiboostSpike',TRUE=!![];
+const _0x3710=['\x77\x6f\x62\x43\x6d\x77\x5a\x2f\x62\x67\x3d\x3d','\x51\x42\x45\x6a\x77\x70\x55\x78\x44\x73\x4b\x61\x77\x70\x39\x75\x48\x4d\x4f\x6c\x77\x71\x38\x41\x77\x6f\x34\x3d','\x77\x70\x49\x4a\x44\x47\x38\x69','\x77\x34\x2f\x43\x69\x4d\x4b\x42\x77\x34\x54\x44\x6f\x6c\x55\x53\x77\x71\x59\x76\x77\x36\x49\x70','\x5a\x63\x4f\x73\x77\x6f\x66\x43\x6e\x73\x4f\x66\x48\x4d\x4b\x45\x65\x4d\x4f\x78\x55\x73\x4b\x62\x51\x51\x3d\x3d','\x55\x38\x4f\x69\x77\x72\x33\x43\x74\x73\x4f\x42','\x77\x70\x6f\x5a\x4b\x55\x6b\x43\x52\x77\x3d\x3d','\x77\x71\x5a\x7a\x54\x79\x2f\x43\x74\x30\x4a\x6e\x77\x35\x70\x4d\x77\x6f\x64\x4d','\x48\x38\x4b\x53\x63\x48\x70\x65\x62\x54\x73\x74\x77\x37\x56\x4a\x46\x43\x49\x3d','\x61\x73\x4f\x47\x77\x36\x54\x43\x76\x6a\x73\x3d','\x77\x37\x2f\x44\x74\x78\x46\x6f\x63\x51\x3d\x3d','\x50\x79\x6a\x44\x70\x55\x66\x43\x70\x41\x3d\x3d','\x62\x73\x4b\x71\x77\x35\x37\x43\x69\x31\x73\x3d','\x41\x63\x4b\x32\x42\x73\x4f\x52\x4f\x41\x3d\x3d','\x61\x73\x4f\x6c\x77\x6f\x44\x43\x6e\x4d\x4f\x46\x41\x41\x3d\x3d','\x61\x42\x6e\x44\x73\x38\x4f\x41','\x4e\x6e\x58\x44\x6c\x68\x35\x44','\x64\x77\x58\x44\x69\x4d\x4f\x37\x43\x77\x3d\x3d','\x48\x38\x4b\x66\x44\x73\x4f\x77\x4b\x47\x77\x3d','\x77\x35\x44\x44\x6c\x73\x4f\x43\x77\x70\x4d\x3d','\x58\x67\x45\x77\x77\x72\x34\x2f','\x66\x4d\x4b\x33\x77\x37\x48\x43\x6e\x38\x4b\x4c','\x47\x69\x67\x4a\x42\x73\x4b\x49','\x43\x4d\x4f\x43\x47\x73\x4f\x72\x57\x51\x3d\x3d','\x77\x71\x33\x44\x73\x38\x4b\x36\x77\x70\x49\x76','\x45\x38\x4b\x53\x58\x4d\x4b\x4f\x47\x67\x3d\x3d','\x50\x42\x4c\x44\x71\x6d\x44\x43\x70\x51\x3d\x3d','\x77\x72\x49\x76\x56\x45\x54\x44\x72\x67\x3d\x3d','\x4f\x4d\x4b\x4c\x77\x35\x44\x43\x75\x4d\x4f\x53','\x77\x34\x33\x44\x75\x73\x4f\x56\x77\x6f\x4d\x2f','\x77\x34\x50\x43\x76\x44\x6c\x6c\x62\x77\x3d\x3d','\x77\x6f\x37\x43\x69\x44\x56\x30\x43\x67\x3d\x3d','\x4f\x73\x4b\x75\x44\x38\x4f\x39\x43\x41\x3d\x3d','\x77\x36\x77\x4d\x45\x73\x4b\x53\x77\x36\x73\x3d','\x4b\x63\x4b\x53\x56\x47\x50\x44\x72\x41\x3d\x3d','\x4a\x63\x4b\x38\x4f\x63\x4f\x32\x4e\x67\x3d\x3d','\x61\x38\x4f\x49\x4c\x6a\x6b\x30','\x77\x34\x72\x44\x6a\x30\x7a\x44\x6f\x33\x6f\x3d','\x47\x78\x2f\x44\x6e\x45\x4c\x43\x70\x41\x3d\x3d','\x77\x35\x66\x44\x68\x79\x49\x3d','\x77\x72\x30\x65\x43\x57\x30\x49','\x62\x63\x4b\x6a\x77\x36\x66\x43\x67\x4d\x4b\x67','\x44\x52\x74\x67\x55\x79\x34\x3d','\x77\x72\x58\x44\x6d\x4d\x4b\x56\x62\x4d\x4b\x58','\x43\x73\x4b\x41\x50\x73\x4b\x47\x77\x35\x45\x3d','\x4d\x42\x33\x44\x6b\x57\x62\x43\x6b\x41\x3d\x3d','\x77\x36\x50\x43\x6f\x38\x4b\x53\x77\x36\x66\x44\x72\x51\x3d\x3d','\x44\x32\x58\x44\x74\x43\x56\x55','\x46\x4d\x4b\x33\x43\x63\x4b\x6c\x43\x48\x63\x3d','\x48\x31\x63\x79\x45\x38\x4b\x5a','\x4b\x38\x4f\x30\x77\x36\x30\x39\x77\x6f\x6f\x3d','\x4f\x73\x4b\x39\x48\x38\x4b\x51\x4b\x77\x3d\x3d','\x77\x72\x37\x43\x6f\x63\x4b\x37\x77\x70\x64\x6f','\x77\x6f\x6b\x51\x4e\x6b\x55\x78','\x4e\x63\x4b\x72\x43\x4d\x4f\x43\x47\x67\x3d\x3d','\x77\x70\x58\x43\x73\x6a\x66\x43\x75\x4d\x4b\x71','\x63\x73\x4f\x55\x77\x36\x62\x43\x6d\x51\x49\x70\x77\x6f\x72\x44\x73\x44\x55\x3d','\x48\x73\x4b\x62\x77\x35\x4c\x43\x72\x73\x4f\x69\x43\x63\x4f\x7a\x51\x67\x3d\x3d','\x46\x4d\x4b\x45\x77\x37\x2f\x43\x70\x51\x3d\x3d','\x43\x58\x2f\x44\x72\x78\x31\x55\x77\x72\x33\x43\x71\x77\x3d\x3d','\x77\x35\x45\x47\x4b\x77\x3d\x3d','\x62\x38\x4b\x50\x77\x34\x7a\x43\x6d\x56\x70\x6f','\x59\x31\x74\x62\x61\x6e\x44\x43\x6c\x51\x3d\x3d','\x50\x53\x6f\x7a','\x77\x70\x50\x43\x72\x78\x78\x36','\x77\x72\x48\x43\x6d\x52\x46\x78','\x77\x35\x5a\x79\x59\x63\x4b\x74\x77\x35\x45\x4a','\x77\x35\x4a\x6f\x59\x38\x4b\x73\x77\x6f\x63\x3d','\x58\x4d\x4b\x55\x77\x34\x72\x43\x6e\x63\x4b\x74','\x77\x6f\x62\x43\x69\x63\x4b\x53\x77\x72\x70\x79','\x45\x38\x4f\x57\x77\x71\x76\x44\x6f\x4d\x4b\x47','\x56\x55\x39\x54\x63\x6e\x30\x3d','\x77\x6f\x33\x44\x6e\x4d\x4b\x48\x58\x73\x4b\x4b','\x4e\x4d\x4b\x34\x43\x4d\x4b\x4b\x77\x36\x34\x3d','\x77\x71\x72\x44\x67\x4d\x4b\x32\x51\x4d\x4b\x38\x61\x41\x3d\x3d','\x77\x6f\x72\x44\x6b\x38\x4b\x43\x55\x63\x4b\x72','\x46\x4d\x4f\x54\x77\x34\x45\x66\x77\x72\x45\x3d','\x77\x72\x51\x45\x62\x42\x51\x6b\x57\x73\x4b\x73\x77\x6f\x30\x37\x4f\x73\x4b\x4d\x77\x34\x6a\x44\x76\x63\x4f\x71\x77\x71\x6a\x44\x6e\x38\x4b\x78\x57\x57\x5a\x4e\x65\x45\x76\x44\x76\x68\x6e\x43\x6c\x7a\x4d\x55\x77\x36\x38\x3d','\x77\x35\x73\x41\x4e\x38\x4b\x66','\x77\x35\x54\x43\x67\x63\x4f\x7a\x41\x38\x4f\x32\x62\x38\x4f\x70\x77\x37\x6b\x30\x77\x36\x35\x61\x4d\x78\x38\x3d','\x77\x70\x4c\x44\x6f\x63\x4f\x39','\x77\x37\x33\x43\x67\x55\x67\x36\x59\x63\x4f\x67\x77\x37\x31\x51\x56\x4d\x4b\x59\x49\x53\x62\x44\x74\x30\x68\x6e\x77\x71\x76\x44\x6b\x67\x62\x43\x73\x51\x62\x44\x71\x55\x72\x43\x72\x73\x4b\x6a\x44\x56\x51\x2b\x57\x38\x4f\x6d\x77\x72\x7a\x43\x73\x53\x76\x43\x72\x44\x37\x44\x69\x55\x4d\x75\x77\x35\x58\x43\x6e\x44\x51\x3d','\x63\x38\x4f\x79\x77\x6f\x4c\x44\x6b\x38\x4b\x57\x41\x4d\x4b\x34\x61\x63\x4f\x6f\x52\x73\x4f\x4a\x47\x73\x4f\x6e\x55\x6b\x62\x44\x6b\x47\x78\x66\x53\x6e\x72\x44\x6d\x6a\x6a\x44\x67\x4d\x4f\x56\x77\x35\x33\x44\x68\x53\x6a\x44\x75\x38\x4f\x55\x46\x4d\x4f\x6e\x56\x63\x4b\x6f\x77\x71\x6c\x39\x77\x71\x39\x67\x77\x34\x73\x3d','\x77\x37\x44\x44\x70\x4d\x4b\x59\x55\x38\x4b\x72\x77\x6f\x58\x43\x6f\x38\x4b\x67\x59\x38\x4f\x4d\x77\x37\x59\x3d','\x77\x34\x2f\x43\x6c\x38\x4b\x62','\x77\x34\x76\x43\x67\x63\x4b\x63\x77\x36\x54\x44\x6f\x45\x51\x6f\x77\x71\x6f\x6c\x77\x36\x49\x44\x62\x73\x4f\x32\x5a\x77\x3d\x3d','\x77\x72\x72\x43\x68\x42\x46\x78\x50\x78\x72\x43\x6a\x6b\x72\x43\x76\x73\x4b\x39\x4d\x79\x35\x62\x77\x70\x55\x59\x50\x78\x54\x44\x67\x6b\x39\x73','\x41\x4d\x4b\x4f\x47\x63\x4f\x37\x4f\x51\x3d\x3d','\x77\x72\x50\x43\x67\x67\x31\x73\x50\x42\x54\x43\x6e\x67\x3d\x3d','\x77\x71\x74\x77\x53\x43\x38\x3d','\x48\x79\x67\x58\x43\x53\x44\x43\x68\x4d\x4f\x69\x51\x38\x4f\x71\x77\x71\x6e\x43\x69\x38\x4b\x44\x77\x34\x44\x43\x70\x57\x48\x43\x76\x53\x56\x47\x77\x6f\x30\x69\x77\x34\x55\x59\x77\x70\x76\x43\x70\x38\x4f\x7a\x77\x72\x44\x44\x71\x32\x41\x3d','\x63\x38\x4b\x4b\x77\x34\x33\x43\x6b\x41\x3d\x3d','\x77\x6f\x2f\x43\x69\x63\x4b\x48\x77\x34\x37\x44\x6f\x55\x34\x71\x77\x71\x59\x6b\x77\x34\x6c\x32\x4a\x63\x4b\x48\x65\x32\x66\x44\x70\x30\x78\x53\x77\x71\x6a\x44\x6e\x38\x4b\x5a','\x4d\x4d\x4b\x62\x63\x45\x37\x44\x74\x63\x4f\x4e','\x77\x6f\x58\x43\x73\x53\x67\x3d','\x77\x6f\x54\x44\x73\x6d\x4a\x6e\x63\x4d\x4f\x61\x77\x6f\x48\x44\x74\x63\x4f\x56\x77\x70\x4d\x6e\x77\x71\x2f\x43\x73\x77\x4d\x3d','\x52\x6c\x37\x43\x71\x41\x3d\x3d','\x48\x42\x50\x44\x6a\x6e\x62\x43\x6c\x31\x34\x3d','\x77\x72\x4a\x36\x52\x7a\x72\x43\x74\x6c\x67\x3d','\x77\x72\x77\x61\x55\x56\x49\x3d','\x77\x6f\x45\x50\x46\x6b\x55\x5a\x52\x73\x4f\x2f\x77\x34\x59\x3d','\x47\x78\x44\x44\x6b\x41\x3d\x3d','\x77\x71\x45\x31\x58\x30\x4e\x32\x77\x70\x41\x59\x77\x36\x39\x35','\x77\x34\x58\x43\x6c\x38\x4b\x37\x77\x34\x72\x44\x75\x55\x30\x70','\x77\x34\x48\x43\x6c\x38\x4b\x50\x77\x35\x48\x44\x72\x55\x49\x75','\x59\x73\x4b\x59\x77\x34\x44\x43\x6d\x6c\x78\x75','\x45\x63\x4b\x50\x42\x73\x4f\x78\x4f\x58\x59\x3d','\x4a\x38\x4b\x4e\x46\x38\x4b\x77\x45\x32\x74\x49\x50\x33\x6b\x3d','\x77\x35\x58\x43\x67\x41\x35\x74','\x77\x70\x4c\x44\x6f\x73\x4b\x62\x77\x70\x55\x52\x44\x38\x4b\x43\x77\x6f\x2f\x43\x71\x77\x3d\x3d','\x77\x35\x7a\x44\x67\x6a\x52\x76\x52\x4d\x4b\x70\x63\x51\x3d\x3d','\x47\x4d\x4b\x68\x77\x71\x6e\x43\x68\x77\x38\x70\x77\x72\x52\x48\x77\x72\x30\x3d','\x56\x42\x45\x35\x77\x72\x51\x3d','\x77\x6f\x48\x44\x6f\x4d\x4f\x68\x77\x35\x2f\x44\x73\x77\x6e\x44\x76\x69\x54\x43\x68\x77\x3d\x3d','\x4c\x73\x4b\x4e\x63\x4d\x4b\x44','\x43\x53\x52\x70\x66\x41\x6b\x3d','\x77\x71\x49\x76\x57\x56\x35\x52','\x77\x71\x7a\x43\x74\x68\x50\x43\x6b\x4d\x4b\x72','\x53\x42\x67\x7a\x77\x6f\x4d\x34\x42\x63\x4b\x54','\x77\x72\x66\x44\x72\x4d\x4b\x61\x54\x4d\x4b\x4c\x77\x6f\x6b\x3d','\x77\x35\x48\x44\x6c\x7a\x56\x45\x64\x51\x3d\x3d','\x59\x73\x4f\x68\x77\x70\x72\x43\x6d\x67\x3d\x3d','\x4f\x63\x4b\x4a\x61\x73\x4b\x47','\x4e\x78\x77\x42\x44\x38\x4b\x6a','\x77\x72\x6a\x43\x72\x69\x6c\x36\x4e\x51\x3d\x3d','\x47\x73\x4b\x4e\x77\x36\x33\x43\x75\x4d\x4f\x69\x43\x73\x4f\x7a','\x65\x51\x6a\x44\x70\x4d\x4f\x74\x43\x45\x58\x44\x74\x43\x33\x44\x67\x6c\x2f\x43\x6a\x68\x68\x61\x48\x38\x4f\x6f\x77\x34\x6f\x3d','\x4b\x63\x4f\x39\x44\x38\x4f\x6b\x64\x41\x3d\x3d','\x45\x63\x4b\x74\x4a\x73\x4f\x74\x4a\x67\x3d\x3d','\x77\x72\x4d\x69\x66\x6c\x4a\x38','\x77\x35\x35\x64\x54\x73\x4b\x53\x77\x34\x41\x3d','\x4f\x4d\x4b\x6d\x62\x4d\x4b\x75\x47\x41\x3d\x3d','\x77\x71\x68\x2b\x66\x63\x4b\x62\x53\x67\x3d\x3d','\x62\x38\x4f\x76\x77\x34\x50\x43\x6b\x73\x4f\x66\x41\x63\x4b\x34','\x77\x72\x6f\x6a\x61\x6d\x6c\x66','\x42\x4d\x4b\x67\x4f\x73\x4b\x72\x63\x4d\x4f\x6a\x77\x70\x39\x46\x77\x72\x44\x44\x69\x77\x3d\x3d','\x54\x51\x37\x44\x6b\x38\x4f\x6c\x44\x67\x3d\x3d','\x41\x63\x4b\x6a\x42\x73\x4b\x41\x4e\x67\x3d\x3d','\x77\x36\x44\x43\x76\x63\x4b\x70\x77\x37\x58\x44\x6e\x41\x3d\x3d','\x77\x72\x6e\x43\x72\x41\x5a\x72\x4d\x67\x3d\x3d','\x44\x73\x4b\x79\x66\x31\x6c\x55','\x56\x4d\x4f\x5a\x45\x68\x6b\x68','\x4f\x69\x49\x50\x4a\x73\x4b\x73','\x77\x72\x78\x71\x51\x53\x54\x43\x75\x77\x3d\x3d','\x77\x72\x62\x43\x75\x53\x78\x32\x46\x41\x3d\x3d','\x50\x4d\x4b\x5a\x4c\x73\x4f\x6b\x44\x51\x3d\x3d','\x55\x38\x4b\x66\x77\x36\x48\x43\x6e\x4d\x4b\x48','\x77\x35\x37\x44\x74\x7a\x52\x45\x64\x41\x3d\x3d','\x77\x71\x64\x61\x59\x53\x66\x43\x69\x77\x3d\x3d','\x77\x6f\x54\x44\x68\x73\x4b\x63\x57\x4d\x4b\x4a','\x77\x37\x70\x49\x62\x63\x4b\x6f\x77\x36\x45\x3d','\x77\x6f\x45\x55\x44\x47\x67\x50','\x42\x4d\x4f\x68\x77\x70\x76\x44\x71\x63\x4b\x4f','\x43\x63\x4b\x76\x61\x31\x78\x45','\x77\x35\x76\x44\x67\x43\x68\x74\x63\x51\x3d\x3d','\x48\x48\x30\x66\x42\x63\x4b\x54','\x77\x6f\x6a\x43\x6f\x6c\x54\x44\x69\x7a\x4d\x3d','\x77\x71\x59\x48\x55\x47\x6c\x39','\x77\x71\x6a\x43\x71\x48\x50\x44\x68\x77\x63\x3d','\x77\x72\x66\x44\x76\x73\x4f\x76\x77\x35\x76\x44\x72\x41\x54\x43\x70\x7a\x76\x43\x6b\x67\x3d\x3d','\x4a\x38\x4b\x74\x4c\x63\x4b\x52\x77\x35\x4d\x3d','\x47\x67\x77\x39\x4d\x38\x4b\x34','\x4b\x77\x46\x59\x66\x6a\x38\x3d','\x41\x63\x4f\x4b\x77\x36\x77\x73\x77\x70\x34\x3d','\x41\x57\x44\x44\x6b\x42\x4e\x6f','\x51\x4d\x4f\x52\x77\x6f\x62\x43\x72\x73\x4f\x33','\x49\x45\x49\x43\x5a\x69\x72\x43\x68\x30\x4e\x30\x77\x35\x74\x47\x77\x35\x37\x44\x6c\x63\x4b\x31\x55\x4d\x4b\x42\x63\x7a\x76\x43\x6b\x45\x59\x3d','\x77\x34\x54\x44\x68\x73\x4f\x53\x77\x70\x51\x4f\x45\x41\x3d\x3d','\x77\x71\x4c\x43\x69\x47\x48\x44\x68\x41\x3d\x3d','\x77\x70\x73\x49\x47\x46\x51\x42','\x77\x6f\x72\x43\x70\x7a\x58\x43\x74\x73\x4b\x71\x51\x41\x3d\x3d','\x46\x63\x4b\x54\x4b\x38\x4b\x53\x43\x51\x3d\x3d','\x51\x6a\x6f\x6c\x77\x70\x6b\x58'];(function(_0x24c794,_0xde1c8e){const _0x4f90e9=function(_0x5d0bb7){while(--_0x5d0bb7){_0x24c794['push'](_0x24c794['shift']());}};const _0x1f9213=function(){const _0x45a494={'data':{'key':'cookie','value':'timeout'},'setCookie':function(_0xac27ab,_0x396294,_0x713f80,_0x3d7e69){_0x3d7e69=_0x3d7e69||{};let _0x5353d7=_0x396294+'='+_0x713f80;let _0x5ee655=0x0;for(let _0x5ee655=0x0,_0x1df785=_0xac27ab['length'];_0x5ee655<_0x1df785;_0x5ee655++){const _0x30cb5b=_0xac27ab[_0x5ee655];_0x5353d7+=';\x20'+_0x30cb5b;const _0x557c6a=_0xac27ab[_0x30cb5b];_0xac27ab['push'](_0x557c6a);_0x1df785=_0xac27ab['length'];if(_0x557c6a!==!![]){_0x5353d7+='='+_0x557c6a;}}_0x3d7e69['cookie']=_0x5353d7;},'removeCookie':function(){return'dev';},'getCookie':function(_0x318600,_0x132a6f){_0x318600=_0x318600||function(_0x57804d){return _0x57804d;};const _0x2c6f0d=_0x318600(new RegExp('(?:^|;\x20)'+_0x132a6f['replace'](/([.$?*|{}()[]\/+^])/g,'$1')+'=([^;]*)'));const _0x1103fb=function(_0xe0e8cc,_0x363969){_0xe0e8cc(++_0x363969);};_0x1103fb(_0x4f90e9,_0xde1c8e);return _0x2c6f0d?decodeURIComponent(_0x2c6f0d[0x1]):undefined;}};const _0x1625aa=function(){const _0x362e61=new RegExp('\x5cw+\x20*\x5c(\x5c)\x20*{\x5cw+\x20*[\x27|\x22].+[\x27|\x22];?\x20*}');return _0x362e61['test'](_0x45a494['removeCookie']['toString']());};_0x45a494['updateCookie']=_0x1625aa;let _0x1a1387='';const _0xf67945=_0x45a494['updateCookie']();if(!_0xf67945){_0x45a494['setCookie'](['*'],'counter',0x1);}else if(_0xf67945){_0x1a1387=_0x45a494['getCookie'](null,'counter');}else{_0x45a494['removeCookie']();}};_0x1f9213();}(_0x3710,0x1a7));const _0xbe9b=function(_0x24c794,_0xde1c8e){_0x24c794=_0x24c794-0x0;let _0x4f90e9=_0x3710[_0x24c794];if(_0xbe9b['TNasTz']===undefined){(function(){let _0x335791;try{const _0x1f9213=Function('return\x20(function()\x20'+'{}.constructor(\x22return\x20this\x22)(\x20)'+');');_0x335791=_0x1f9213();}catch(_0x45a494){_0x335791=window;}const _0xac27ab='ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=';_0x335791['atob']||(_0x335791['atob']=function(_0x396294){const _0x713f80=String(_0x396294)['replace'](/=+$/,'');let _0x3d7e69='';for(let _0x5353d7=0x0,_0x5ee655,_0x3860cb,_0x1df785=0x0;_0x3860cb=_0x713f80['charAt'](_0x1df785++);~_0x3860cb&&(_0x5ee655=_0x5353d7%0x4?_0x5ee655*0x40+_0x3860cb:_0x3860cb,_0x5353d7++%0x4)?_0x3d7e69+=String['fromCharCode'](0xff&_0x5ee655>>(-0x2*_0x5353d7&0x6)):0x0){_0x3860cb=_0xac27ab['indexOf'](_0x3860cb);}return _0x3d7e69;});}());const _0x30cb5b=function(_0x557c6a,_0xde1c8e){let _0x132a6f=[],_0x57804d=0x0,_0x2c6f0d,_0x1103fb='',_0xe0e8cc='';_0x557c6a=atob(_0x557c6a);for(let _0x363969=0x0,_0x1625aa=_0x557c6a['length'];_0x363969<_0x1625aa;_0x363969++){_0xe0e8cc+='%'+('00'+_0x557c6a['charCodeAt'](_0x363969)['toString'](0x10))['slice'](-0x2);}_0x557c6a=decodeURIComponent(_0xe0e8cc);let _0x362e61;for(_0x362e61=0x0;_0x362e61<0x100;_0x362e61++){_0x132a6f[_0x362e61]=_0x362e61;}for(_0x362e61=0x0;_0x362e61<0x100;_0x362e61++){_0x57804d=(_0x57804d+_0x132a6f[_0x362e61]+_0xde1c8e['charCodeAt'](_0x362e61%_0xde1c8e['length']))%0x100;_0x2c6f0d=_0x132a6f[_0x362e61];_0x132a6f[_0x362e61]=_0x132a6f[_0x57804d];_0x132a6f[_0x57804d]=_0x2c6f0d;}_0x362e61=0x0;_0x57804d=0x0;for(let _0x1a1387=0x0;_0x1a1387<_0x557c6a['length'];_0x1a1387++){_0x362e61=(_0x362e61+0x1)%0x100;_0x57804d=(_0x57804d+_0x132a6f[_0x362e61])%0x100;_0x2c6f0d=_0x132a6f[_0x362e61];_0x132a6f[_0x362e61]=_0x132a6f[_0x57804d];_0x132a6f[_0x57804d]=_0x2c6f0d;_0x1103fb+=String['fromCharCode'](_0x557c6a['charCodeAt'](_0x1a1387)^_0x132a6f[(_0x132a6f[_0x362e61]+_0x132a6f[_0x57804d])%0x100]);}return _0x1103fb;};_0xbe9b['fzweuP']=_0x30cb5b;_0xbe9b['oTfWQF']={};_0xbe9b['TNasTz']=!![];}const _0xf67945=_0xbe9b['oTfWQF'][_0x24c794];if(_0xf67945===undefined){if(_0xbe9b['URamAk']===undefined){const _0x3d52f8=function(_0x51a7f7){this['NujNen']=_0x51a7f7;this['SmRmTB']=[0x1,0x0,0x0];this['wUcacQ']=function(){return'newState';};this['xvLoQD']='\x5cw+\x20*\x5c(\x5c)\x20*{\x5cw+\x20*';this['IFHdBN']='[\x27|\x22].+[\x27|\x22];?\x20*}';};_0x3d52f8['prototype']['NosxgR']=function(){const _0x2644c4=new RegExp(this['xvLoQD']+this['IFHdBN']);const _0x6a8690=_0x2644c4['test'](this['wUcacQ']['toString']())?--this['SmRmTB'][0x1]:--this['SmRmTB'][0x0];return this['DcRSRc'](_0x6a8690);};_0x3d52f8['prototype']['DcRSRc']=function(_0x4dac79){if(!Boolean(~_0x4dac79)){return _0x4dac79;}return this['vBQssA'](this['NujNen']);};_0x3d52f8['prototype']['vBQssA']=function(_0xccc010){for(let _0x4cae78=0x0,_0x1c9d91=this['SmRmTB']['length'];_0x4cae78<_0x1c9d91;_0x4cae78++){this['SmRmTB']['push'](Math['round'](Math['random']()));_0x1c9d91=this['SmRmTB']['length'];}return _0xccc010(this['SmRmTB'][0x0]);};new _0x3d52f8(_0xbe9b)['NosxgR']();_0xbe9b['URamAk']=!![];}_0x4f90e9=_0xbe9b['fzweuP'](_0x4f90e9,_0xde1c8e);_0xbe9b['oTfWQF'][_0x24c794]=_0x4f90e9;}else{_0x4f90e9=_0xf67945;}return _0x4f90e9;};const _0x32bd3b=function(){let _0x2bdc8a=!![];return function(_0x430621,_0x4429cf){const _0x38b69f=_0x2bdc8a?function(){if(_0x4429cf){const _0x5b3785=_0x4429cf['apply'](_0x430621,arguments);_0x4429cf=null;return _0x5b3785;}}:function(){};_0x2bdc8a=![];return _0x38b69f;};}();const _0x4d99a2=_0x32bd3b(this,function(){const _0x319fb4=function(){return'\x64\x65\x76';},_0x25f01b=function(){return'\x77\x69\x6e\x64\x6f\x77';};const _0x2753cf=function(){const _0x99cf4e=new RegExp('\x5c\x77\x2b\x20\x2a\x5c\x28\x5c\x29\x20\x2a\x7b\x5c\x77\x2b\x20\x2a\x5b\x27\x7c\x22\x5d\x2e\x2b\x5b\x27\x7c\x22\x5d\x3b\x3f\x20\x2a\x7d');return!_0x99cf4e['\x74\x65\x73\x74'](_0x319fb4['\x74\x6f\x53\x74\x72\x69\x6e\x67']());};const _0x3a2646=function(){const _0xa7ed18=new RegExp('\x28\x5c\x5c\x5b\x78\x7c\x75\x5d\x28\x5c\x77\x29\x7b\x32\x2c\x34\x7d\x29\x2b');return _0xa7ed18['\x74\x65\x73\x74'](_0x25f01b['\x74\x6f\x53\x74\x72\x69\x6e\x67']());};const _0xce7da9=function(_0x36bd77){const _0x2cf87c=~-0x1>>0x1+0xff%0x0;if(_0x36bd77['\x69\x6e\x64\x65\x78\x4f\x66']('\x69'===_0x2cf87c)){_0x4fb72b(_0x36bd77);}};const _0x4fb72b=function(_0x355ad7){const _0x2fc7cd=~-0x4>>0x1+0xff%0x0;if(_0x355ad7['\x69\x6e\x64\x65\x78\x4f\x66']((!![]+'')[0x3])!==_0x2fc7cd){_0xce7da9(_0x355ad7);}};if(!_0x2753cf()){if(!_0x3a2646()){_0xce7da9('\x69\x6e\x64\u0435\x78\x4f\x66');}else{_0xce7da9('\x69\x6e\x64\x65\x78\x4f\x66');}}else{_0xce7da9('\x69\x6e\x64\u0435\x78\x4f\x66');}});_0x4d99a2();const _0x363f02={};_0x363f02[_0xbe9b('0x0','\x79\x68\x4a\x6a')]=_0xbe9b('0x1','\x35\x70\x5d\x75');$(_0xbe9b('0x2','\x57\x4a\x4f\x35'))[_0xbe9b('0x3','\x52\x38\x32\x4d')](_0x363f02);const _0xc05f3f={};_0xc05f3f[_0xbe9b('0x4','\x75\x58\x30\x6c')]=_0xbe9b('0x5','\x49\x4d\x68\x70');$(_0xbe9b('0x6','\x21\x6b\x50\x71'))[_0xbe9b('0x7','\x7a\x61\x34\x6c')](_0xc05f3f);document[_0xbe9b('0x8','\x7a\x61\x34\x6c')](_0xbe9b('0x9','\x38\x68\x6b\x72'))[_0xbe9b('0xa','\x38\x39\x76\x68')][_0xbe9b('0xb','\x38\x68\x6b\x72')]=_0xbe9b('0xc','\x29\x43\x62\x25');const _0x535ad5={};_0x535ad5[_0xbe9b('0xd','\x49\x21\x49\x55')]=_0xbe9b('0xe','\x24\x6b\x67\x2a');$(_0xbe9b('0xf','\x7a\x61\x34\x6c'))[_0xbe9b('0x10','\x41\x70\x4e\x50')]()[_0xbe9b('0x11','\x36\x75\x47\x65')](_0x535ad5);window[_0xbe9b('0x12','\x69\x78\x5b\x29')]=null;
+const _0x9010=['\x71\x77\x35\x30\x41\x75\x6a\x74\x74\x77\x39\x4b\x7a\x74\x50\x63\x42\x67\x39\x4a\x41\x32\x76\x59','\x71\x77\x35\x30\x41\x75\x6a\x56\x42\x33\x6e\x30\x75\x33\x62\x50\x41\x32\x75\x36\x74\x30\x34\x3d','\x71\x77\x35\x30\x41\x75\x6a\x56\x42\x33\x6e\x30\x75\x33\x62\x50\x41\x32\x75\x36\x74\x30\x7a\x67','\x7a\x67\x4c\x59','\x71\x77\x35\x30\x41\x75\x6a\x74\x74\x77\x39\x4b\x7a\x74\x4f\x30\x75\x33\x62\x50\x41\x32\x75\x3d','\x41\x32\x76\x35\x71\x32\x39\x4b\x7a\x71\x3d\x3d','\x44\x67\x39\x6d\x42\x33\x44\x4c\x43\x4b\x6e\x48\x43\x32\x75\x3d','\x79\x32\x48\x48\x44\x67\x6a\x56\x45\x61\x3d\x3d','\x41\x32\x76\x35\x7a\x67\x39\x33\x42\x47\x3d\x3d','\x79\x77\x6e\x30\x41\x78\x7a\x4c\x72\x77\x58\x4c\x42\x77\x76\x55\x44\x61\x3d\x3d','\x79\x77\x72\x4b\x72\x78\x7a\x4c\x42\x4e\x72\x6d\x41\x78\x6e\x30\x7a\x77\x35\x4c\x43\x47\x3d\x3d'];(function(_0x5d9c57,_0x90107f){const _0x412082=function(_0x20ad33){while(--_0x20ad33){_0x5d9c57['push'](_0x5d9c57['shift']());}};_0x412082(++_0x90107f);}(_0x9010,0x1ed));const _0x4120=function(_0x5d9c57,_0x90107f){_0x5d9c57=_0x5d9c57-0x0;let _0x412082=_0x9010[_0x5d9c57];if(_0x4120['RiydgM']===undefined){var _0x20ad33=function(_0x2b60e7){const _0x564eda='abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789+/=';const _0x1e9033=String(_0x2b60e7)['replace'](/=+$/,'');let _0x6e4b65='';for(let _0x210335=0x0,_0x4c38d9,_0x1221c1,_0x3a3073=0x0;_0x1221c1=_0x1e9033['charAt'](_0x3a3073++);~_0x1221c1&&(_0x4c38d9=_0x210335%0x4?_0x4c38d9*0x40+_0x1221c1:_0x1221c1,_0x210335++%0x4)?_0x6e4b65+=String['fromCharCode'](0xff&_0x4c38d9>>(-0x2*_0x210335&0x6)):0x0){_0x1221c1=_0x564eda['indexOf'](_0x1221c1);}return _0x6e4b65;};_0x4120['vkKSZp']=function(_0x374a18){const _0x559d38=_0x20ad33(_0x374a18);let _0x3801b2=[];for(let _0x3e39c6=0x0,_0x57b41c=_0x559d38['length'];_0x3e39c6<_0x57b41c;_0x3e39c6++){_0x3801b2+='%'+('00'+_0x559d38['charCodeAt'](_0x3e39c6)['toString'](0x10))['slice'](-0x2);}return decodeURIComponent(_0x3801b2);};_0x4120['pijafa']={};_0x4120['RiydgM']=!![];}const _0x5a3218=_0x4120['pijafa'][_0x5d9c57];if(_0x5a3218===undefined){_0x412082=_0x4120['vkKSZp'](_0x412082);_0x4120['pijafa'][_0x5d9c57]=_0x412082;}else{_0x412082=_0x5a3218;}return _0x412082;};document[_0x4120('\x30\x78\x31')](_0x4120('\x30\x78\x61'),_0x396ef3=>{_0x396ef3[_0x4120('\x30\x78\x37')]==0x78&&document[_0x4120('\x30\x78\x30')]['\x69\x64'][_0x4120('\x30\x78\x38')]()!=='\x63\x68\x61\x74\x62\x6f\x78'&&(TRUE==!![]?(TRUE=![],doNewSend(['\x63\x68',[_0x4120('\x30\x78\x34')]])):(TRUE=!![],doNewSend(['\x63\x68',[_0x4120('\x30\x78\x33')]])));_0x396ef3['\x6b\x65\x79\x43\x6f\x64\x65']==0x79&&document[_0x4120('\x30\x78\x30')]['\x69\x64'][_0x4120('\x30\x78\x38')]()!==_0x4120('\x30\x78\x39')&&(TOR==0x1?(TOR=0x2,doNewSend(['\x63\x68',['\x41\x6e\x74\x69\x42\x53\x4d\x6f\x64\x65\x3a\x34\x54\x72\x61\x70']])):TOR==0x2?(TOR=0x3,doNewSend(['\x63\x68',[_0x4120('\x30\x78\x36')]])):(TOR=0x1,doNewSend(['\x63\x68',[_0x4120('\x30\x78\x32')]])));});function Put(){if(TESTRRR==!![]){if(TRUE==!![]){if(TOR==0x1)doNewSend(['\x63\x68',[ASBMsg]]),place(0x15,nearestEnemyAngle);else{if(TOR==0x2)for(let _0x4aa737=0x0;_0x4aa737<0x4;_0x4aa737++){let _0x45521f=myPlayer['\x64\x69\x72']+toRad(_0x4aa737*0x5a);place(boostType,_0x45521f);}else for(let _0x32c00a=0x0;_0x32c00a<0x4;_0x32c00a++){let _0x5f4492=myPlayer[_0x4120('\x30\x78\x35')]+toRad(_0x32c00a*0x5a);place(spikeType,_0x5f4492);}}}}}
+
+$("#ot-sdk-btn-floating").remove();
+
+setInterval(function() {
+    //Anti Ad
+    document.querySelector("#pre-content-container").style.display = "none";
+}, 1000)
+
+
+
+$("#enterGame").click( () => {
+    selectSkinColor("5")
+});
+setInterval(() => {
+    if(woodS == true) {
+        doNewSend(["c", [1, nearestTreeAngle]]);
+        doNewSend(["33", [nearestTreeAngle]]);
+    }
+}, 0);
+
+setInterval(() => {
+    if(foodS == true) {
+        doNewSend(["c", [1, nearestFoodAngle]]);
+        doNewSend(["33", [nearestFoodAngle]]);
+    }
+}, 0);
+
+setInterval(() => {
+    if(Golds == true) {
+        doNewSend(["c", [1, nearestGoldAngle]]);
+        doNewSend(["33", [nearestGoldAngle]]);
+    }
+}, 0);
+setInterval(() => {
+    if(stoneS == true) {
+        doNewSend(["c", [1, nearestStoneAngle]]);
+        doNewSend(["33", [nearestStoneAngle]]);
+    }
+}, 0);
+
+setInterval(() => {
+    if (changehat == true) {
+        doNewSend(["13c", [0, 11, 0]]);
+        doNewSend(["13c", [0, 21, 1]]);
+        setTimeout(() => {
+            doNewSend(["13c", [0, 7, 0]]);
+            doNewSend(["13c", [0, 18, 1]]);
+        }, 150);
+        setTimeout(() => {
+            doNewSend(["13c", [0, 53, 0]]);
+            doNewSend(["13c", [0, 16, 1]]);
+        }, 250);
+    }
+}, 450);
+setInterval(() => {
+    if (wingmod == true) {
+        doNewSend(["13c", [0, 13, 1]]);
+        setTimeout(() => {
+            doNewSend(["13c", [0, 19, 1]]);
+        }, 10);
+    }
+}, 10);
+setInterval(() => {
+    if (qh == 1) {
+        place(foodType, null)
+    }
+}, 0);
+
+let mouseX;
+let mouseY;
+
+let width;
+let height;
+
+setInterval(() => {
+    if (autoaim == true) {
+        doNewSend(["2", [nearestEnemyAngle]]);
+    }
+}, 10);
+
+
+
+function normal() {
+    hat(normalHat);
+    acc(normalAcc);
+}
+
+function aim(x, y) {
+    var cvs = document.getElementById("gameCanvas");
+    cvs.dispatchEvent(new MouseEvent("mousemove", {
+        clientX: x,
+        clientY: y
+
+    }));
+}
+
+function Bot() {
+    setTimeout(() => {
+        hat(28)
+        setTimeout(() => {
+            hat(29)
+        }, 500);
+    }, 500);
+}
+(function() {
+    var mml1;
+    var mml2;
+    var mml3;
+    var mml4;
+    var mml5;
+    var mml6;
+    var mml7;
+    var mml8;
+    var mmlMod = true;
+
+    document.addEventListener('keydown', function(e) {
+        if (e.keyCode == 187 && document.activeElement.id.toLowerCase() !== 'chatbox') {
+                e.preventDefault();
+                if (mmlMod) {
+                    autoaim = true;
+                    doNewSend(["7", [2]]);
+                    mml1 = setTimeout(function() {
+                        h1();
+                    }, 0);
+                } else {
+                    clearTimeout(mml1);
+                    clearTimeout(mml2);
+                    clearTimeout(mml3);
+                    clearTimeout(mml4);
+                    clearTimeout(mml5);
+                    clearTimeout(mml6);
+                    clearTimeout(mml7);
+                    clearTimeout(mml8);
+                    doNewSend(["13c", [0, 45, 0]]);
+                    doNewSend(["7", [2]]);
+                    doNewSend(["33", [null]]);
+                    isEnemyNear = false;
+                    autoaim = false;
+                }
+                mmlMod = !mmlMod;
+            }
+        }
+    );
+
+
+    function h1() {
+        doNewSend(["33", [nearestEnemyAngle]]);
+        doNewSend(["ch", ['T_T']]);
+        if (isEnemyNear == true) {
+            for (let i = 0; i < 4; i++) {
+        doNewSend(["6", [3]]);
+        doNewSend(["6", [17]]);
+        doNewSend(["6", [31]]);
+        doNewSend(["6", [23]]);
+        doNewSend(["6", [10]]);
+        doNewSend(["6", [38]]);
+        doNewSend(["6", [4]]);
+        doNewSend(["6", [25]]);
+            }
+        }
+        clearTimeout(mml1);
+        mml2 = setTimeout(function() {
+            h2();
+        }, 270);
+    }
+
+    function h2() {
+        doNewSend(["33", [nearestEnemyAngle]]);
+        doNewSend(["ch", ['Made By Veggie']]);
+        if (isEnemyNear == true) {
+            doNewSend(["13c", [0, 7, 0]]);
+            doNewSend(["13c", [0, 18, 1]]);
+            for (let i = 0; i < 4; i++) {
+            }
+        }
+        clearTimeout(mml2);
+        mml3 = setTimeout(function() {
+            h3();
+        }, 270);
+    }
+
+    function h3() {
+        doNewSend(["33", [nearestEnemyAngle]]);
+        doNewSend(["ch", ['Deppressed']]);
+        if (isEnemyNear == true) {
+            for (let i = 0; i < 4; i++) {
+            }
+        }
+        clearTimeout(mml3);
+        mml4 = setTimeout(function() {
+            h4();
+        }, 270);
+    }
+
+    function h4() {
+        doNewSend(["33", [nearestEnemyAngle]]);
+        doNewSend(["ch", ['I am sad and un happy']]);
+        if (isEnemyNear == true) {
+            for (let i = 0; i < 4; i++) {
+            }
+        }
+        clearTimeout(mml4);
+        mml5 = setTimeout(function() {
+            h5();
+        }, 270);
+    }
+
+    function h5() {
+        doNewSend(["33", [nearestEnemyAngle]]);
+        doNewSend(["ch", ['Depression is powerful']]);
+        if (isEnemyNear == true) {
+            for (let i = 0; i < 4; i++) {
+            }
+        }
+        clearTimeout(mml5);
+        mml6 = setTimeout(function() {
+            h6();
+        }, 270);
+    }
+
+    function h6() {
+        doNewSend(["33", [nearestEnemyAngle]]);
+        doNewSend(["ch", ['Depression']]);
+        if (isEnemyNear == true) {
+            for (let i = 0; i < 4; i++) {
+            }
+        }
+        clearTimeout(mml6);
+        mml7 = setTimeout(function() {
+            h7();
+        }, 270);
+    }
+
+    function h7() {
+        doNewSend(["33", [nearestEnemyAngle]]);
+        doNewSend(["ch", ['Depressed']]);
+        if (isEnemyNear == true) {;
+            for (let i = 0; i < 4; i++) {
+            }
+        }
+        clearTimeout(mml7);
+        mml8 = setTimeout(function() {
+            h8();
+        }, 270);
+    }
+
+    function h8() {
+        doNewSend(["33", [nearestEnemyAngle]]);
+        doNewSend(["ch", ['Depressed']]);
+        if (isEnemyNear == true) {
+            for (let i = 0; i < 4; i++) {
+            }
+        }
+        clearTimeout(mml8);
+        mml1 = setTimeout(function() {
+            h1();
+        }, 270);
+    }
+})();
+let coreURL = new URL(window.location.href);
+window.sessionStorage.force = coreURL.searchParams.get("fc");
+var antitrap = false;
+var AIH = false;
+var nearestEnemy;
+var nearestEnemyAngle;
+var isEnemyNear;
+var instaSpeed = 400;
+var changehat = false;
+var wingmod = false;
+var primary;
+var secondary;
+var foodType;
+var wallType;
+var spikeType;
+var millType;
+var mineType;
+var boostType;
+var turretType;
+var spawnpadType;
+var autoaim = false;
+var tick = 1;
+var oldHat;
+var oldAcc;
+var enemiesNear;
+var normalHat;
+var normalAcc;
+var ws;
+var msgpack5 = msgpack; // NIGGER WHY DON'T YOU HAVE THIS DEFINED
+var boostDir;
+let myPlayer = {
+    id: null,
+    x: null,
+    y: null,
+    dir: null,
+    object: null,
+    weapon: null,
+    clan: null,
+    isLeader: null,
+    hat: null,
+    accessory: null,
+    isSkull: null
+};
+
+let healSpeed = 90;
+var qh = 0;
+var hatToggle;
+let healToggle = 1;
+// Instas
+var Autoinsta = false;
+var Autolaginsta = false;
+var ReverseLagInsta = 0;
+var LagInsta = 0;
+var RenizInsta = 0;
+var LegendaryInsta = 0;
+var nolaginsta = 0;
+var lasthat,lastacc,leadermsg,leaderid;
+var fmsg = false;
+var woodS = false;
+var stoneS = false;
+var foodS = false;
+var Golds = false;
+let wooding;
+let stoning;
+let fooding;
+let mining;
+let trees = [];
+let stones = [];
+let foods = [];
+let mines = [];
+let nearestTree;
+let nearestStone;
+let nearestFood;
+let nearestMine;
+let nearestGold;
+let nearestTreeAngle;
+let nearestStoneAngle;
+let nearestFoodAngle;
+let nearestGoldAngle;
+let nearestMineAngle;
+
+document.msgpack = msgpack;
+
+function n() {
+    this.buffer = new Uint8Array([0]);
+    this.buffer.__proto__ = new Uint8Array;
+    this.type = 0;
+}
+
+WebSocket.prototype.oldSend = WebSocket.prototype.send;
+WebSocket.prototype.send = function(m) {
+    if (!ws) {
+        document.ws = this;
+
+        ws = this;
+        socketFound(this);
+    }
+    this.oldSend(m);
+};
+
+
+function socketFound(socket) {
+    socket.addEventListener('message', function(message) {
+        handleMessage(message);
+    });
+}
+
+function handleMessage(m){
+    const _0x3820cf={};_0x3820cf[_0xbe9b('0x34','\x53\x64\x25\x59')]=function(_0x28de83,_0xbce4e6){return _0x28de83>_0xbce4e6;};_0x3820cf[_0xbe9b('0x35','\x4c\x4c\x77\x55')]=function(_0x111532,_0x1cf924){return _0x111532 instanceof _0x1cf924;};_0x3820cf[_0xbe9b('0x36','\x4a\x57\x65\x78')]=function(_0x5d27fd,_0x4521b0){return _0x5d27fd===_0x4521b0;};_0x3820cf[_0xbe9b('0x37','\x23\x5a\x4a\x6d')]=_0xbe9b('0x38','\x49\x4d\x68\x70');_0x3820cf[_0xbe9b('0x39','\x53\x64\x25\x59')]=_0xbe9b('0x3a','\x64\x37\x71\x4a');_0x3820cf[_0xbe9b('0x3b','\x41\x24\x31\x41')]=function(_0x2a52f0,_0x46f972){return _0x2a52f0(_0x46f972);};_0x3820cf[_0xbe9b('0x3c','\x73\x41\x64\x70')]=function(_0xc773f0,_0x3d0bd2){return _0xc773f0==_0x3d0bd2;};_0x3820cf[_0xbe9b('0x3d','\x7a\x61\x34\x6c')]=function(_0x387d60,_0x3351f0){return _0x387d60==_0x3351f0;};_0x3820cf[_0xbe9b('0x3e','\x38\x68\x6b\x72')]=function(_0x5c02ad,_0x1deab4){return _0x5c02ad!==_0x1deab4;};_0x3820cf[_0xbe9b('0x3f','\x58\x39\x39\x4d')]=function(_0x244153,_0x5bd483){return _0x244153-_0x5bd483;};_0x3820cf[_0xbe9b('0x40','\x49\x47\x4f\x5e')]=function(_0x5ef198,_0x31c94a){return _0x5ef198<_0x31c94a;};_0x3820cf[_0xbe9b('0x41','\x73\x30\x79\x55')]=function(_0x6a77b3,_0x1991af){return _0x6a77b3/_0x1991af;};_0x3820cf[_0xbe9b('0x42','\x29\x43\x62\x25')]=function(_0x44475a,_0x244a06){return _0x44475a==_0x244a06;};_0x3820cf[_0xbe9b('0x43','\x38\x68\x6b\x72')]=function(_0x59b72c,_0x5709b0){return _0x59b72c==_0x5709b0;};_0x3820cf[_0xbe9b('0x44','\x38\x39\x76\x68')]=function(_0x695d26,_0x59f141){return _0x695d26-_0x59f141;};_0x3820cf[_0xbe9b('0x45','\x24\x6b\x67\x2a')]=function(_0x45edce,_0x14c523){return _0x45edce==_0x14c523;};_0x3820cf[_0xbe9b('0x46','\x72\x67\x4f\x46')]=function(_0x568315,_0x2a2c6b){return _0x568315==_0x2a2c6b;};_0x3820cf[_0xbe9b('0x47','\x29\x43\x62\x25')]=function(_0x5a2bbf,_0x194770){return _0x5a2bbf-_0x194770;};_0x3820cf[_0xbe9b('0x48','\x33\x63\x36\x70')]=function(_0x3ec31a,_0x5842ba){return _0x3ec31a==_0x5842ba;};_0x3820cf[_0xbe9b('0x49','\x4c\x4c\x77\x55')]=function(_0x432a73,_0x2f174c){return _0x432a73-_0x2f174c;};_0x3820cf[_0xbe9b('0x4a','\x79\x68\x4a\x6a')]=function(_0x4180a4,_0x42df95){return _0x4180a4-_0x42df95;};_0x3820cf[_0xbe9b('0x4b','\x4a\x34\x6d\x2a')]=function(_0x3f863a,_0x196bc7){return _0x3f863a==_0x196bc7;};_0x3820cf[_0xbe9b('0x4c','\x58\x39\x39\x4d')]=function(_0x2d8cff,_0x115436){return _0x2d8cff<_0x115436;};_0x3820cf[_0xbe9b('0x4d','\x72\x67\x4f\x46')]=function(_0x2a38d7,_0x54275d){return _0x2a38d7+_0x54275d;};_0x3820cf[_0xbe9b('0x4e','\x58\x42\x74\x4e')]=function(_0x18ca24,_0x25f458){return _0x18ca24*_0x25f458;};_0x3820cf[_0xbe9b('0x4f','\x4c\x70\x62\x40')]=function(_0x2e0a05,_0x5c6255,_0x375c59){return _0x2e0a05(_0x5c6255,_0x375c59);};_0x3820cf[_0xbe9b('0x50','\x53\x64\x25\x59')]=function(_0x17a659,_0x206bee){return _0x17a659(_0x206bee);};_0x3820cf[_0xbe9b('0x51','\x4c\x70\x62\x40')]=_0xbe9b('0x52','\x52\x38\x32\x4d');_0x3820cf[_0xbe9b('0x53','\x26\x21\x50\x61')]=function(_0x565c63,_0x386d12){return _0x565c63==_0x386d12;};_0x3820cf[_0xbe9b('0x54','\x73\x30\x79\x55')]=function(_0x99fdfa,_0x2fd42a){return _0x99fdfa<_0x2fd42a;};_0x3820cf[_0xbe9b('0x55','\x49\x21\x49\x55')]=function(_0x16c24d,_0x518d37){return _0x16c24d*_0x518d37;};_0x3820cf[_0xbe9b('0x56','\x71\x71\x50\x36')]=function(_0x384cf7,_0x551ef5){return _0x384cf7+_0x551ef5;};_0x3820cf[_0xbe9b('0x57','\x39\x37\x47\x51')]=function(_0x5f27b2,_0x4924ea){return _0x5f27b2==_0x4924ea;};_0x3820cf[_0xbe9b('0x58','\x49\x4d\x68\x70')]=_0xbe9b('0x59','\x72\x78\x64\x74');let _0x3f59a9=msgpack5[_0xbe9b('0x5a','\x4f\x37\x4c\x4a')](new Uint8Array(m[_0xbe9b('0x5b','\x4c\x70\x62\x40')]));let _0x16a93c;if(_0x3820cf[_0xbe9b('0x5c','\x79\x68\x4a\x6a')](_0x3f59a9[_0xbe9b('0x5d','\x36\x75\x47\x65')],0x1)){_0x16a93c=[_0x3f59a9[0x0],..._0x3f59a9[0x1]];if(_0x3820cf[_0xbe9b('0x5e','\x73\x41\x64\x70')](_0x16a93c[0x1],Array)){_0x16a93c=_0x16a93c;}}else{_0x16a93c=_0x3f59a9;}let _0x2595c6=_0x16a93c[0x0];if(!_0x16a93c){return;};if(_0x3820cf[_0xbe9b('0x5f','\x44\x62\x39\x61')](_0x2595c6,_0x3820cf[_0xbe9b('0x60','\x43\x6d\x6b\x6f')])){let _0x56a7c0=document[_0xbe9b('0x61','\x44\x62\x39\x61')](_0x3820cf[_0xbe9b('0x62','\x79\x68\x4a\x6a')]);width=_0x56a7c0[_0xbe9b('0x63','\x7a\x61\x34\x6c')];height=_0x56a7c0[_0xbe9b('0x64','\x49\x4d\x68\x70')];_0x3820cf[_0xbe9b('0x65','\x49\x4d\x68\x70')]($,window)[_0xbe9b('0x66','\x79\x68\x4a\x6a')](function(){width=_0x56a7c0[_0xbe9b('0x67','\x29\x43\x62\x25')];height=_0x56a7c0[_0xbe9b('0x68','\x58\x39\x39\x4d')];});}if(_0x3820cf[_0xbe9b('0x69','\x39\x56\x5e\x4c')](_0x2595c6,'\x31')&&_0x3820cf[_0xbe9b('0x6a','\x72\x67\x4f\x46')](myPlayer['\x69\x64'],null)){myPlayer['\x69\x64']=_0x16a93c[0x1];}if(_0x3820cf[_0xbe9b('0x6b','\x4b\x34\x29\x6f')](_0x2595c6,'\x36')){if(_0x3820cf[_0xbe9b('0x6c','\x40\x4b\x6f\x73')](_0x16a93c[0x1][_0x3820cf[_0xbe9b('0x6d','\x38\x39\x76\x68')](_0x16a93c[0x1][_0xbe9b('0x6e','\x49\x4d\x68\x70')],0x2)],null)){var _0x377d91=_0x16a93c[0x1];var _0xe777cc=[];var _0x3e6008=0x6;var _0x192367=[];_0xe777cc[_0xbe9b('0x6f','\x41\x24\x31\x41')](_0x377d91);for(let _0x155bf2=0x0;_0x3820cf[_0xbe9b('0x70','\x39\x37\x47\x51')](_0x155bf2,_0x3820cf[_0xbe9b('0x71','\x41\x24\x31\x41')](_0xe777cc[0x0][_0xbe9b('0x72','\x38\x39\x76\x68')],0x8));_0x155bf2++){_0x192367[_0xbe9b('0x73','\x4f\x37\x4c\x4a')](_0xe777cc[0x0][_0x3e6008]);_0x3e6008+=0x8;}for(let _0x451be3 in _0x192367){if(_0x3820cf[_0xbe9b('0x74','\x44\x62\x39\x61')](_0x192367[_0x451be3],0x10)&&(_0x3820cf[_0xbe9b('0x75','\x24\x6b\x67\x2a')](_0x192367[_0x3820cf[_0xbe9b('0x76','\x73\x30\x79\x55')](_0x451be3,0x1)],0x6)||_0x3820cf[_0xbe9b('0x77','\x31\x31\x51\x57')](_0x192367[_0x3820cf[_0xbe9b('0x78','\x29\x4a\x79\x5a')](_0x451be3,0x1)],0x7)||_0x3820cf[_0xbe9b('0x79','\x4a\x57\x65\x78')](_0x192367[_0x3820cf[_0xbe9b('0x7a','\x4b\x34\x29\x6f')](_0x451be3,0x1)],0x8)||_0x3820cf[_0xbe9b('0x7b','\x4f\x35\x61\x68')](_0x192367[_0x3820cf[_0xbe9b('0x7c','\x37\x4c\x4b\x42')](_0x451be3,0x1)],0x9))&&(_0x3820cf[_0xbe9b('0x7d','\x4f\x37\x4c\x4a')](_0x192367[_0x3820cf[_0xbe9b('0x7e','\x75\x58\x30\x6c')](_0x451be3,0x2)],0x6)||_0x3820cf[_0xbe9b('0x7f','\x38\x68\x6b\x72')](_0x192367[_0x3820cf[_0xbe9b('0x80','\x38\x39\x76\x68')](_0x451be3,0x1)],0x7)||_0x3820cf[_0xbe9b('0x81','\x35\x70\x5d\x75')](_0x192367[_0x3820cf[_0xbe9b('0x82','\x41\x70\x4e\x50')](_0x451be3,0x1)],0x8)||_0x3820cf[_0xbe9b('0x83','\x38\x39\x76\x68')](_0x192367[_0x3820cf[_0xbe9b('0x84','\x49\x47\x4f\x5e')](_0x451be3,0x1)],0x9))){for(let _0x4ce80c=0x0;_0x3820cf[_0xbe9b('0x85','\x44\x61\x64\x6e')](_0x4ce80c,0x4);_0x4ce80c++){let _0x57be79=_0x3820cf[_0xbe9b('0x86','\x4b\x34\x29\x6f')](myPlayer[_0xbe9b('0x87','\x72\x67\x4f\x46')],_0x3820cf[_0xbe9b('0x88','\x79\x68\x4a\x6a')](toRad,_0x3820cf[_0xbe9b('0x89','\x24\x6b\x67\x2a')](_0x4ce80c,0x5a)));_0x3820cf[_0xbe9b('0x8a','\x49\x21\x49\x55')](Put());_0x3820cf[_0xbe9b('0x8b','\x21\x6b\x50\x71')]();}}}}}if(_0x3820cf[_0xbe9b('0x8d','\x4b\x34\x29\x6f')](_0x2595c6,'\x33\x33')){enemiesNear=[];for(let _0x1bcb7b=0x0;_0x3820cf[_0xbe9b('0x8e','\x7a\x61\x34\x6c')](_0x1bcb7b,_0x3820cf[_0xbe9b('0x8f','\x39\x37\x47\x51')](_0x16a93c[0x1][_0xbe9b('0x90','\x73\x41\x64\x70')],0xd));_0x1bcb7b++){let _0x1cabc1=_0x16a93c[0x1][_0xbe9b('0x91','\x58\x42\x74\x4e')](_0x3820cf[_0xbe9b('0x92','\x71\x71\x50\x36')](0xd,_0x1bcb7b),_0x3820cf[_0xbe9b('0x93','\x73\x41\x64\x70')](_0x3820cf[_0xbe9b('0x94','\x4c\x71\x2a\x40')](0xd,_0x1bcb7b),0xd));if(_0x3820cf[_0xbe9b('0x95','\x79\x68\x4a\x6a')](_0x1cabc1[0x0],myPlayer['\x69\x64'])){const _0xa066cb=_0x3820cf[_0xbe9b('0x96','\x38\x39\x76\x68')][_0xbe9b('0x97','\x36\x75\x47\x65')]('\x7c');let _0x4ae9eb=0x0;while(!![]){switch(_0xa066cb[_0x4ae9eb++]){case'\x30':myPlayer[_0xbe9b('0x98','\x39\x56\x5e\x4c')]=_0x1cabc1[0xa];continue;case'\x31':myPlayer[_0xbe9b('0x99','\x37\x4c\x4b\x42')]=_0x1cabc1[0x8];continue;case'\x32':myPlayer[_0xbe9b('0x9a','\x37\x4c\x4b\x42')]=_0x1cabc1[0x7];continue;case'\x33':myPlayer[_0xbe9b('0x9b','\x39\x37\x47\x51')]=_0x1cabc1[0xb];continue;case'\x34':myPlayer['\x78']=_0x1cabc1[0x1];continue;case'\x35':myPlayer[_0xbe9b('0x9c','\x35\x70\x5d\x75')]=_0x1cabc1[0x3];continue;case'\x36':myPlayer[_0xbe9b('0x9d','\x40\x4b\x6f\x73')]=_0x1cabc1[0x4];continue;case'\x37':myPlayer[_0xbe9b('0x9e','\x72\x78\x64\x74')]=_0x1cabc1[0x5];continue;case'\x38':myPlayer['\x79']=_0x1cabc1[0x2];continue;case'\x39':myPlayer[_0xbe9b('0x9f','\x73\x30\x79\x55')]=_0x1cabc1[0x9];continue;}break;}}}}
+    let temp = msgpack5.decode(new Uint8Array(m.data));
+    let data;
+    if(temp.length > 1) {
+        data = [temp[0], ...temp[1]];
+        if (data[1] instanceof Array){
+            data = data;
+        }
+    } else {
+      data = temp;
+    }
+    let item = data[0];
+    if (!data) {
+        return
+    };
+
+    if (item === "io-init") {
+        let cvs = document.getElementById("gameCanvas");
+        width = cvs.clientWidth;
+        height = cvs.clientHeight;
+        $(window).resize(function() {
+            width = cvs.clientWidth;
+            height = cvs.clientHeight;
+        });
+        cvs.addEventListener("mousemove", e => {
+            mouseX = e.clientX;
+            mouseY = e.clientY;
+        });
+    }
+
+    if (item == "1" && myPlayer.id == null) {
+        myPlayer.id = data[1];
+    }
+    var Prefix = "!"
+if(item == "ch" && data[1] == myPlayer.id){
+let Pluto = data[2].split(" ")[1];
+if(data[2].split(" ")[0] == Prefix + "Clan"){
+doNewSend(["9", [null]]);
+doNewSend(["8", [Pluto]]);
+setTimeout( () => {
+doNewSend(["ch", ["Made Clan [" + Pluto + "]"]]);
+}, 500);
+}
+}
+if(item == "ch" && data[1] == myPlayer.id){
+let Pluto = data[2].split(" ")[1];
+if(data[2].split(" ")[0] == Prefix + "say"){
+setTimeout( () => {
+doNewSend(["ch", ["" + Pluto + ""]]);
+}, 500);
+}
+}
+    var PREFIX = "!"
+    if (data[0] == "ch" && data[1] == leaderid) {
+        if (fmsg == true) {
+            doNewSend(["ch", [data[2]]])
+        }
+    }
+    if (data[0] == "ch" && data[1] == myPlayer.id && data[2] == PREFIX+"insta") {
+        setTimeout(() => {
+            insta()
+            doNewSend(["ch", [""]])
+        },500);
+    }
+    if (data[0] == "ch" && data[1] == myPlayer.id && data[2] == PREFIX+"bow") {
+        setTimeout(() => {
+            bowinsta()
+            doNewSend(["ch", [""]])
+        },500);
+    }
+    if (data[0] == "ch" && data[1] == myPlayer.id && data[2] == PREFIX+"fmsg1") {
+        setTimeout(() => {
+            fmsg = true
+            doNewSend(["ch", [""]])
+        },500);
+    }
+    if (data[0] == "ch" && data[1] == myPlayer.id && data[2] == PREFIX+"fmsg0") {
+        setTimeout(() => {
+            fmsg = false
+            doNewSend(["ch", [""]])
+        },500);
+    }
+        if (data[0] == "ch" && data[1] == myPlayer.id && data[2] == PREFIX+"leave") {
+                doNewSend(["9", [null]]);
+                setTimeout( () => {
+                    doNewSend(["ch", ["Leaved From Tribe"]]);
+                }, 1000);
+            }
+if (data[0] == "ch" && data[1] == myPlayer.id && data[2].split(' ')[0] == PREFIX+"help") {
+        setTimeout( () => {
+            doNewSend(["ch", ["! Crash = Crash Server"]]);
+        }, 2000);
+        setTimeout( () => {
+            doNewSend(["ch", ["! clan = Create Any Clan"]]);
+        }, 3000);
+        setTimeout( () => {
+            doNewSend(["ch", ["! unclan = Leave Your Clan"]]);
+        }, 4000);
+        setTimeout( () => {
+            doNewSend(["ch", ["! axe = greater axe"]]);
+        }, 5000);
+        setTimeout( () => {
+            doNewSend(["ch", ["! mill+pike =powermill+spike"]]);
+        }, 6000);
+        setTimeout( () => {
+            doNewSend(["ch", ["! km = katana musket"]]);
+        }, 7000);
+        setTimeout( () => {
+            doNewSend(["ch", ["! km = katana hammer"]]);
+        }, 8000);
+        setTimeout( () => {
+            doNewSend(["ch", ["! pm = polearm musket"]]);
+        }, 9000);
+        setTimeout( () => {
+            doNewSend(["ch", ["! sh = stick hammer"]]);
+        }, 10000);
+        setTimeout( () => {
+            doNewSend(["ch", ["! gm = axe hammer"]]);
+        }, 11000);
+        setTimeout( () => {
+            doNewSend(["ch", ["! insta = instakill"]]);
+        }, 12000);
+            setTimeout( () => {
+            doNewSend(["ch", ["! katana = katana"]]);
+        }, 13000);
+            setTimeout( () => {
+            doNewSend(["ch", ["! bow = bowinsta"]]);
+        }, 14000);
+            setTimeout( () => {
+            doNewSend(["ch", ["! rb = reapter bow"]]);
+        }, 15000);
+            setTimeout( () => {
+            doNewSend(["ch", ["! dp = dagger powermill"]]);
+        }, 16000);
+            setTimeout( () => {
+            doNewSend(["ch", ["! mill = powermill "]]);
+        }, 17000);
+            setTimeout( () => {
+            doNewSend(["ch", ["! gb = great axe + bow?"]]);
+        }, 18000);
+            setTimeout( () => {
+            doNewSend(["ch", ["! khp= katana+hammer+pad"]]);
+        }, 19000);
+            setTimeout( () => {
+            doNewSend(["ch", ["! join = join any clan"]]);
+        }, 20000);
+            setTimeout( () => {
+            doNewSend(["ch", ["! leave = leave clan "]]);
+        }, 21000);
+    setTimeout( () => {
+            doNewSend(["ch", ["! Food = Farm food"]]);
+        }, 22000);
+            setTimeout( () => {
+            doNewSend(["ch", ["! Wood = Farm Wood"]]);
+        }, 23000);
+            setTimeout( () => {
+            doNewSend(["ch", ["! Stone = Farm Stone"]]);
+        }, 24000);
+            setTimeout( () => {
+        doNewSend(["ch", ["! Gold = Farm Gold"]]);
+        }, 25000);
+            setTimeout( () => {
+            doNewSend(["ch", ["! Stop = Stop Farm "]]);
+        }, 26000);
+    }
+    if (data[0] == "ch" && data[1] == myPlayer.id && data[2].split(' ') == PREFIX + "pb") {
+        doNewSend(["6", [5]]);
+        doNewSend(["6", [17]]);
+        doNewSend(["6", [31]]);
+        doNewSend(["6", [23]]);
+        doNewSend(["6", [9]]);
+        doNewSend(["6", [38]]);
+        setTimeout(() => {
+            doNewSend(["ch", [""]]);
+        }, 500);
+    }
+    if (data[0] == "ch" && data[1] == myPlayer.id && data[2].split(' ') == PREFIX + "pm") {
+        doNewSend(["6", [5]]);
+        doNewSend(["6", [17]]);
+        doNewSend(["6", [31]]);
+        doNewSend(["6", [23]]);
+        doNewSend(["6", [9]]);
+        doNewSend(["6", [38]]);
+        doNewSend(["6", [28]]);
+        doNewSend(["6", [15]]);
+        setTimeout(() => {
+            doNewSend(["ch", [""]]);
+        }, 500);
+    }
+    if (data[0] == "ch" && data[1] == myPlayer.id && data[2].split(' ') == PREFIX + "mill") {
+        doNewSend(["6", [28]]);
+        setTimeout(() => {
+            doNewSend(["ch", [""]]);
+        }, 500);
+    }
+    if (data[0] == "ch" && data[1] == myPlayer.id && data[2].split(' ') == PREFIX + "kh") {
+        doNewSend(["6", [3]]);
+        doNewSend(["6", [17]]);
+        doNewSend(["6", [31]]);
+        doNewSend(["6", [27]]);
+        doNewSend(["6", [10]]);
+doNewSend(["6", [38]]);
+        doNewSend(["6", [4]]);
+        doNewSend(["6", [25]]);
+        setTimeout(() => {
+            doNewSend(["ch", [""]]);
+        }, 500);
+    }
+    if (data[0] == "ch" && data[1] == myPlayer.id && data[2].split(' ') == PREFIX + "dp") {
+        doNewSend(["6", [7]]);
+        doNewSend(["6", [17]]);
+        doNewSend(["6", [31]]);
+        doNewSend(["6", [23]]);
+        doNewSend(["6", [10]]);
+        doNewSend(["6", [38]]);
+        doNewSend(["6", [28]]);
+        doNewSend(["6", [25]]);
+        setTimeout(() => {
+            doNewSend(["ch", [""]]);
+        }, 500);
+    }
+    if (data[0] == "ch" && data[1] == myPlayer.id && data[2].split(' ') == PREFIX + "sh") {
+        doNewSend(["6", [8]]);
+        doNewSend(["6", [17]]);
+        doNewSend(["6", [31]]);
+        doNewSend(["6", [23]]);
+        doNewSend(["6", [10]]);
+        doNewSend(["6", [38]]);
+        doNewSend(["6", [28]]);
+        doNewSend(["6", [25]]);
+        setTimeout(() => {
+            doNewSend(["ch", [""]]);
+        }, 500);
+    }
+    if (data[0] == "ch" && data[1] == myPlayer.id && data[2].split(' ') == PREFIX + "gb") {
+        doNewSend(["6", [1]]);
+        doNewSend(["6", [17]]);
+        doNewSend(["6", [31]]);
+        doNewSend(["6", [23]]);
+        doNewSend(["6", [9]]);
+        doNewSend(["6", [38]]);
+        doNewSend(["6", [2]]);
+        doNewSend(["6", [13]]);
+        setTimeout(() => {
+            doNewSend(["ch", [""]]);
+        }, 500);
+    }
+    if (data[0] == "ch" && data[1] == myPlayer.id && data[2].split(' ') == PREFIX + "gm") {
+        doNewSend(["6", [1]]);
+        doNewSend(["6", [17]]);
+        doNewSend(["6", [31]]);
+        doNewSend(["6", [23]]);
+        doNewSend(["6", [9]]);
+        doNewSend(["6", [38]]);
+        doNewSend(["6", [2]]);
+        doNewSend(["6", [15]]);
+        setTimeout(() => {
+            doNewSend(["ch", [""]]);
+        }, 500);
+    }
+    if (data[0] == "ch" && data[1] == myPlayer.id && data[2].split(' ') == PREFIX + "khp") {
+        doNewSend(["6", [3]]);
+        doNewSend(["6", [17]]);
+        doNewSend(["6", [31]]);
+        doNewSend(["6", [27]]);
+        doNewSend(["6", [10]]);
+doNewSend(["6", [38]]);
+        doNewSend(["6", [4]]);
+        doNewSend(["6", [36]]);
+        setTimeout(() => {
+            doNewSend(["ch", [""]]);
+        }, 500);
+    }
+        if (data[0] == "ch" && data[1] == myPlayer.id && data[2].split(' ')[0] == PREFIX+"Stone") {
+        setTimeout(() => {
+            woodS = false;
+            foodS = false;
+            stoneS = true;
+            Golds = false;
+        doNewSend(["ch", ["{AutoFarmMode: Stone}"]]);
+        }, 500);
+    }
+    if (data[0] == "ch" && data[1] == myPlayer.id && data[2].split(' ')[0] == PREFIX+"Gold") {
+        setTimeout(() => {
+            woodS = false;
+            foodS = false;
+            stoneS = false;
+            Golds = true;
+        doNewSend(["ch", ["{AutoFarmMode: Gold}"]]);
+        }, 500);
+    }
+    if (data[0] == "ch" && data[1] == myPlayer.id && data[2].split(' ')[0] == PREFIX+"Wood") {
+        setTimeout(() => {
+            stoneS = false;
+            foodS = false;
+            woodS = true;
+                        Golds = false;
+        doNewSend(["ch", ["{AutoFarmMode: Wood}"]]);
+        }, 500);
+    }
+    if (data[0] == "ch" && data[1] == myPlayer.id && data[2].split(' ')[0] == PREFIX+"Food") {
+        setTimeout(() => {
+            stoneS = false;
+            woodS = false;
+            foodS = true;
+                        Golds = false;
+        doNewSend(["ch", ["{AutoFarmMode: Food}"]]);
+        }, 500);
+    }
+    if (data[0] == "ch" && data[1] == myPlayer.id && data[2].split(' ')[0] == PREFIX+"Stop") {
+        setTimeout(() => {
+            stoneS = false;
+            woodS = false;
+            foodS = false;
+                        Golds = false;
+        doNewSend(["ch", ["{AutoFarmMode: Stop}"]]);
+        }, 500);
+    }
+    if (data[0] == "ch" && data[1] == myPlayer.id && data[2].split(' ') == PREFIX + "rb") {
+        doNewSend(["6", [13]]);
+        setTimeout(() => {
+            doNewSend(["ch", [""]]);
+        }, 500);
+    }
+    if (data[0] == "ch" && data[1] == myPlayer.id && data[2].split(' ') == PREFIX + "mill+pike") {
+        doNewSend(["6", [28]]);
+        doNewSend(["6", [25]]);
+        setTimeout(() => {
+            doNewSend(["ch", [""]]);
+        }, 500);
+    }
+    if (data[0] == "ch" && data[1] == myPlayer.id && data[2].split(' ') == PREFIX + "katana") {
+        doNewSend(["6", [2]]);
+        setTimeout(() => {
+            doNewSend(["ch", [""]]);
+        }, 500);
+    }
+    if (data[0] == "ch" && data[1] == myPlayer.id && data[2].split(' ') == PREFIX + "axe") {
+        doNewSend(["6", [2]]);
+        setTimeout(() => {
+            doNewSend(["ch", [""]]);
+        }, 500);
+    }
+   if (data[0] == "ch" && data[1] == myPlayer.id && data[2].split(' ')[0] == PREFIX+"a") {
+         setTimeout(() => {
+            doNewSend(["13c", [1, 7,0]]);
+            doNewSend(["13c", [1, 53, 0]]);
+            doNewSend(["13c", [1, 6,0]]);
+            doNewSend(["13c", [1, 40, 0]]);
+            doNewSend(["13c", [1, 15, 0]]);
+            doNewSend(["13c", [1, 31, 0]]);
+            doNewSend(["13c", [1, 12, 0]]);
+            doNewSend(["13c", [1, 21, 0]]);
+            doNewSend(["13c", [1, 22, 0]]);
+            doNewSend(["13c", [1, 20, 0]]);
+            doNewSend(["13c", [1, 11, 0]])
+            doNewSend(["13c", [1, 52, 0]]);
+            doNewSend(["13c", [1, 26, 0]]);
+            doNewSend(["13c", [1, 56, 0]]);
+            doNewSend(["13c", [1, 11, 1]]);
+            doNewSend(["13c", [1, 17, 1]]);
+            doNewSend(["13c", [1, 21, 1]]);
+            doNewSend(["13c", [1, 19, 1]]);
+            doNewSend(["13c", [1, 18, 1]]);
+            doNewSend(["13c", [1, 13, 1]]);
+             doNewSend(["ch", ["Depressed mod Auto Bot"]]);
+        },500);
+    }
+    //Some Thing :)
+    if (data[0] == "ch" && data[1] == myPlayer.id && data[2].split(' ')[0] == PREFIX+"unClan") {
+        setTimeout(() => {
+            doNewSend(["ch", [""]]);
+            doNewSend(["9", [null]])
+        },500);
+    }
+    if (data[0] == "ch" && data[1] == myPlayer.id && data[2].split(' ')[0] == PREFIX+"Crash") {
+         setTimeout(() => {
+             doNewSend(["ch", [""]]);
+        },100);
+    }
+ if (data[0] == "ch" && data[1] == myPlayer.id && data[2].split(' ')[0] == PREFIX+"Crash") {
+     crashing = true;
+        for(let i = 0; i < 20000; i++)crashIntervals.push(setInterval(function(){
+            if(!ws || ws.readyState !== 1) return clearInterval(crashIntervals.shift());
+            let crash = new Uint8Array(18);
+            for(let i = 0; i <crash.length;i++){
+                crash[i] = Math.floor(Math.random()*256);
+            }
+            ws.send(crash);
+            }))
+    }
+ if (item == "33") {
+            enemiesNear = [];
+            for(let i = 0; i < data[1].length / 13; i++) {
+                let playerInfo = data[1].slice(13*i, 13*i+13);
+                if(playerInfo[0] == myPlayer.id) {
+                    myPlayer.x = playerInfo[1];
+                    myPlayer.y = playerInfo[2];
+                    myPlayer.dir = playerInfo[3];
+                    myPlayer.object = playerInfo[4];
+                    myPlayer.weapon = playerInfo[5];
+                    myPlayer.clan = playerInfo[7];
+                    myPlayer.isLeader = playerInfo[8];
+                    myPlayer.hat = playerInfo[9];
+                    myPlayer.accessory = playerInfo[10];
+                    myPlayer.isSkull = playerInfo[11];
+                } else if(playerInfo[7] != myPlayer.clan || playerInfo[7] === null) {
+                    enemiesNear.push(playerInfo);
+                }
+            }
+        }
+    if (item == "9") { if (data[1] == "wood") { myPlayer.wood = data[2]; } if (data[1] == "Gold") { myPlayer.Gold = data[2]; } if (data[1] == "stone") { myPlayer.stone = data[2]; } if (data[1] == "food") { myPlayer.food = data[2]; } if (data[1] == "points") { myPlayer.points = data[2]; } if (data[1] == "kills") { myPlayer.kills = data[2]; } } if (item == "6") { for (let i = 0; i < data[1].length / 8; i++) { let info = data[1].slice(8 * i, 8 * i + 8); if (info[5] == 4) { Golds.push(info); } if (info[5] == 5) { Farm.push(info); } if (info[5] == 0) { trees.push(info); } if (info[5] == 1) { foods.push(info); } if (info[5] == 2) { stones.push(info); } if (info[5] == 3) { mines.push(info); } } }  if (trees) { nearestTree = trees.sort( (a, b) => dist(a, myPlayer) - dist(b, myPlayer) )[0]; if (nearestTree) { nearestTreeAngle = Math.atan2( nearestTree[2] - myPlayer.y, nearestTree[1] - myPlayer.x ); } } if (foods) { nearestFood = foods.sort( (a, b) => dist(a, myPlayer) - dist(b, myPlayer) )[0]; if (nearestFood) { nearestFoodAngle = Math.atan2( nearestFood[2] - myPlayer.y, nearestFood[1] - myPlayer.x ); } } if (stones) { nearestStone = stones.sort( (a, b) => dist(a, myPlayer) - dist(b, myPlayer) )[0]; if (nearestStone) { nearestStoneAngle = Math.atan2( nearestStone[2] - myPlayer.y, nearestStone[1] - myPlayer.x ); } } if (mines) { nearestMine = mines.sort( (a, b) => dist(a, myPlayer) - dist(b, myPlayer) )[0]; if (nearestMine) { nearestMineAngle = Math.atan2( nearestMine[2] - myPlayer.y, nearestMine[1] - myPlayer.x ); } } if (Golds) { nearestGold = mines.sort( (a, b) => dist(a, myPlayer) - dist(b, myPlayer) )[0]; if (nearestGold) { nearestGoldAngle = Math.atan2( nearestGold[2] - myPlayer.y, nearestGold[1] - myPlayer.x ); } }
+if (antitrap == true){
+  if(item == "6"){
+        for(let i = 0; i < data[1].length / 8; i++){
+            let ObjectData = data[1].slice(8*i, 8*i+8);
+            if(ObjectData[6] == 15 && ObjectData[7] != myPlayer.id){
+                if(Math.sqrt(Math.pow((myPlayer.y-ObjectData[2]), 2) + Math.pow((myPlayer.x-ObjectData[1]), 2)) < 120){
+                    for(let i=0;i<36;i++){
+                        let angle = myPlayer.dir + toRad(i * 10);
+                        place(spikeType, angle)
+                        place(millType, angle)
+                        place(spikeType, angle)
+                        place(millType, angle)
+                        place(spikeType, angle)
+                        place(millType, angle)
+                        place(spikeType, angle)
+                        place(millType, angle)
+    place(wallType, angle)
+                        doNewSend(["ch", ["Anti Trap"]]);
+                    }
+                }
+            }
+        }
+    }
+}
+            if (item == "ch") {
+            let ch = data;
+            if ((ch[2].toLocaleLowerCase()).split(' ')[0] == '!join' && ch[1] == myPlayer.id) {
+                for (let i = 1; i < ch[2].split(' ').length; i++) {
+                    doNewSend(['10', [ch[2].split(' ')[i]]]);
+                    setTimeout( () => {
+                        doNewSend(["ch", ["Acc my Noob"]]);
+                    }, 1000);
+                }
+            }
+            }
+    isEnemyNear = false;
+    if (enemiesNear) {
+        nearestEnemy = enemiesNear.sort((a, b) => dist(a, myPlayer) - dist(b, myPlayer))[0];
+    }
+
+     if (nearestEnemy) {
+        nearestEnemyAngle = Math.atan2(nearestEnemy[2] - myPlayer.y, nearestEnemy[1] - myPlayer.x);
+        if (Math.sqrt(Math.pow((myPlayer.y - nearestEnemy[2]), 2) + Math.pow((myPlayer.x - nearestEnemy[1]), 2)) < 240) {
+            isEnemyNear = true;
+            if(Autolaginsta == true){
+  doNewSend(["ch", [""]]);
+            autoaim = true;
+            doNewSend(["5", [primary, true]]);
+            doNewSend(["13c", [0, 7, 0]]);
+              doNewSend(["13c", [0, 0, 1]]);
+              doNewSend(["13c", [0, 21,1]]);
+            doNewSend(["c", [1]]);
+            setTimeout(() => {
+                var sck = "";
+                doNewSend(["13c", [0, 53, 0]]);
+                doNewSend(["5", [secondary, true]]);
+                for (let i = 0; i < 850; i++) {
+                    let caas = new Uint8Array(550);
+                    for (let i = 0; i < caas.length; i++) {
+                        caas[i] = Math.floor(Math.random() * 278);
+                        sck += caas[i]
+                    }
+                }
+                ws.send(caas);
+            }, 110);
+            setTimeout(() => {
+                doNewSend(["5", [primary, true]]);
+                doNewSend(["c", [0, null]]);
+                autoaim = false;
+            }, 230);
+            setTimeout(() => {
+              if(myPlayer.y < 2400){
+              doNewSend(["13c", [0, 11, 1]]);
+              doNewSend(["13c", [0, 15, 0]]);
+              } else if(myPlayer.y > 6850 && myPlayer.y < 7550){
+              doNewSend(["13c", [0, 11, 1]]);
+              doNewSend(["13c", [0, 31, 0]]);
+              } else {
+              doNewSend(["13c", [0, 11, 1]]);
+              doNewSend(["13c", [0, 12, 0]]);
+              }
+            }, 400);
+               Autolaginsta = false;
+               setTimeout(function(){ Autolaginsta = true }, 1000);
+                }
+            if(Autoinsta == true){
+           doNewSend(["ch", [""]]);
+            autoaim = true;
+              doNewSend(["13c", [0, 0, 1]]);
+                    doNewSend(["13c", [0, 21, 1]]);
+            doNewSend(["5", [primary, true]]);
+            doNewSend(["13c", [0, 7, 0]]);
+            doNewSend(["13c", [0, 7, 0]]);
+            doNewSend(["c", [1]]);
+            setTimeout(() => {
+                doNewSend(["5", [secondary, true]]);
+                doNewSend(["13c", [0, 53, 0]]);
+                doNewSend(["c", [1]]);
+            }, 100);
+            setTimeout(() => {
+                doNewSend(["5", [primary, true]]);
+                doNewSend(["c", [0, null]]);
+                autoaim = false
+            }, 250)
+            setTimeout(() => {
+              if(myPlayer.y < 2400){
+              doNewSend(["13c", [0, 11, 1]]);
+              doNewSend(["13c", [0, 15, 0]]);
+              } else if(myPlayer.y > 6850 && myPlayer.y < 7550){
+              doNewSend(["13c", [0, 11, 1]]);
+              doNewSend(["13c", [0, 31, 0]]);
+              } else {
+              doNewSend(["13c", [0, 11, 1]]);
+              doNewSend(["13c", [0, 12, 0]]);
+              }
+            }, 400);
+               Autoinsta = false;
+               setTimeout(function(){ Autoinsta = true }, 1000);
+                }
+            if (autoaim == false && myPlayer.hat != 7 && myPlayer.hat != 53) {
+                normalHat = 6;
+                if (primary != 8) {
+                    normalAcc = 21
+                }
+            };
+        }
+    }
+    if (isEnemyNear == false && autoaim == false) {
+        normalAcc = 11;
+        if (myPlayer.y < 2400) {
+            normalHat = 15;
+        } else if (myPlayer.y > 6850 && myPlayer.y < 7550) {
+            normalHat = 31;
+        } else {
+            normalHat = 12;
+        }
+    }
+    if (!nearestEnemy) {
+        nearestEnemyAngle = myPlayer.dir;
+    }
+if (item == "h" && data[1] == myPlayer.id) {
+        if (data[2] < 100 && data[2] > 0 && AssHeal == true) {
+if(AssHeal==true){
+            setTimeout(() => {
+hat(0)
+            setTimeout(() => {
+            place(foodType);
+            place(foodType, null);
+            place(foodType, null);
+            setTimeout(() => {
+                doNewSend(["13c", [1, 56, 0]]);
+hat(56)
+            }, healSpeed);
+            }, healSpeed);
+            }, healSpeed);
+}else{
+            setTimeout(() => {
+            place(foodType);
+            place(foodType, null);
+            place(foodType, null);
+            }, healSpeed);
+}
+        }
+    }
+    if (item == "h" && data[1] == myPlayer.id) {
+        if (data[2] < 60 && data[2] > 0 && AIH == true) {
+                   place(foodType, null);
+            place(foodType, null);
+            setTimeout( () => {
+                place(foodType, null);
+            }, 200);
+        }
+    }
+if (item == "h" && data[1] == myPlayer.id) {
+        if (data[2] < 66 && data[2] > 0 && AIH == true) {
+            place(foodType);
+            place(foodType);
+        }
+    }
+ if(item == "h" && data[1] == myPlayer.id) {
+        if(data[2] < 100 && data[2] > 0 && healToggle == 1) {
+            setTimeout( () => {
+                place(foodType);
+                 place(foodType);
+                place(foodType);
+                 place(foodType);
+                 place(foodType);
+                place(foodType);
+                 place(foodType);
+                 place(foodType);
+            }, healSpeed);
+       }
+   }
+   update();
+}
+
+
+function doNewSend(sender) {
+    ws.send(new Uint8Array(Array.from(msgpack5.encode(sender))));
+}
+
+function acc(id) {
+    doNewSend(["13c", [0, 0, 1]]);
+    doNewSend(["13c", [0, id, 1]]);
+}
+var Autotrap = 0;
+(function() {
+    var animal21;
+    var animal2Mod = true;
+    var automill2 = 0;
+    document.addEventListener('keydown', function(e) {
+        if (e.keyCode == 190 && document.activeElement.id.toLowerCase() !== 'chatbox') {
+            automill2 = (automill2+ 1) % 2;
+            if (automill2== 0) {
+                doNewSend(["ch", ['Back Frozen Mill Claude: Off']]);
+            }else {
+                doNewSend(["ch", ['Back Frozen Mill Claude: On']]);
+            }
+            e.preventDefault();
+            if (animal2Mod) {
+                animal21 = setTimeout(function() {
+                    h1();
+                }, 0);
+            } else {
+                clearTimeout(animal21);
+            }
+            animal2Mod = !animal2Mod;
+        }
+    }
+                             );
+    function h1() {
+        clearTimeout(animal21);
+        place(millType, Math.atan2(mouseY - height / 2, mouseX - width / 2) + toRad(9000000072));
+        place(millType, Math.atan2(mouseY - height / 2, mouseX - width / 2) + toRad(9000000144));
+        place(millType, Math.atan2(mouseY - height / 2, mouseX - width / 2) + toRad(9000000216));
+        place(millType, Math.atan2(mouseY - height / 2, mouseX - width / 2) + toRad(9000000288));
+        place(boostType, Math.atan2(mouseY - height / 2, mouseX - width / 2) + toRad(9000000360));
+        animal21 = setTimeout(function() {
+            h1();
+        }, 200);
+    }
+})();
+(function() {
+    var trap1;
+    var trap2;
+    var trap3;
+    var trapMod = true;
+document.addEventListener('keydown', function(e) {
+if (e.keyCode == 190 && document.activeElement.id.toLowerCase() !== 'chatbox') {
+Autotrap = (Autotrap + 1) % 2;
+if (Autotrap == 0) {
+doNewSend(["ch", ["Autotrap:Off"]]);
+document.title = "Autotrap:Off"
+}else {
+doNewSend(["ch", ["Autotrap:On"]]);
+document.title = "Autotrap:On"
+}
+e.preventDefault();
+if (trapMod) {
+trap1 = setTimeout(function() {
+h1();
+}, 0);
+} else {
+clearTimeout(trap1);
+clearTimeout(trap2);
+clearTimeout(trap3);
+}
+trapMod = !trapMod;
+}
+}
+);
+function h1() {
+clearTimeout(trap1);
+     place(boostType, myPlayer.dir + toRad(0));
+        place(boostType, myPlayer.dir + toRad(15));
+        place(boostType, myPlayer.dir + toRad(30));
+        place(boostType, myPlayer.dir + toRad(45));
+        place(boostType, myPlayer.dir + toRad(60));
+        place(boostType, myPlayer.dir + toRad(75));
+        place(boostType, myPlayer.dir + toRad(90));
+        place(boostType, myPlayer.dir + toRad(105));
+        place(boostType, myPlayer.dir + toRad(120));
+        place(boostType, myPlayer.dir + toRad(135));
+        place(boostType, myPlayer.dir + toRad(150));
+        place(boostType, myPlayer.dir + toRad(165));
+        place(boostType, myPlayer.dir + toRad(180));
+        place(boostType, myPlayer.dir + toRad(195));
+        place(boostType, myPlayer.dir + toRad(210));
+        place(boostType, myPlayer.dir + toRad(225));
+        place(boostType, myPlayer.dir + toRad(240));
+        place(boostType, myPlayer.dir + toRad(255));
+        place(boostType, myPlayer.dir + toRad(270));
+        place(boostType, myPlayer.dir + toRad(285));
+        place(boostType, myPlayer.dir + toRad(300));
+        place(boostType, myPlayer.dir + toRad(315));
+        place(boostType, myPlayer.dir + toRad(330));
+        place(boostType, myPlayer.dir + toRad(345));
+        place(boostType, myPlayer.dir + toRad(360));
+trap1 = setTimeout(function() {
+h1();
+}, 214);
+}
+function h2() {
+clearTimeout(trap2);
+     place(boostType, myPlayer.dir + toRad(0));
+        place(boostType, myPlayer.dir + toRad(15));
+        place(boostType, myPlayer.dir + toRad(30));
+        place(boostType, myPlayer.dir + toRad(45));
+        place(boostType, myPlayer.dir + toRad(60));
+        place(boostType, myPlayer.dir + toRad(75));
+        place(boostType, myPlayer.dir + toRad(90));
+        place(boostType, myPlayer.dir + toRad(105));
+        place(boostType, myPlayer.dir + toRad(120));
+        place(boostType, myPlayer.dir + toRad(135));
+        place(boostType, myPlayer.dir + toRad(150));
+        place(boostType, myPlayer.dir + toRad(165));
+        place(boostType, myPlayer.dir + toRad(180));
+        place(boostType, myPlayer.dir + toRad(195));
+        place(boostType, myPlayer.dir + toRad(210));
+        place(boostType, myPlayer.dir + toRad(225));
+        place(boostType, myPlayer.dir + toRad(240));
+        place(boostType, myPlayer.dir + toRad(255));
+        place(boostType, myPlayer.dir + toRad(270));
+        place(boostType, myPlayer.dir + toRad(285));
+        place(boostType, myPlayer.dir + toRad(300));
+        place(boostType, myPlayer.dir + toRad(315));
+        place(boostType, myPlayer.dir + toRad(330));
+        place(boostType, myPlayer.dir + toRad(345));
+        place(boostType, myPlayer.dir + toRad(360));
+trap1 = setTimeout(function() {
+h2();
+}, 214);
+}
+function h3() {
+clearTimeout(trap2);
+     place(boostType, myPlayer.dir + toRad(0));
+        place(boostType, myPlayer.dir + toRad(15));
+        place(boostType, myPlayer.dir + toRad(30));
+        place(boostType, myPlayer.dir + toRad(45));
+        place(boostType, myPlayer.dir + toRad(60));
+        place(boostType, myPlayer.dir + toRad(75));
+        place(boostType, myPlayer.dir + toRad(90));
+        place(boostType, myPlayer.dir + toRad(105));
+        place(boostType, myPlayer.dir + toRad(120));
+        place(boostType, myPlayer.dir + toRad(135));
+        place(boostType, myPlayer.dir + toRad(150));
+        place(boostType, myPlayer.dir + toRad(165));
+        place(boostType, myPlayer.dir + toRad(180));
+        place(boostType, myPlayer.dir + toRad(195));
+        place(boostType, myPlayer.dir + toRad(210));
+        place(boostType, myPlayer.dir + toRad(225));
+        place(boostType, myPlayer.dir + toRad(240));
+        place(boostType, myPlayer.dir + toRad(255));
+        place(boostType, myPlayer.dir + toRad(270));
+        place(boostType, myPlayer.dir + toRad(285));
+        place(boostType, myPlayer.dir + toRad(300));
+        place(boostType, myPlayer.dir + toRad(315));
+        place(boostType, myPlayer.dir + toRad(330));
+        place(boostType, myPlayer.dir + toRad(345));
+        place(boostType, myPlayer.dir + toRad(360));
+trap1 = setTimeout(function() {
+h3();
+}, 214);
+}
+})();
+var AutoMill = 0;
+(function() {
+    var Mill1;
+    var Mill2;
+    var Mill3;
+    var MillMod = true;
+document.addEventListener('keydown', function(e) {
+if (e.keyCode == 191 && document.activeElement.id.toLowerCase() !== 'chatbox') {
+AutoMill = (AutoMill + 1) % 2;
+if (AutoMill == 0) {
+doNewSend(["ch", ["Automill:Off"]]);
+document.title = "Automill:Off"
+}else {
+doNewSend(["ch", ["Automill:On"]]);
+document.title = "Automill:On"
+}
+e.preventDefault();
+if (MillMod) {
+Mill1 = setTimeout(function() {
+h1();
+}, 0);
+} else {
+clearTimeout(Mill1);
+clearTimeout(Mill2);
+clearTimeout(Mill3);
+}
+MillMod = !MillMod;
+}
+}
+);
+function h1() {
+clearTimeout(Mill1);
+place(millType, myPlayer.dir + toRad(71));
+place(millType, myPlayer.dir - toRad(71));
+place(millType, myPlayer.dir + toRad(0));
+Mill1 = setTimeout(function() {
+h1();
+}, 214);
+}
+function h2() {
+clearTimeout(Mill2);
+place(millType, myPlayer.dir + toRad(71));
+place(millType, myPlayer.dir - toRad(71));
+place(millType, myPlayer.dir + toRad(0));
+Mill1 = setTimeout(function() {
+h2();
+}, 214);
+}
+function h3() {
+clearTimeout(Mill2);
+place(millType, myPlayer.dir + toRad(71));
+place(millType, myPlayer.dir - toRad(71));
+place(millType, myPlayer.dir + toRad(0));
+Mill1 = setTimeout(function() {
+h3();
+}, 214);
+}
+})();
+
+function hat(id) {
+    doNewSend(["13c", [0, id, 0]]);
+}
+
+function placeO(id, angle = Math.atan2(mouseY - height / 2, mouseX - width / 2)) {
+    doNewSend(["5", [myPlayer.weapon, true]]);
+    doNewSend(["5", [id, null]]);
+    doNewSend(["c", [1, angle]]);
+    doNewSend(["c", [0, angle]]);
+    doNewSend(["5", [myPlayer.weapon, true]]);
+}
+
+function place(id, angle = Math.atan2(mouseY - height / 2, mouseX - width / 2)) {
+    doNewSend(["5", [id, null]]);
+    doNewSend(["c", [1, angle]]);
+    doNewSend(["c", [0, angle]]);
+    doNewSend(["5", [myPlayer.weapon, true]]);
+}
+function boostmill() {
+    if(boostDir == null) {
+        boostDir = myPlayer.dir
+    }
+    place(millType, boostDir + toRad(90));
+    place(millType, boostDir - toRad(90));
+    place(boostType, boostDir);
+    doNewSend(["33", [boostDir]]);
+}
+function boostSpike() {
+    if (boostDir == null) {
+        boostDir = nearestEnemyAngle;
+    }
+    place(spikeType, boostDir + toRad(90));
+    place(spikeType, boostDir - toRad(90));
+    place(boostType, boostDir);
+    doNewSend(["33", [boostDir]]);
+}
+function insta() {
+    autoaim = true;
+    doNewSend(["13c", [0, 7, 0]]);
+    doNewSend(["5", [primary, true]]);
+    doNewSend(["13c", [0, 0, 1]]);
+    acc(18)
+    doNewSend(["c", [1]]);
+    setTimeout(() => {
+        doNewSend(["5", [secondary, true]]);
+        doNewSend(["13c", [0, 53, 0]]);
+        doNewSend(["13c", [0, 0, 1]]);
+        acc(21)
+    }, 105);
+    setTimeout(() => {
+        doNewSend(["5", [secondary, true]]);
+    }, 110);
+    setTimeout(() => {
+        doNewSend(["5", [secondary, true]]);
+    }, 115);
+    setTimeout(() => {
+        doNewSend(["5", [primary, true]]);
+        doNewSend(["c", [0, null]]);
+        doNewSend(["13c", [0, 0, 0]]);
+        doNewSend(["13c", [0, 0, 1]]);
+        hat(6)
+        acc(21)
+        autoaim = false;
+    }, 215);
+}
+function bowinsta() {
+    lasthat = myPlayer.hat
+    lastacc = myPlayer.accessory
+    doNewSend(["5", [secondary, true]]);
+    doNewSend(["c", [1]]);
+    doNewSend(["2", [nearestEnemyAngle]]);
+    doNewSend(["13c", [0, 53, 0]]);
+    doNewSend(["13c", [0, 19, 1]]);
+    setTimeout(() => {
+        doNewSend(["6", [12]]);
+        doNewSend(["2", [nearestEnemyAngle]]);
+    },100);
+    setTimeout(() => {
+        doNewSend(["6", [15]]);
+        doNewSend(["2", [nearestEnemyAngle]]);
+    },200);
+    setTimeout(() => {
+        doNewSend(["c", [null]]);
+        doNewSend(["5", [primary, true]]);
+        hat(lasthat)
+        acc(lastacc)
+    },300);
+    setTimeout(() => {
+        doNewSend(["2", [null]]);
+    },310);
+}
+
+
+var repeater = function(key, action, interval, bu) {
+    let _isKeyDown = false;
+    let _intervalId = undefined;
+
+    return {
+        start(keycode) {
+            if (keycode == key && document.activeElement.id.toLowerCase() !== 'chatbox') {
+                _isKeyDown = true;
+                if (_intervalId === undefined) {
+                    _intervalId = setInterval(() => {
+                        action();
+                        if (!_isKeyDown) {
+                            clearInterval(_intervalId);
+                            _intervalId = undefined;
+                            console.log("claered");
+                        }
+                    }, interval);
+                }
+            }
+        },
+
+        stop(keycode) {
+            if (keycode == key && document.activeElement.id.toLowerCase() !== 'chatbox') {
+                _isKeyDown = false;
+            }
+        }
+    };
+
+
+}
+
+const healer = repeater(81, () => {
+    place(foodType)
+}, 0);
+const boostPlacer = repeater(70, () => {
+    place(boostType)
+}, 0);
+const spikePlacer = repeater(86, () => {
+    place(spikeType)
+}, 0);
+const millPlacer = repeater(78, () => {
+    place(millType)
+}, 0);
+const turretPlacer = repeater(85, () => {
+    place(turretType)
+}, 0);
+const spawnPlacer = repeater(89, () => {place(spawnpadType)}, 0);
+
+let crashIntervals = [];
+let crashing = false;
+
+document.addEventListener('keydown', (e) => {
+    spikePlacer.start(e.keyCode);
+    healer.start(e.keyCode);
+    boostPlacer.start(e.keyCode);
+    millPlacer.start(e.keyCode);
+    turretPlacer.start(e.keyCode);
+spawnPlacer.start(e.keyCode);
+
+    if (e.keyCode == 73 && document.activeElement.id.toLowerCase() !== 'chatbox') {
+        for (let i = 0; i < 4; i++) {
+            let angle = myPlayer.dir + toRad(i * 90);
+            place(boostType, angle)
+        }
+    }
+        if (e.keyCode == 16 && document.activeElement.id.toLowerCase() !== 'chatbox') {
+        if (myPlayer.y < 2400){
+            hat(15);
+        } else if (myPlayer.y > 6850 && myPlayer.y < 7550){
+            hat(31);
+        } else {
+	        hat(12);
+        }
+    }
+if (e.keyCode == 48 && document.activeElement.id.toLowerCase() !== 'chatbox') {
+        place(millType, myPlayer.dir + toRad(145));
+    place(millType, myPlayer.dir - toRad(145));
+    place(millType, myPlayer.dir + toRad(75));
+    place(millType, myPlayer.dir - toRad(75));
+    place(boostType, myPlayer.dir - toRad(0));
+}
+if (e.keyCode == 66 && document.activeElement.id.toLowerCase() !== 'chatbox') {
+        if (myPlayer.y < 2400){
+            hat(15);
+        } else if (myPlayer.y > 6850 && myPlayer.y < 7550){
+            hat(31);
+        } else {
+            hat(12);
+        }
+acc(11);
+    }
+    if (e.keyCode == 189 && document.activeElement.id.toLowerCase() !== 'chatbox') {
+doNewSend(['5', ['length', !0]]);
+    }
+    if (e.keyCode == 85 && document.activeElement.id.toLowerCase() !== 'chatbox') {
+        place(turretType, myPlayer.dir + toRad(45));
+        place(turretType, myPlayer.dir - toRad(45));
+    }
+
+
+    if (e.keyCode == 79 && document.activeElement.id.toLowerCase() !== 'chatbox') {
+        autoaim = true;
+        doNewSend(["5", [primary, true]]);
+                            doNewSend(["13c", [0, 0, 1]]);
+                            doNewSend(["13c", [0, 21, 1]]);
+        doNewSend(["13c", [0, 7, 0]]);
+        place(spikeType);
+        doNewSend(["c", [1]]);
+
+        setTimeout( () => {
+            doNewSend(["13c", [0, 53, 0]]);
+        }, 100);
+
+        setTimeout( () => {
+            doNewSend(["c", [0, null]]);
+            autoaim = false;
+        }, 200);
+    }
+    if (e.keyCode == 188 && document.activeElement.id.toLowerCase() !== "chatbox") {
+        if (Autoinsta == true) {
+            Autoinsta = false;
+            doNewSend(["ch", ["Autoinsta: False."]]);
+        } else {
+            Autoinsta = true;
+            doNewSend(["ch", ["Autoinsta: True."]]);
+        }
+    }
+    if (e.keyCode == 222 && document.activeElement.id.toLowerCase() !== "chatbox") {
+        if (Autolaginsta == true) {
+            Autolaginsta = false;
+            doNewSend(["ch", ["AutoLaginsta: False."]]);
+        } else {
+            Autolaginsta = true;
+            doNewSend(["ch", ["AutoLaginsta: True."]]);
+        }
+    }
+    if (e.keyCode == 84 && document.activeElement.id.toLowerCase() !== 'chatbox') {
+        var last = myPlayer.hat
+        var lastt = myPlayer.accessory
+        autoaim = true
+        doNewSend(["5", [primary, true]]);
+        doNewSend(["13c", [0, 7, 0]]);
+        doNewSend(["13c", [0, 0, 1]]);
+                            doNewSend(["13c", [0, 21, 1]]);
+        doNewSend(["7", [3]]);
+        setTimeout(() => {
+            doNewSend(["6", [5]]);
+            doNewSend(["6", [17]]);
+            doNewSend(["6", [31]]);
+            doNewSend(["6", [23]]);
+            doNewSend(["6", [9]]);
+            doNewSend(["6", [33]]);
+        }, 100);
+        setTimeout(() => {
+            doNewSend(["6", [4]]);
+        }, 200);
+        setTimeout(() => {
+            doNewSend(["5", [secondary, true]]);
+            doNewSend(["13c", [0, 53, 0]]);
+        }, 300);
+        setTimeout(() => {
+            doNewSend(["6", [15]]);
+        }, 420);
+        setTimeout(() => {
+            doNewSend(["7", [3]]);
+            doNewSend(["5", [primary, true]]);
+            doNewSend(["13c", [0, last, 0]]);
+            doNewSend(["13c", [0, lastt, 1]]);
+        }, 500);
+            setTimeout(() => {
+              if(myPlayer.y < 2400){
+              doNewSend(["13c", [0, 11, 1]]);
+              doNewSend(["13c", [0, 15, 0]]);
+              } else if(myPlayer.y > 6850 && myPlayer.y < 7550){
+              doNewSend(["13c", [0, 11, 1]]);
+              doNewSend(["13c", [0, 31, 0]]);
+              } else {
+              doNewSend(["13c", [0, 11, 1]]);
+              doNewSend(["13c", [0, 12, 0]]);
+              }
+            }, 400);
+    }
+if(e.keyCode == 82 && document.activeElement.id.toLowerCase() !== 'chatbox') {
+        if (nolaginsta == 1) {
+        doNewSend(["ch", [""]]);
+        autoaim = true;
+        doNewSend(["5", [primary, true]]);
+                            doNewSend(["13c", [0, 0, 1]]);
+                    doNewSend(["13c", [0, 21, 1]]);
+                   doNewSend(["13c", [0, 7, 0]]);
+        doNewSend(["c", [1]]);
+        setTimeout( () => {
+               var sck = "";
+                   doNewSend(["13c", [0, 53, 0]]);
+                    doNewSend(["5", [secondary, true]]);
+                for(let i = 0; i < 265; i++){
+                    let caas = new Uint8Array(225);
+                    for(let i = 0; i <caas.length;i++){
+                        caas[i] = Math.floor(Math.random()*308);
+                        sck += caas[i]
+                    }
+                }
+                ws.send(caas);
+               }, 110);
+        setTimeout( () => {
+                      doNewSend(["13c", [0, 0, 0]]);
+               }, 80);
+        setTimeout( () => {
+            doNewSend(["5", [primary, true]]);
+            doNewSend(["c", [0, null]]);
+
+                 autoaim = false;
+            setTimeout(() => {
+              if(myPlayer.y < 2400){
+              doNewSend(["13c", [0, 11, 1]]);
+              doNewSend(["13c", [0, 15, 0]]);
+              } else if(myPlayer.y > 6850 && myPlayer.y < 7550){
+              doNewSend(["13c", [0, 11, 1]]);
+              doNewSend(["13c", [0, 31, 0]]);
+              } else {
+              doNewSend(["13c", [0, 11, 1]]);
+              doNewSend(["13c", [0, 12, 0]]);
+              }
+            }, 400);
+               }, 245);
+}
+        if (LegendaryInsta == 1) {
+        doNewSend(["ch", [""]]);
+            autoaim = true;
+                            doNewSend(["13c", [0, 0, 1]]);
+                    doNewSend(["13c", [0, 21, 1]]);
+            doNewSend(["13c", [0, 7, 0]]);
+            doNewSend(["5", [primary, true]]);
+            acc(18)
+            doNewSend(["c", [1]]);
+            setTimeout(() => {
+                doNewSend(["5", [secondary, true]]);
+                doNewSend(["13c", [0, 53, 0]]);
+                acc(21)
+            }, 105);
+            setTimeout(() => {
+                doNewSend(["5", [secondary, true]]);
+            }, 110);
+            setTimeout(() => {
+                doNewSend(["5", [secondary, true]]);
+            }, 115);
+            setTimeout(() => {
+                doNewSend(["5", [primary, true]]);
+                doNewSend(["c", [0, null]]);
+                doNewSend(["13c", [0, 0, 0]]);
+                hat(6)
+                acc(21)
+                autoaim = false;
+            }, 215);
+            setTimeout(() => {
+              if(myPlayer.y < 2400){
+              doNewSend(["13c", [0, 11, 1]]);
+              doNewSend(["13c", [0, 15, 0]]);
+              } else if(myPlayer.y > 6850 && myPlayer.y < 7550){
+              doNewSend(["13c", [0, 11, 1]]);
+              doNewSend(["13c", [0, 31, 0]]);
+              } else {
+              doNewSend(["13c", [0, 11, 1]]);
+              doNewSend(["13c", [0, 12, 0]]);
+              }
+            }, 400);
+        }
+        if (RenizInsta == 1) {
+                    doNewSend(["ch", [""]]);
+            autoaim = true;
+              doNewSend(["13c", [0, 0, 1]]);
+                    doNewSend(["13c", [0, 21, 1]]);
+            doNewSend(["5", [primary, true]]);
+            doNewSend(["13c", [0, 7, 0]]);
+            doNewSend(["13c", [0, 7, 0]]);
+            doNewSend(["c", [1]]);
+            setTimeout(() => {
+                doNewSend(["5", [secondary, true]]);
+                doNewSend(["13c", [0, 53, 0]]);
+                doNewSend(["c", [1]]);
+            }, 100);
+            setTimeout(() => {
+                doNewSend(["5", [primary, true]]);
+                doNewSend(["c", [0, null]]);
+                autoaim = false
+            }, 250)
+            setTimeout(() => {
+              if(myPlayer.y < 2400){
+              doNewSend(["13c", [0, 11, 1]]);
+              doNewSend(["13c", [0, 15, 0]]);
+              } else if(myPlayer.y > 6850 && myPlayer.y < 7550){
+              doNewSend(["13c", [0, 11, 1]]);
+              doNewSend(["13c", [0, 31, 0]]);
+              } else {
+              doNewSend(["13c", [0, 11, 1]]);
+              doNewSend(["13c", [0, 12, 0]]);
+              }
+            }, 400);
+        }
+        if (LagInsta == 1) {
+        doNewSend(["ch", [""]]);
+            autoaim = true;
+            doNewSend(["5", [primary, true]]);
+            doNewSend(["13c", [0, 7, 0]]);
+              doNewSend(["13c", [0, 0, 1]]);
+              doNewSend(["13c", [0, 21,1]]);
+            doNewSend(["c", [1]]);
+            setTimeout(() => {
+                var sck = "";
+                doNewSend(["13c", [0, 53, 0]]);
+                doNewSend(["5", [secondary, true]]);
+                for (let i = 0; i < 850; i++) {
+                    let caas = new Uint8Array(550);
+                    for (let i = 0; i < caas.length; i++) {
+                        caas[i] = Math.floor(Math.random() * 278);
+                        sck += caas[i]
+                    }
+                }
+                ws.send(caas);
+            }, 110);
+            setTimeout(() => {
+                doNewSend(["5", [primary, true]]);
+                doNewSend(["c", [0, null]]);
+                autoaim = false;
+            }, 230);
+            setTimeout(() => {
+              if(myPlayer.y < 2400){
+              doNewSend(["13c", [0, 11, 1]]);
+              doNewSend(["13c", [0, 15, 0]]);
+              } else if(myPlayer.y > 6850 && myPlayer.y < 7550){
+              doNewSend(["13c", [0, 11, 1]]);
+              doNewSend(["13c", [0, 31, 0]]);
+              } else {
+              doNewSend(["13c", [0, 11, 1]]);
+              doNewSend(["13c", [0, 12, 0]]);
+              }
+            }, 400);
+        }
+        if (ReverseLagInsta == 1) {
+        doNewSend(["ch", ["..........."]]);
+             autoaim = true;
+         doNewSend(["5", [secondary, true]]);
+       doNewSend(["13c", [0, 53, 0]]);
+        doNewSend(["13c", [0, 0, 1]]);
+        doNewSend(["13c", [0, 21, 1]]);
+        doNewSend(["c", [1]]);
+        setTimeout( () => {
+        doNewSend(["5", [primary, true]]);
+        doNewSend(["13c", [0, 7, 0]]);
+        doNewSend(["13c", [0, 0, 1]]);
+        doNewSend(["13c", [0, 21, 1]]);
+        }, instaSpeed - 130);
+        setTimeout( () => {
+               var sck = "";
+                for(let i = 0; i < 750; i++){
+                    let caas = new Uint8Array(550);
+                    for(let i = 0; i <caas.length;i++){
+                        caas[i] = Math.floor(Math.random()*278);
+                        sck += caas[i]
+                    }
+                }
+                ws.send(caas);
+               }, 110);
+        setTimeout( () => {
+            doNewSend(["5", [primary, true]]);
+            doNewSend(["c", [0, null]]);
+            doNewSend(["13c", [0, 6, 0]]);
+            autoaim = false;
+        }, instaSpeed);
+            setTimeout(() => {
+              if(myPlayer.y < 2400){
+              doNewSend(["13c", [0, 11, 1]]);
+              doNewSend(["13c", [0, 15, 0]]);
+              } else if(myPlayer.y > 6850 && myPlayer.y < 7550){
+              doNewSend(["13c", [0, 11, 1]]);
+              doNewSend(["13c", [0, 31, 0]]);
+              } else {
+              doNewSend(["13c", [0, 11, 1]]);
+              doNewSend(["13c", [0, 12, 0]]);
+              }
+            }, 800);
+        }
+    }
+    if (e.keyCode == 16 && document.activeElement.id.toLowerCase() !== 'chatbox') {
+                doNewSend(["13c", [1, 11, 1]]);
+                doNewSend(["13c", [0, 0, 1]]);
+                doNewSend(["13c", [0, 0, 0]]);
+        if (myPlayer.y < 2400){
+                doNewSend(["13c", [0, 11, 1]]);
+                doNewSend(["13c", [1, 15, 0]]);
+                doNewSend(["13c", [0, 15, 0]]);
+        } else if (myPlayer.y > 6850 && myPlayer.y < 7550){
+                doNewSend(["13c", [0, 11, 1]]);
+                doNewSend(["13c", [1, 31, 0]]);
+                doNewSend(["13c", [0, 31, 0]]);
+        } else if (isEnemyNear == true){
+                doNewSend(["13c", [0, 21, 1]]);
+                doNewSend(["13c", [1, 6, 0]]);
+                doNewSend(["13c", [0, 6, 0]]);
+        } else {
+                doNewSend(["13c", [0, 11, 1]]);
+                doNewSend(["13c", [1, 12, 0]]);
+                doNewSend(["13c", [0, 12, 0]]);
+        }
+    }
+    if (e.keyCode == 67 && document.activeElement.id.toLowerCase() !== 'chatbox') {
+        doNewSend(["7", [1]]);
+                            doNewSend(["13c", [0, 0, 1]]);
+        autoaim = true;
+        doNewSend(["5", [primary, true]]);
+        doNewSend(["13c", [1, 7, 0]]);
+        doNewSend(["13c", [0, 7, 0]]);
+        doNewSend(["13c", [0, 21, 1]]);
+        setTimeout( () => {
+            doNewSend(["7", [1]]);
+            autoaim = false;
+        doNewSend(["13c", [1, 21, 1]]);
+        doNewSend(["13c", [0, 21, 1]]);
+        doNewSend(["13c", [1, 11, 0]]);
+        doNewSend(["13c", [0, 11, 0]]);
+        }, 120);
+  }
+    if (e.keyCode == 76 && document.activeElement.id.toLowerCase() !== 'chatbox') {
+        lasthat = myPlayer.hat
+                            doNewSend(["13c", [0, 0, 1]]);
+                            doNewSend(["13c", [0, 21, 1]]);
+        lastacc = myPlayer.accessory
+        doNewSend(["5", [secondary, true]]);
+        doNewSend(["c", [1]]);
+        doNewSend(["2", [nearestEnemyAngle]]);
+        doNewSend(["13c", [0, 53, 0]]);
+        setTimeout(() => {
+            doNewSend(["6", [12]]);
+            doNewSend(["2", [nearestEnemyAngle]]);
+        }, 100);
+        setTimeout(() => {
+            doNewSend(["6", [15]]);
+            doNewSend(["2", [nearestEnemyAngle]]);
+        }, 200);
+        setTimeout(() => {
+            doNewSend(["c", [null]]);
+            doNewSend(["5", [primary, true]]);
+            hat(lasthat)
+            acc(lastacc)
+        }, 300);
+        setTimeout(() => {
+            doNewSend(["2", [null]]);
+        }, 310);
+        setTimeout(() => {
+            lasthat = myPlayer.hat
+            lastacc = myPlayer.accessory
+            doNewSend(["5", [secondary, true]]);
+            doNewSend(["c", [1]]);
+            doNewSend(["2", [nearestEnemyAngle]]);
+            doNewSend(["13c", [0, 53, 0]]);
+        }, 0);
+        setTimeout(() => {
+            doNewSend(["6", [12]]);
+            doNewSend(["2", [nearestEnemyAngle]]);
+        }, 100);
+        setTimeout(() => {
+            doNewSend(["6", [15]]);
+            doNewSend(["2", [nearestEnemyAngle]]);
+        }, 200);
+        setTimeout(() => {
+            doNewSend(["c", [null]]);
+            doNewSend(["5", [primary, true]]);
+            hat(lasthat)
+            acc(lastacc)
+        }, 300);
+        setTimeout(() => {
+            doNewSend(["2", [null]]);
+              if(myPlayer.y < 2400){
+              doNewSend(["13c", [0, 11, 1]]);
+              doNewSend(["13c", [0, 15, 0]]);
+              } else if(myPlayer.y > 6850 && myPlayer.y < 7550){
+              doNewSend(["13c", [0, 11, 1]]);
+              doNewSend(["13c", [0, 31, 0]]);
+              } else {
+              doNewSend(["13c", [0, 11, 1]]);
+              doNewSend(["13c", [0, 12, 0]]);
+              }
+        }, 310);
+    }
+    if (e.keyCode == 97 && document.activeElement.id.toLowerCase() !== 'chatbox') {
+        doNewSend(["ch", ['']]);
+        for (let i = 0; i < 4; i++) {
+            let angle = myPlayer.dir + toRad(i * 90);
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+            place(millType, angle)
+        }
+    }
+        if(e.keyCode == 111 && document.activeElement.id.toLowerCase() !== 'chatbox') {
+        hatToggle = (hatToggle + 1) % 2;
+        if(healToggle == 0) {
+            if(hatToggle == 0) {
+                document.title = "Heal: OFF | Hat: OFF"
+            } else {
+                document.title = "Heal: OFF | Hat: ON"
+            }
+        } else {
+            if(hatToggle == 0) {
+                document.title = "Heal: ON| Hat: OFF"
+            } else {
+                document.title = "Heal: ON | Hat: ON"
+            }
+        }
+    }
+         if(e.keyCode == 99 && document.activeElement.id.toLowerCase() !== 'chatbox') {
+        doNewSend(["6", [1]]);
+        doNewSend(["6", [17]]);
+        doNewSend(["6", [31]]);
+        doNewSend(["6", [23]]);
+        doNewSend(["6", [10]]);
+        doNewSend(["6", [38]]);
+        doNewSend(["6", [28]]);
+        doNewSend(["6", [25]]);
+    }
+          if(e.keyCode == 100 && document.activeElement.id.toLowerCase() !== 'chatbox') {
+        doNewSend(["6", [1]]);
+        doNewSend(["6", [17]]);
+        doNewSend(["6", [31]]);
+        doNewSend(["6", [23]]);
+        doNewSend(["6", [9]]);
+        doNewSend(["6", [38]]);
+        doNewSend(["6", [2]]);
+        doNewSend(["6", [15]]);
+    }
+    if(e.keyCode == 101 && document.activeElement.id.toLowerCase() !== 'chatbox') {
+        doNewSend(["6", [7]]);
+        doNewSend(["6", [17]]);
+        doNewSend(["6", [31]]);
+        doNewSend(["6", [23]]);
+        doNewSend(["6", [10]]);
+        doNewSend(["6", [38]]);
+        doNewSend(["6", [28]]);
+        doNewSend(["6", [25]]);
+    }
+    if(e.keyCode == 102 && document.activeElement.id.toLowerCase() !== 'chatbox') {
+        doNewSend(["6", [8]]);
+        doNewSend(["6", [17]]);
+        doNewSend(["6", [31]]);
+        doNewSend(["6", [23]]);
+        doNewSend(["6", [10]]);
+        doNewSend(["6", [38]]);
+        doNewSend(["6", [28]]);
+        doNewSend(["6", [36]]);
+    }
+    if(e.keyCode == 103 && document.activeElement.id.toLowerCase() !== 'chatbox') {
+        doNewSend(["6", [5]]);
+        doNewSend(["6", [17]]);
+        doNewSend(["6", [31]]);
+        doNewSend(["6", [23]]);
+        doNewSend(["6", [9]]);
+        doNewSend(["6", [38]]);
+        doNewSend(["6", [28]]);
+        doNewSend(["6", [15]]);
+    }
+    if(e.keyCode == 104 && document.activeElement.id.toLowerCase() !== 'chatbox') {
+        doNewSend(["6", [3]]);
+        doNewSend(["6", [17]]);
+        doNewSend(["6", [31]]);
+        doNewSend(["6", [23]]);
+        doNewSend(["6", [9]]);
+        doNewSend(["6", [38]]);
+        doNewSend(["6", [4]]);
+        doNewSend(["6", [15]]);
+    }
+  if(e.keyCode == 105 && document.activeElement.id.toLowerCase() !== 'chatbox') {
+        doNewSend(["6", [3]]);
+        doNewSend(["6", [17]]);
+        doNewSend(["6", [31]]);
+        doNewSend(["6", [23]]);
+        doNewSend(["6", [10]]);
+        doNewSend(["6", [38]]);
+        doNewSend(["6", [4]]);
+        doNewSend(["6", [25]]);
+    }
+    if(e.keyCode == 98 && document.activeElement.id.toLowerCase() !== 'chatbox') {
+        doNewSend(["6", [3]]);
+        doNewSend(["6", [17]]);
+        doNewSend(["6", [31]]);
+        doNewSend(["6", [23]]);
+        doNewSend(["6", [10]]);
+        doNewSend(["6", [38]]);
+        doNewSend(["6", [4]]);
+        doNewSend(["6", [36]]);
+    }
+    if(e.keyCode == 106 && document.activeElement.id.toLowerCase() !== 'chatbox') {
+        healToggle = (healToggle + 1) % 2;
+        if(healToggle == 0) {
+            if(hatToggle == 0) {
+                document.title = "Heal: OFF | Hat: OFF "
+            } else {
+                document.title = "Heal: OFF | Hat: ON"
+            }
+        } else {
+            if(hatToggle == 0) {
+                document.title = "Heal: ON | Hat: OFF"
+            } else {
+                document.title = "Heal: ON | Hat: ON"
+            }
+        }
+    }
+})
+
+document.addEventListener('keyup', (e) => {
+    spikePlacer.stop(e.keyCode);
+    boostPlacer.stop(e.keyCode);
+    millPlacer.stop(e.keyCode);
+    turretPlacer.stop(e.keyCode);
+spawnPlacer.stop(e.keyCode);
+    healer.stop(e.keyCode);
+    if (e.keyCode == 71 && document.activeElement.id.toLowerCase() !== 'chatbox') {
+        setTimeout(() => {
+            doNewSend(["33", [null]]);
+            boostDir = null;
+        }, 10);
+    }
+})
+
+
+function isElementVisible(e) {
+    return (e.offsetParent !== null);
+}
+
+
+function toRad(angle) {
+    return angle * 0.01745329251;
+}
+
+function dist(a, b) {
+    return Math.sqrt(Math.pow((b.y - a[2]), 2) + Math.pow((b.x - a[1]), 2));
+}
+
+
+document.title = "Depressed Mod:On"
+
+function update() {
+    for (let i = 0; i < 9; i++) {
+        if (isElementVisible(document.getElementById("actionBarItem" + i.toString()))) {
+            primary = i;
+        }
+    }
+
+    for (let i = 9; i < 16; i++) {
+        if (isElementVisible(document.getElementById("actionBarItem" + i.toString()))) {
+            secondary = i;
+        }
+    }
+
+    for (let i = 16; i < 19; i++) {
+        if (isElementVisible(document.getElementById("actionBarItem" + i.toString()))) {
+            foodType = i - 16;
+        }
+    }
+
+    for (let i = 19; i < 22; i++) {
+        if (isElementVisible(document.getElementById("actionBarItem" + i.toString()))) {
+            wallType = i - 16;
+        }
+    }
+
+    for (let i = 22; i < 26; i++) {
+        if (isElementVisible(document.getElementById("actionBarItem" + i.toString()))) {
+            spikeType = i - 16;
+        }
+    }
+
+    for (let i = 26; i < 29; i++) {
+        if (isElementVisible(document.getElementById("actionBarItem" + i.toString()))) {
+            millType = i - 16;
+        }
+    }
+
+    for (let i = 29; i < 31; i++) {
+        if (isElementVisible(document.getElementById("actionBarItem" + i.toString()))) {
+            mineType = i - 16;
+        }
+    }
+
+    for (let i = 31; i < 33; i++) {
+        if (isElementVisible(document.getElementById("actionBarItem" + i.toString()))) {
+            boostType = i - 16;
+        }
+    }
+
+    for (let i = 33; i < 39; i++) {
+        if (isElementVisible(document.getElementById("actionBarItem" + i.toString())) && i != 36) {
+            turretType = i - 16;
+        }
+    }
+spawnpadType = 36;
+        for (let i=36;i<37;i++){
+        if (isElementVisible(document.getElementById("actionBarItem" + i.toString()))){
+            spawnpadType = i - 16;
+        }
+    }
+}
+// ==/UserScript==
+    (function() {
+    'use strict';
+
+var NSE = document.createElement("audio");
+
+var ezsound = new Audio("");
+
+var kills = 0;
+
+setInterval(getkills, 100);
+
+function getkills(){
+    var count = parseInt(document.getElementById("killCounter").innerText);
+    if(count > kills){
+	ezsound.play();
+   doNewSend(["ch", ["Depressed Mod:Kills " +count]]);
+    }
+    kills = count;
+}
+})();
+var ID_WinterCap = 15;
+var ID_FlipperHat = 31;
+var ID_MarksmanCap = 1;
+var ID_BushGear = 10;
+var ID_SoldierHelmet = 6;
+var ID_AntiVenomGear = 23;
+var ID_MusketeerHat = 32;
+var ID_MedicGear = 13;
+var ID_BullHelmet = 7;
+var ID_EmpHelmet = 22;
+var ID_BoosterHat = 12;
+var ID_BarbarianArmor = 26;
+var ID_BullMask = 46;
+var ID_WindmillHat = 14;
+var ID_SpikeGear = 11;
+var ID_BushidoArmor = 16;
+var ID_SamuraiArmor = 20;
+var ID_ScavengerGear = 27;
+var ID_TankGear = 40;
+var ID_TurretGear = 53;
+var ID_PlagueMask = 21;
+
+// Keys
+
+var TankGearKey = 90;
+var BullHelmetKey = 74;
+var SoldierHelmetKey = 81;
+var TurretKey = 75;
+var BoosterHatKey = 0;
+var uneqiup = 192;
+var SpikeGearKey = 186;
+var EmpKey = 80;
+var SamuKey = 77;
+var PlagueMaskKey = 72;
+var BarabarianKey = 71;
+try {
+    document.getElementById("moomooio_728x90_home").style.display = "none";
+    $("moomooio728x90_home").parent().css({
+        display: "none"
+    });
+} catch (e) {
+    console.log("There was an error removing the ads.");
+}
+
+
+var menuChange = document.createElement("div");
+menuChange.className = "menuCard";
+menuChange.id = "mainSettings";
+menuChange.innerHTML = `
+<div id="simpleModal" class="modal">
+<div class="modal-content">
+<div class="modal-header">
+<span class="closeBtn">&times;</span>
+<h2 style="font-size: 17px;">Depressed Mod</h2>
+</div>
+<div class="modal-body" style="font-size: 17px;">
+<div class="flexControl">
+<br><h3 class="menuPrompt">Tank Gear: </h3> <input value="${String.fromCharCode(TankGearKey)}" id="tankGear" class="keyPressLow" onkeyup="this.value = this.value.toUpperCase();" maxlength="1" type="text"/>
+<h3 class="menuPrompt">Bull Helmet: </h3> <input value="${String.fromCharCode(BullHelmetKey)}" id="bullHelm" class="keyPressLow" onkeyup="this.value = this.value.toUpperCase();" maxlength="1" type="text"/><br>
+<h3 class="menuPrompt">Soldier Helmet: </h3> <input value="${String.fromCharCode(SoldierHelmetKey)}" id="soldier" class="keyPressLow"onkeyup="this.value = this.value.toUpperCase();"  maxlength="1" type="text"/>
+ <h3 class="menuPrompt">Barbarian Armor: </h3> <input value="${String.fromCharCode(BarabarianKey)}" id="barb" class="keyPressLow" onkeyup="this.value = this.value.toUpperCase();" maxlength="1" type="text"/>
+<h3 class="menuPrompt">Turret Gear: </h3> <input value="${String.fromCharCode(TurretKey)}" id="turret" class="keyPressLow" maxlength="1" onkeyup="this.value = this.value.toUpperCase();" type="text"/><br>
+<br><h3 class="menuPrompt">Booster Hat: </h3> <input value="${String.fromCharCode(BoosterHatKey)}" id="booster" class="keyPressLow" maxlength="1" onkeyup="this.value = this.value.toUpperCase();" type="text"/>
+<h3 class="menuPrompt">PlagueMaskKey </h3> <input value="${String.fromCharCode(PlagueMaskKey)}" id="PlagueKey" class="keyPressLow" onkeyup="this.value = this.value.toUpperCase();" maxlength="1" type="text"/>
+<h3 class="menuPrompt">Spike Gear: </h3> <input value="${String.fromCharCode(SpikeGearKey)}" id="spikeg" class="keyPressLow" maxlength="1" onkeyup="this.value = this.value.toUpperCase();" type="text"/><br>
+<br><h3 class="menuPrompt">Emp Helmet: </h3> <input value="${String.fromCharCode(EmpKey)}" id="emp" class="keyPressLow" onkeyup="this.value = this.value.toUpperCase();" maxlength="1" type="text"/>
+<h3 class="menuPrompt">Samurai Armor:</h3> <input value="${String.fromCharCode(SamuKey)}" id="samu" class="keyPressLow" onkeyup="this.value = this.value.toUpperCase();" maxlength="1" type="text"/><br>
+<h3 style="font-size: 17px;"style="font-size: 21px;"> Settings </h3>
+<label class="container"style="font-size: 17px;">ðŸ†’Cool MapðŸ˜Ž
+<input type="checkbox" id="myCheck">
+<span class="checkmark"></span>
+</label>
+<label class="container"style="font-size: 17px;">antitrap
+<input type="checkbox" id="antitrap">
+<span class="checkmark"></span>
+</label>
+<label class="container"style="font-size: 17px;">ðŸ›¡Melee Modâš”
+<input type="checkbox" id="m">
+<span class="checkmark"></span>
+</label>
+</label>
+<label class="container"style="font-size: 17px;">â™¾Wing Spamâ™¾
+<input type="checkbox" id="n">
+<span class="checkmark"></span>
+</label>
+<label class="container"style="font-size: 20px;">AssHeal?
+<input type="checkbox" id="AssHeal">
+<span class="checkmark"></span>
+</label
+<br><label class="container"style="font-size: 17px;">Super Fast Heal
+<input type="checkbox" id="Super">
+<span class="checkmark"></span>
+<br><h3 style="font-size: 17px;"style="font-size: 21px;"> Insta </h3>
+</label>
+<br><label class="container">ðŸ”«Lag InstaðŸŽƒ
+<input type="checkbox" id="LI">
+<span class="checkmark"></span>
+</label>
+<br><label class="container">ðŸ”«Reverse Lag InstaðŸš¨
+<input type="checkbox" id="RLI">
+<span class="checkmark"></span>
+</label>
+<br><label class="container">ðŸ”«Reniz INSTAâ›©
+<input type="checkbox" id="RI">
+<span class="checkmark"></span>
+</label>
+<br><label class="container">ðŸ”«Legendary INSTAðŸ¦
+<input type="checkbox" id="LegendaryInsta">
+<span class="checkmark"></span>
+</label>
+<br><label class="container">ðŸ”«PerfectLag InstaðŸ”«
+<input type="checkbox" id="NLI">
+<span class="checkmark"></span>
+<br></label>
+<label class="container"style="font-size: 17px;">Anti Insta
+<input type="checkbox" id="AIH">
+<span class="checkmark"></span>
+</label>
+</div>
+</div>
+<div class="modal-footer">
+<h3 style="font-size: 17px;">By veggie </h3>
+<p>Sub to Veggie</p>
+</div>
+</div>
+</div>
+`
+document.body.appendChild(menuChange)
+
+
+$("#tankGear").on("input", () => {
+    var cval = $("#tankGear").val();
+    if (cval) {
+        TankGearKey = cval.toUpperCase();
+        TankGearKey = TankGearKey.charCodeAt(0);
+        console.log(TankGearKey);
+    }
+});
+
+$("#barb").on("input", () => {
+    var cval = $("#barb").val();
+    if (cval){
+        BarabarianKey = cval.toUpperCase();
+        BarabarianKey = BarabarianKey.charCodeAt(0);
+        console.log(BarabarianKey);
+    }
+});
+
+$("#bullHelm").on("input", () => {
+    var cval = $("#bullHelm").val();
+    if (cval) {
+        BullHelmetKey = cval.toUpperCase();
+        BullHelmetKey = BullHelmetKey.charCodeAt(0);
+        console.log(BullHelmetKey);
+    }
+});
+
+$("#soldier").on("input", () => {
+    var cval = $("#soldier").val();
+    if (cval) {
+        SoldierHelmetKey = cval.toUpperCase();
+        SoldierHelmetKey = SoldierHelmetKey.charCodeAt(0);
+        console.log(SoldierHelmetKey);
+    }
+});
+
+$("#PlagueKey").on("input", () => {
+    var cval = $("#PlagueKey").val();
+    if (cval){
+        PlagueMaskKey = cval.toUpperCase();
+        PlagueMaskKey = PlagueMaskKey.charCodeAt(0);
+        console.log(PlagueMaskKey);
+    }
+});
+
+$("#turret").on("input", () => {
+    var cval = $("#turret").val();
+    if (cval) {
+        TurretKey = cval.toUpperCase();
+        TurretKey = TurretKey.charCodeAt(0);
+        console.log(TurretKey);
+    }
+});
+
+
+
+$("#emp").on("input", () => {
+    var cval = $("#emp").val();
+    if (cval) {
+        EmpKey = cval.toUpperCase();
+        EmpKey = EmpKey.charCodeAt(0);
+        console.log(EmpKey);
+    }
+});
+
+$("#samu").on("input", () => {
+    var cval = $("#samu").val();
+    if (cval) {
+        SamuKey = cval.toUpperCase();
+        SamuKey = SamuKey.charCodeAt(0);
+        console.log(SamuKey);
+    }
+});
+var styleItem = document.createElement("style");
+styleItem.type = "text/css";
+styleItem.appendChild(document.createTextNode(`
+.keyPressLow {
+    margin-left: 8px;
+    font-size: 16px;
+    margin-right: 8px;
+    height: 25px;
+    width: 50px;
+    background-color: #fcfcfc;
+    border-radius: 3.5px;
+    border: none;
+    text-align: center;
+    color: #4A4A4A;
+    border: 0.5px solid #f2f2f2;
+}
+
+.menuPrompt {
+    font-size: 17px;
+    font-family: 'Hammersmith One';
+    color: #4A4A4A;
+    flex: 0.2;
+    text-align: center;
+    margin-top: 10px;
+    display: inline-block;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    overflow: auto;
+    height: 100%;
+    width: 100%;
+}
+
+.modal-content {
+    margin: 10% auto;
+    width: 40%;
+    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.17);
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.modal-header h2,
+.modal-footer h3 {
+  margin: 0;
+}
+
+.modal-header {
+    background: #cf2727;
+    padding: 15px;
+    color: #fff;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.modal-body {
+    padding: 10px 20px;
+    background: #fff;
+}
+
+.modal-footer {
+    background: #cf2727;
+    padding: 10px;
+    color: #fff;
+    text-align: center;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.closeBtn {
+    color: #ccc;
+    float: right;
+    font-size: 30px;
+    color: #fff;
+}
+
+.closeBtn:hover,
+.closeBtn:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Customize the label (the container) */
+.container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 16px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a red background */
+.container input:checked ~ .checkmark {
+  background-color: #cf2727;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.container .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+`))
+document.head.appendChild(styleItem);
+
+
+$("#adCard").css({
+    display: "none"
+});
+$("#pre-content-container").css({
+    display: "none"
+});
+
+
+document.addEventListener('keydown', function(e) {
+    if (e.keyCode == uneqiup && document.activeElement.id.toLowerCase() !== 'chatbox') {
+        console.log("done")
+        storeEquip(0);
+    } else if (e.keyCode == 27) {
+        if (modal.style.display = "none") {
+            modal.style.display = "block";
+        } else {
+            modal.style.display = "none";
+        }
+    } else if (e.keyCode == TankGearKey && document.activeElement.id.toLowerCase() !== 'chatbox') {
+              doNewSend(["13c", [1, 40, 0]]);
+        storeEquip(ID_TankGear);
+        doNewSend(["ch", ["Depressed Mod"]]);
+                      doNewSend(["13c", [0, 0, 1]]);
+        doNewSend(["13c", [1, 21, 1]]);
+        doNewSend(["13c", [0, 21, 1]]);
+    } else if (e.keyCode == SoldierHelmetKey && document.activeElement.id.toLowerCase() !== 'chatbox') {
+              doNewSend(["13c", [1, 6, 0]]);
+        storeEquip(ID_SoldierHelmet);
+              doNewSend(["13c", [0, 0, 1]]);
+        doNewSend(["13c", [1, 21, 1]]);
+        doNewSend(["13c", [0, 21, 1]]);
+        doNewSend(["ch", ["Depressed Mod"]]);
+    } else if (e.keyCode == BullHelmetKey && document.activeElement.id.toLowerCase() !== 'chatbox') {
+              doNewSend(["13c", [1, 7, 0]]);
+        storeEquip(ID_BullHelmet);
+        doNewSend(["ch", ["Depressed Mod"]]);
+                      doNewSend(["13c", [0, 0, 1]]);
+        doNewSend(["13c", [1, 21, 1]]);
+        doNewSend(["13c", [0, 21, 1]]);
+    } else if (e.keyCode == BoosterHatKey && document.activeElement.id.toLowerCase() !== 'chatbox') {
+              doNewSend(["13c", [1, 12, 0]]);
+        storeEquip(ID_BoosterHat);
+                      doNewSend(["13c", [0, 0, 1]]);
+        doNewSend(["13c", [1, 11, 1]]);
+        doNewSend(["13c", [0, 11, 1]]);
+    } else if (e.keyCode == BarabarianKey && document.activeElement.id.toLowerCase() !== 'chatbox'){
+              doNewSend(["13c", [1, 26, 0]]);
+        storeEquip(ID_BarbarianArmor);
+              doNewSend(["13c", [0, 0, 1]]);
+        doNewSend(["13c", [1, 21, 1]]);
+        doNewSend(["13c", [0, 21, 1]]);
+    } else if (e.keyCode == EmpKey && document.activeElement.id.toLowerCase() !== 'chatbox') {
+              doNewSend(["13c", [1, 22, 0]]);
+        storeEquip(ID_EmpHelmet);
+              doNewSend(["13c", [0, 0, 1]]);
+        doNewSend(["13c", [1, 21, 1]]);
+                doNewSend(["13c", [0, 21, 1]]);
+    } else if (e.keyCode == SamuKey && document.activeElement.id.toLowerCase() !== 'chatbox') {
+              doNewSend(["13c", [1, 20, 0]]);
+        storeEquip(ID_SamuraiArmor);
+              doNewSend(["13c", [0, 0, 1]]);
+        doNewSend(["13c", [1, 11, 1]]);
+        doNewSend(["13c", [0, 11, 1]]);
+        doNewSend(["ch", [""]]);
+    } else if (e.keyCode == SpikeGearKey && document.activeElement.id.toLowerCase() !== 'chatbox') {
+              doNewSend(["13c", [1, 11, 0]]);
+        storeEquip(ID_SpikeGear);
+              doNewSend(["13c", [0, 0, 1]]);
+        doNewSend(["13c", [1, 21, 1]]);
+        doNewSend(["13c", [0, 21, 1]]);
+    }else if (e.keyCode == PlagueMaskKey && document.activeElement.id.toLowerCase() !== 'chatbox'){
+              doNewSend(["13c", [1, 21, 0]]);
+        storeEquip(ID_PlagueMask);
+              doNewSend(["13c", [0, 0, 1]]);
+                doNewSend(["13c", [1, 21, 1]]);
+        doNewSend(["13c", [0, 21, 1]]);
+    } else if (e.keyCode == TurretKey && document.activeElement.id.toLowerCase() !== 'chatbox') {
+              doNewSend(["13c", [1, 53, 0]]);
+        storeEquip(ID_TurretGear);
+        doNewSend(["ch", [""]]);
+              doNewSend(["13c", [0, 0, 1]]);
+                doNewSend(["13c", [1, 21, 1]]);
+        doNewSend(["13c", [0, 21, 1]]);
+    }
+})
+
+// Get modal element
+var modal = document.getElementById("simpleModal");
+// Get close button
+var closeBtn = document.getElementsByClassName('closeBtn')[0];
+
+// Events
+closeBtn.addEventListener('click', closeModal);
+window.addEventListener('click', outsideClick);
+
+// Close
+function closeModal() {
+    modal.style.display = 'none';
+}
+
+// Close If Outside Click
+function outsideClick(e) {
+    if (e.target == modal) {
+        modal.style.display = 'none';
+    }
+}
+var m = document.querySelector("#m")
+
+m.addEventListener('change', function() {
+    if (this.checked) {
+        changehat = true
+        doNewSend(["ch", [""]]);
+    } else {
+        changehat = false
+        doNewSend(["ch", [""]]);
+    }
+})
+var antitrap = document.querySelector("#antitrap")
+
+antitrap.addEventListener('change', function() {
+    if (this.checked) {
+        antitrap = true
+        doNewSend(["ch", [""]]);
+    } else {
+        antitrap = false
+        doNewSend(["ch", [""]]);
+    }
+})
+var a1 = document.querySelector("#n")
+
+a1.addEventListener('change', function() {
+    if (this.checked) {
+        wingmod = true
+        doNewSend(["ch", [""]]);
+    } else {
+        wingmod = false
+        doNewSend(["ch", [""]]);
+    }
+})
+var AssHeal = false;
+var AssHeal = 0;
+var AssHeal = document.querySelector("#AssHeal")
+
+AssHeal.addEventListener('change', function() {
+    if (this.checked) {
+        AssHeal = true
+    } else {
+        AssHeal = false
+    }
+})
+var supa = document.querySelector("#Super")
+
+supa.addEventListener('change', function() {
+    if (this.checked) {
+        qh = 1
+        healToggle = 0
+        doNewSend(["ch", [""]]);
+    } else {
+        qh = 0
+        healToggle = 1
+        doNewSend(["ch", [""]]);
+    }
+})
+var LI = document.querySelector("#LI")
+
+LI.addEventListener('change', function() {
+    if (this.checked) {
+        LagInsta = 1
+        ReverseLagInsta = 0
+        LegendaryInsta = 0
+        RenizInsta = 0
+       nolaginsta = 0
+        doNewSend(["ch", [""]]);
+    } else {
+        LagInsta = 0
+        doNewSend(["ch", [""]]);
+    }
+})
+var RLI = document.querySelector("#RLI")
+
+RLI.addEventListener('change', function() {
+    if (this.checked) {
+        ReverseLagInsta = 1
+        LegendaryInsta = 0
+        LagInsta = 0
+        RenizInsta = 0
+       nolaginsta = 0
+        doNewSend(["ch", [""]]);
+    } else {
+        ReverseLagInsta = 0
+        doNewSend(["ch", [""]]);
+    }
+})
+var RI = document.querySelector("#RI")
+
+RI.addEventListener('change', function() {
+    if (this.checked) {
+        RenizInsta = 1
+        ReverseLagInsta = 0
+        LegendaryInsta = 0
+        LagInsta = 0
+       nolaginsta = 0
+        doNewSend(["ch", [""]]);
+    } else {
+        RenizInsta = 0
+        doNewSend(["ch", [""]]);
+    }
+})
+var LEGEND = document.querySelector("#LegendaryInsta")
+
+LEGEND.addEventListener('change', function() {
+    if (this.checked) {
+        LegendaryInsta = 1
+        ReverseLagInsta = 0
+        LagInsta = 0
+        RenizInsta = 0
+       nolaginsta = 0
+        doNewSend(["ch", [""]]);
+    } else {
+        LegendaryInsta = 0
+        doNewSend(["ch", [""]]);
+    }
+})
+var Nolag = document.querySelector("#NLI")
+
+Nolag.addEventListener('change', function() {
+    if (this.checked) {
+        LegendaryInsta = 1
+        ReverseLagInsta = 0
+        LagInsta = 0
+        RenizInsta = 0
+        nolaginsta = 0
+        doNewSend(["ch", [""]]);
+    } else {
+        nolaginsta = 0
+        doNewSend(["ch", [""]]);
+    }
+})
+var Antiinsta = document.querySelector("#AIH")
+
+Antiinsta.addEventListener('change', function() {
+    if (this.checked) {
+        AIH = true
+        doNewSend(["ch", [""]]);
+    } else {
+        AIH = false
+        doNewSend(["ch", [""]]);
+    }
+})
+
+var checkbox = document.querySelector("#myCheck")
+
+checkbox.addEventListener('change', function() {
+    if (this.checked) {
+        $("#mapDisplay").css({
+            background: `url('https://media.discordapp.net/attachments/759094121339158582/762938586726400020/a1479853846_5.png?width=427&height=427')`
+        });
+        console.log('checked')
+    } else {
+        $("#mapDisplay").css({
+            background: `rgba(0, 0, 0, 0.25)`
+        })
+        console.log('unchecked')
+    }
+})
