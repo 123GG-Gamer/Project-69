@@ -1,0 +1,2408 @@
+// ==UserScript==
+// @name           Radar
+// @namespace      RadarMod
+// @version        v20
+// @description    Keys ➜ ║ AUTO HEAL- Q ║ ║ MOD SETTINGS - ESC ║ ║ INSTAKILL - R ║ ║ SPIKE - V ║ ║ TRAP- F ║ ║ GET MORE FPS ║ ║ BOOST + SPIKE - G ║ ║ WINDMILL - N ║ ║ MACRO HAT ║ ║ PREMIUM MAP ║ ║ 4 TRAPS / BOOSTPADS - I ║ ║ CX INSTA - SPACE ║ ║ 4 SPIKES - ;(:) ║ ║ AIM CURSOR ║ ║ BIG SHOP ║ AND MORE!
+// @author         Radar#4061
+// @match          *://moomoo.io/*
+// @match          *://dev.moomoo.io/*
+// @match          *://*sandbox.moomoo.io/*
+// @require https://greasyfork.org/scripts/368273-msgpack/code/msgpack.js?version=598723
+// @require http://code.jquery.com/jquery-3.3.1.min.js
+// @require https://code.jquery.com/ui/1.12.0/jquery-ui.min.js
+// @require https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.0/jquery-confirm.min.js
+// @icon           https://cdn.discordapp.com/attachments/766971302345965608/768155377425449001/a_d75bd5cb2148adb5e8df51357043267a.gif
+// ==/UserScript==
+
+let hue = 0;
+
+let replaceInterval = setInterval(() => {
+    if (CanvasRenderingContext2D.prototype.roundRect) {
+        CanvasRenderingContext2D.prototype.roundRect = ((oldFunc) => function() { if (this.fillStyle == "#8ecc51") this.fillStyle = `hsl(${hue}, 100%, 50%)`; return oldFunc.call(this, ...arguments); })(CanvasRenderingContext2D.prototype.roundRect);
+        clearInterval(replaceInterval);
+    }}, 10);
+
+function changeHue() {
+    hue += Math.random() * 3;
+}
+
+setInterval(changeHue, 1);
+
+$('#leaderboard').append('๖̶ζ͜͡RadarModツ𝐯9');
+
+$("#mapDisplay").css({background: `url('https://cdn.discordapp.com/attachments/685828755012452369/721682004050968666/null.png')`});
+
+(function() {
+    'use strict';
+
+    var ezsound = new Audio("https://dl.dropboxusercontent.com/s/no05l68fg4qzyyr/Hit%20Marker.wav?dl=0");
+
+    var kills = 0;
+
+    setInterval(getkills, 1);
+
+    function getkills(){
+        var count = parseInt(document.getElementById("killCounter").innerText);
+        if(count > kills){
+            ezsound.play();
+        }
+        kills = count;
+    }
+})();
+
+$("#linksContainer2 > a:nth-child(1)" ).replaceWith( '<a href="./docs/versions.txt" target="_blank" class="menuLink"̶๖̶ζRadarModツ v9</a>' );
+var YouName = window.prompt("๖̶ζ͜͡RadarModツ? Did Radar give u?:","");
+alert('๖̶ζRadarModツ Use This Mod Wisely;)');
+$("#consentBlock").css({display: "none"});
+window.onbeforeunload = null;
+
+var SubToRadar = window.prompt("๖̶ζ͜͡nice");
+
+setInterval(() => {
+    if (changehat == true) {
+        doNewSend(["13c", [0, 11, 0]]);
+        doNewSend(["13c", [0, 21, 1]]);
+        setTimeout(() => {
+            doNewSend(["13c", [0, 7, 0]]);
+            doNewSend(["13c", [0, 18, 1]]);
+        },350);
+        setTimeout(() => {
+            doNewSend(["13c", [0, 53, 0]]);
+            doNewSend(["13c", [0, 16, 1]]);
+        },350);
+    }
+},700);
+setInterval(() => {
+    if (wingmod == true) {
+        doNewSend(["13c", [0, 13, 1]]);
+        setTimeout(() => {
+            doNewSend(["13c", [0, 19, 1]]);
+        },10);
+    }
+},10);
+
+let mouseX;
+let mouseY;
+
+let width;
+let height;
+
+setInterval(() => {
+    if(clanToggle == 1) {
+        doNewSend(["9", [null]]);
+        doNewSend(["8", [animate(false, 5)]])
+    }
+    doNewSend(["testing", [6]]);
+}, 200);
+
+setInterval(() => {
+    if(messageToggle == 1) {
+        doNewSend(["ch", [animate(true, 5)]])
+    }
+}, 200);
+
+setInterval(() => {
+    if(autoaim == true) {
+        doNewSend(["2", [nearestEnemyAngle]]);
+    }
+}, 0);
+
+setInterval(() => {
+    if(hatToggle == 1) {
+        if(oldHat != normalHat) {
+            hat(normalHat);
+            console.log("Tried. - Hat")
+        }
+        if(oldAcc != normalAcc) {
+            acc(normalAcc);
+            console.log("Tried. - Acc")
+        }
+        oldHat = normalHat;
+        oldAcc = normalAcc
+    }
+}, 25);
+
+function normal() {
+    hat(normalHat);
+    acc(normalAcc);
+}
+
+function aim(x, y){
+    var cvs = document.getElementById("gameCanvas");
+    cvs.dispatchEvent(new MouseEvent("mousemove", {
+        clientX: x,
+        clientY: y
+
+    }));
+}
+
+let coreURL = new URL(window.location.href);
+window.sessionStorage.force = coreURL.searchParams.get("fc");
+
+var nearestEnemy;
+var nearestEnemyAngle;
+var isEnemyNear;
+var instaSpeed = 230;
+var changehat = true;
+var wingmod = true;
+var primary;
+var secondary;
+var foodType;
+var wallType;
+var spikeType;
+var millType;
+var mineType;
+var boostType;
+var turretType;
+var spawnpadType;
+var autoaim = false;
+var tick = 1;
+var oldHat;
+var oldAcc;
+var enemiesNear;
+var normalHat;
+var normalAcc;
+var ws;
+var msgpack5 = msgpack;
+var boostDir;
+let myPlayer = {
+    id: null,
+    x: null,
+    y: null,
+    dir: null,
+    object: null,
+    weapon: null,
+    clan: null,
+    isLeader: null,
+    hat: null,
+    accessory: null,
+    isSkull: null
+};
+
+let healSpeed = 135;
+var messageToggle = 0;
+var clanToggle = 0;
+let healToggle = 1;
+let hatToggle = 1;
+var InvisibleInsta = 0;
+var LagInsta = 0;
+var ReverseInsta = 0;
+document.msgpack = msgpack;
+function n(){
+    this.buffer = new Uint8Array([0]);
+    this.buffer.__proto__ = new Uint8Array;
+    this.type = 0;
+}
+
+WebSocket.prototype.oldSend = WebSocket.prototype.send;
+WebSocket.prototype.send = function(m){
+    if (!ws){
+        document.ws = this;
+
+        ws = this;
+        socketFound(this);
+    }
+    this.oldSend(m);
+};
+
+
+function socketFound(socket){
+    socket.addEventListener('message', function(message){
+        handleMessage(message);
+    });
+}
+
+function handleMessage(m){
+    let temp = msgpack5.decode(new Uint8Array(m.data));
+    let data;
+    if(temp.length > 1) {
+        data = [temp[0], ...temp[1]];
+        if (data[1] instanceof Array){
+            data = data;
+        }
+    } else {
+        data = temp;
+    }
+    let item = data[0];
+    if(!data) {return};
+
+    if(item === "io-init") {
+        let cvs = document.getElementById("gameCanvas");
+        width = cvs.clientWidth;
+        height = cvs.clientHeight;
+        $(window).resize(function() {
+            width = cvs.clientWidth;
+            height = cvs.clientHeight;
+        });
+        cvs.addEventListener("mousemove", e => {
+            mouseX = e.clientX;
+            mouseY = e.clientY;
+        });
+    }
+
+    if (item == "1" && myPlayer.id == null){
+        myPlayer.id = data[1];
+    }
+    var PREFIX = "!"
+    if (data[0] == "ch" && data[1] == myPlayer.id && data[2].split(' ')[0] == PREFIX+"healspeed-120") {
+        healSpeed = 120;
+        setTimeout(() => {
+            doNewSend(["ch", ["Healspeed120"]]);
+        },500);
+    }
+    if (data[0] == "ch" && data[1] == myPlayer.id && data[2].split(' ')[0] == PREFIX+"healspeed-140") {
+        healSpeed = 140;
+        setTimeout(() => {
+            doNewSend(["ch", ["Healspeed140"]]);
+        },500);
+    }
+    if (data[0] == "ch" && data[1] == myPlayer.id && data[2].split(' ')[0] == PREFIX+"healspeed-110") {
+        healSpeed = 110;
+        setTimeout(() => {
+            doNewSend(["ch", ["Healspeed110"]]);
+        },500);
+    }
+    if (data[0] == "ch" && data[1] == myPlayer.id && data[2].split(' ')[0] == PREFIX+"healspeed-100") {
+        healSpeed = 100;
+        setTimeout(() => {
+            doNewSend(["ch", ["Healspeed100"]]);
+        },500);
+    }
+    if (data[0] == "ch" && data[1] == myPlayer.id && data[2].split(' ')[0] == PREFIX+"healspeed-150") {
+        healSpeed = 150;
+        setTimeout(() => {
+            doNewSend(["ch", ["Healspeed150"]]);
+        },500);
+    }
+    if (data[0] == "ch" && data[1] == myPlayer.id && data[2].split(' ')[0] == PREFIX+"healspeed-130") {
+        healSpeed = 130;
+        setTimeout(() => {
+            doNewSend(["ch", ["Healspeed130"]]);
+        },500);
+    }
+    if (data[0] == "ch" && data[1] == myPlayer.id && data[2].split(' ') == PREFIX+"pm") {
+        doNewSend(["6", [5]]);
+        doNewSend(["6", [17]]);
+        doNewSend(["6", [31]]);
+        doNewSend(["6", [23]]);
+        doNewSend(["6", [9]]);
+        doNewSend(["6", [33]]);
+        doNewSend(["6", [28]]);
+        doNewSend(["6", [15]]);
+        setTimeout(() => {
+            doNewSend(["ch", ["Polearm+Musket OP!"]]);
+        },500);
+    }
+    if (data[0] == "ch" && data[1] == myPlayer.id && data[2].split(' ') == PREFIX+"km") {
+        doNewSend(["6", [3]]);
+        doNewSend(["6", [17]]);
+        doNewSend(["6", [31]]);
+        doNewSend(["6", [23]]);
+        doNewSend(["6", [9]]);
+        doNewSend(["6", [33]]);
+        doNewSend(["6", [4]]);
+        doNewSend(["6", [15]]);
+        setTimeout(() => {
+            doNewSend(["ch", ["KaTana+Musket The Best combo!"]]);
+        },500);
+    }
+    if (data[0] == "ch" && data[1] == myPlayer.id && data[2].split(' ') == PREFIX+"kh") {
+        doNewSend(["6", [3]]);
+        doNewSend(["6", [17]]);
+        doNewSend(["6", [31]]);
+        doNewSend(["6", [27]]);
+        doNewSend(["6", [10]]);
+        doNewSend(["6", [37]]);
+        doNewSend(["6", [4]]);
+        doNewSend(["6", [25]]);
+        setTimeout(() => {
+            doNewSend(["ch", ["Katana+hammer 1N$T4 Blocker"]]);
+        },500);
+    }
+    if (data[0] == "ch" && data[1] == myPlayer.id && data[2].split(' ') == PREFIX+"mill+pike") {
+        doNewSend(["6", [28]]);
+        doNewSend(["6", [25]]);
+        setTimeout(() => {
+            doNewSend(["ch", ["mill+pike"]]);
+        },500);
+    }
+    if (data[0] == "ch" && data[1] == myPlayer.id && data[2].split(' ')[0] == PREFIX+"unclan") {
+        setTimeout(() => {
+            doNewSend(["ch", ["Left Clan"]]);
+            doNewSend(["9", [null]])
+        },500);
+    }
+    if (data[0] == "ch" && data[1] == myPlayer.id && data[2].split(' ') == PREFIX+"wing1") {
+        wingmod = true;
+        setTimeout(() => {
+            doNewSend(["ch", ["Wing:On"]]);
+        },500);
+    }
+    if (data[0] == "ch" && data[1] == myPlayer.id && data[2].split(' ') == PREFIX+"wing0") {
+        wingmod = false;
+        setTimeout(() => {
+            doNewSend(["ch", ["Wing:Off"]]);
+        },500);
+    }
+    if (item == "33") {
+        enemiesNear = [];
+        for(let i = 0; i < data[1].length / 13; i++) {
+            let playerInfo = data[1].slice(13*i, 13*i+13);
+            if(playerInfo[0] == myPlayer.id) {
+                myPlayer.x = playerInfo[1];
+                myPlayer.y = playerInfo[2];
+                myPlayer.dir = playerInfo[3];
+                myPlayer.object = playerInfo[4];
+                myPlayer.weapon = playerInfo[5];
+                myPlayer.clan = playerInfo[7];
+                myPlayer.isLeader = playerInfo[8];
+                myPlayer.hat = playerInfo[9];
+                myPlayer.accessory = playerInfo[10];
+                myPlayer.isSkull = playerInfo[11];
+            } else if(playerInfo[7] != myPlayer.clan || playerInfo[7] === null) {
+                enemiesNear.push(playerInfo);
+            }
+        }
+    }
+
+    isEnemyNear = false;
+    if(enemiesNear) {
+        nearestEnemy = enemiesNear.sort((a,b) => dist(a, myPlayer) - dist(b, myPlayer))[0];
+    }
+
+    if(nearestEnemy) {
+        nearestEnemyAngle = Math.atan2(nearestEnemy[2]-myPlayer.y, nearestEnemy[1]-myPlayer.x);
+        if(Math.sqrt(Math.pow((myPlayer.y-nearestEnemy[2]), 2) + Math.pow((myPlayer.x-nearestEnemy[1]), 2)) < 235) {
+            isEnemyNear = true;
+            if(autoaim == false && myPlayer.hat != 7 && myPlayer.hat != 53) {
+                normalHat = 6;
+                if(primary != 8) {
+                    normalAcc = 19
+                }
+            };
+        }
+    }
+    if(isEnemyNear == false && autoaim == false) {
+        normalAcc = 11;
+        if (myPlayer.y < 2400){
+            normalHat = 15;
+        } else if (myPlayer.y > 6850 && myPlayer.y < 7550){
+            normalHat = 31;
+        } else {
+            normalHat = 12;
+        }
+    }
+    if (!nearestEnemy) {
+        nearestEnemyAngle = myPlayer.dir;
+    }
+    if(item == "h" && data[1] == myPlayer.id) {
+        if(data[2] < 91 && data[2] > 0 && healToggle == 1) {
+            setTimeout( () => {
+                place(foodType)
+                doNewSend(['c', [1]]);
+                doNewSend(['c', [0]]);
+                doNewSend(['5', [null]]);
+            }, healSpeed);
+        }
+    }
+    update();
+}
+
+
+function doNewSend(sender){
+    ws.send(new Uint8Array(Array.from(msgpack5.encode(sender))));
+}
+
+function acc(id) {
+    doNewSend(["13c", [0, 0, 1]]);
+    doNewSend(["13c", [0, id, 1]]);
+}
+
+function hat(id) {
+    doNewSend(["13c", [0, id, 0]]);
+}
+
+
+function place(id, angle = Math.atan2(mouseY - height / 2, mouseX - width / 2)) {
+    doNewSend(["5", [id, null]]);
+    doNewSend(["c", [1, angle]]);
+    doNewSend(["c", [0, angle]]);
+    doNewSend(["5", [id, null]]);
+    doNewSend(["c", [1, angle]]);
+    doNewSend(["c", [0, angle]]);
+    doNewSend(["5", [id, null]]);
+    doNewSend(["c", [1, angle]]);
+    doNewSend(["c", [0, angle]]);
+    doNewSend(["5", [id, null]]);
+    doNewSend(["c", [1, angle]]);
+    doNewSend(["c", [0, angle]]);
+    doNewSend(["5", [id, null]]);
+    doNewSend(["c", [1, angle]]);
+    doNewSend(["c", [0, angle]]);
+    doNewSend(["5", [myPlayer.weapon, true]]);
+}
+
+function boostSpike() {
+    if(boostDir == null) {
+        boostDir = nearestEnemyAngle;
+    }
+    place(spikeType, boostDir + toRad(90));
+    place(spikeType, boostDir - toRad(90));
+    place(boostType, boostDir);
+    doNewSend(["33", [boostDir]]);
+}
+
+function boostmill() {
+    if(boostDir == null) {
+        boostDir = myPlayer.dir
+    }
+    place(millType, boostDir + toRad(90));
+    place(millType, boostDir - toRad(90));
+    place(boostType, boostDir);
+    doNewSend(["33", [boostDir]]);
+}
+var repeater = function(key, action, interval) {
+    let _isKeyDown = false;
+    let _intervalId = undefined;
+
+    return {
+        start(keycode) {
+            if(keycode == key && document.activeElement.id.toLowerCase() !== 'chatbox') {
+                _isKeyDown = true;
+                if(_intervalId === undefined) {
+                    _intervalId = setInterval(() => {
+                        action();
+                        if(!_isKeyDown){
+                            clearInterval(_intervalId);
+                            _intervalId = undefined;
+                            console.log("claered");
+                        }
+                    }, interval);
+                }
+            }
+        },
+
+        stop(keycode) {
+            if(keycode == key && document.activeElement.id.toLowerCase() !== 'chatbox') {
+                _isKeyDown = false;
+            }
+        }
+    };
+
+
+}
+
+const healer = repeater(81, () => {place(foodType)}, 0);
+const boostPlacer = repeater(70, () => {place(boostType)}, 0);
+const spikePlacer = repeater(86, () => {place(spikeType)}, 0);
+const millPlacer = repeater(78, () => {place(millType)}, 0);
+const turretPlacer = repeater(56, () => {place(turretType)}, 0);
+const boostSpiker = repeater(71, boostSpike, 0);
+const boostmiller = repeater(72, boostmill, 0);
+
+document.addEventListener('keydown', (e)=>{
+    spikePlacer.start(e.keyCode);
+    healer.start(e.keyCode);
+    boostPlacer.start(e.keyCode);
+    boostSpiker.start(e.keyCode);
+    boostmiller.start(e.keyCode);
+    millPlacer.start(e.keyCode);
+    turretPlacer.start(e.keyCode);
+    if(e.keyCode == 222 && document.activeElement.id.toLowerCase() !== 'chatbox') {
+        if (changehat == false) {
+            changehat = true
+            doNewSend(["ch", ["Melee Mod:ON"]]);
+        } else {
+            changehat = false
+            doNewSend(["ch", ["Melee Mod:OFF"]]);
+        }
+    }
+    if (e.keyCode == 0 && document.activeElement.id.toLowerCase() !== 'chatbox') {
+        for (let i=0;i<5;i++){
+            let angle = myPlayer.dir + toRad(i * 72);
+            place(millType, angle)
+        }
+    }
+    if (e.keyCode == 0 && document.activeElement.id.toLowerCase() !== 'chatbox') {
+        for (let i=0;i<4;i++){
+            let angle = myPlayer.dir + toRad(i * 90);
+            place(wallType, angle)
+        }
+    }
+    if (e.keyCode == 73 && document.activeElement.id.toLowerCase() !== 'chatbox') {
+        for (let i=0;i<4;i++){
+            let angle = myPlayer.dir + toRad(i * 90);
+            place(boostType, angle)
+        }
+    }
+    if (e.keyCode == 186 && document.activeElement.id.toLowerCase() !== 'chatbox') {
+        for (let i=0;i<4;i++){
+            let angle = myPlayer.dir + toRad(i * 90);
+            place(spikeType, angle)
+        }
+    }
+    if (e.keyCode == 56 && document.activeElement.id.toLowerCase() !== 'chatbox') {
+        place(turretType, myPlayer.dir + toRad(45));
+        place(turretType, myPlayer.dir - toRad(45));
+        place(turretType, myPlayer.dir + toRad(90));
+        place(turretType, myPlayer.dir - toRad(90));
+    }
+
+    if (e.keyCode == 77 && document.activeElement.id.toLowerCase() !== 'chatbox') {
+        if (myPlayer.y < 2400){
+            hat(15);
+        } else if (myPlayer.y > 6850 && myPlayer.y < 7550){
+            hat(31);
+        } else {
+            hat(12);
+        }
+        acc(11);
+    }
+    if(e.keyCode == 85 && document.activeElement.id.toLowerCase() !== 'chatbox') {
+        var last = myPlayer.hat
+        var lastt = myPlayer.accessory
+        autoaim = true
+        doNewSend(["5", [primary, true]]);
+        doNewSend(["13c", [0, 7, 0]]);
+        doNewSend(["13c", [0, 0, 1]]);
+        doNewSend(["7", [3]]);
+        setTimeout(() => {
+            doNewSend(["6", [5]]);
+            doNewSend(["6", [17]]);
+            doNewSend(["6", [31]]);
+            doNewSend(["6", [23]]);
+            doNewSend(["6", [9]]);
+            doNewSend(["6", [33]]);
+        },100);
+        setTimeout(() => {
+            doNewSend(["6", [4]]);
+        },200);
+        setTimeout(() => {
+            doNewSend(["5", [secondary, true]]);
+            doNewSend(["13c", [0, 53, 0]]);
+        },300);
+        setTimeout(() => {
+            doNewSend(["6", [15]]);
+        },420);
+        setTimeout(() => {
+            doNewSend(["7", [3]]);
+            doNewSend(["5", [primary, true]]);
+            doNewSend(["13c", [0, last, 0]]);
+            doNewSend(["13c", [0, lastt, 1]]);
+        },500);
+    }
+    if(e.keyCode == 82 && document.activeElement.id.toLowerCase() !== 'chatbox') {
+        if (InvisibleInsta == 1) {
+            autoaim = true;
+            doNewSend(["13c", [0, 0, 1]]);
+            doNewSend(["5", [primary, true]]);
+            doNewSend(["7", [1]]);
+            doNewSend(["13c", [0, 7, 0]]);
+            setTimeout( () => {
+                doNewSend(["13c", [0, 0, 0]]);
+                doNewSend(["13c", [0, 53, 0]]);
+                doNewSend(["5", [secondary, true]]);
+            }, 150);
+            setTimeout( () => {
+                doNewSend(["5", [primary, true]]);
+                doNewSend(["5", [secondary, true]]);
+            }, 155);
+            setTimeout( () => {
+                doNewSend(["5", [primary, true]]);
+                doNewSend(["5", [secondary, true]]);
+            }, 160);
+            setTimeout( () => {
+                doNewSend(["5", [primary, true]]);
+                doNewSend(["5", [secondary, true]]);
+            }, 165);
+            setTimeout( () => {
+                doNewSend(["5", [primary, true]]);
+                doNewSend(["5", [secondary, true]]);
+            }, 170);
+            setTimeout( () => {
+                doNewSend(["5", [primary, true]]);
+                doNewSend(["5", [secondary, true]]);
+            }, 175);
+            setTimeout( () => {
+                doNewSend(["5", [primary, true]]);
+                doNewSend(["5", [secondary, true]]);
+            }, 180);
+            setTimeout( () => {
+                doNewSend(["5", [primary, true]]);
+                doNewSend(["5", [secondary, true]]);
+            }, 185);
+            setTimeout( () => {
+                doNewSend(["5", [primary, true]]);
+                doNewSend(["5", [secondary, true]]);
+            }, 190);
+            setTimeout( () => {
+                doNewSend(["5", [primary, true]]);
+                doNewSend(["5", [secondary, true]]);
+            }, 195);
+            setTimeout( () => {
+                doNewSend(["5", [primary, true]]);
+                doNewSend(["5", [secondary, true]]);
+            }, 200);
+            setTimeout( () => {
+                doNewSend(["5", [primary, true]]);
+                doNewSend(["5", [secondary, true]]);
+            }, 205);
+            setTimeout( () => {
+                doNewSend(["5", [primary, true]]);
+                doNewSend(["5", [secondary, true]]);
+            }, 210);
+            setTimeout( () => {
+                doNewSend(["5", [primary, true]]);
+                doNewSend(["5", [secondary, true]]);
+            }, 215);
+            setTimeout( () => {
+                doNewSend(["5", [primary, true]]);
+                doNewSend(["5", [secondary, true]]);
+            }, 220);
+            setTimeout( () => {
+                doNewSend(["5", [primary, true]]);
+                doNewSend(["5", [secondary, true]]);
+            }, 225);
+            setTimeout( () => {
+                doNewSend(["13c", [0, 0, 0]]);
+                doNewSend(["7", [1]]);
+                doNewSend(["5", [primary, true]]);
+                doNewSend(["13c", [0, 53, 0]]);
+                autoaim = false;
+            }, 230);
+            setTimeout( () => {
+                doNewSend(["13c", [0, 6, 0]]);
+            }, 250);
+        }
+        if (LagInsta == 1) {
+            autoaim = true;
+            doNewSend(["ch", ['RadarMod']]);
+            doNewSend(["5", [primary, true]]);
+            doNewSend(["13c", [0, 7, 0]]);
+            doNewSend(["13c", [0, 0, 1]]);
+            doNewSend(["13c", [0, 18, 1]]);
+            doNewSend(["c", [1]]);
+            setTimeout( () => {
+                var sck = "";
+                doNewSend(["13c", [0, 53, 0]]);
+                doNewSend(["13c", [0, 21, 1]]);
+                doNewSend(["5", [secondary, true]]);
+                for(let i = 0; i < 850; i++){
+                    let caas = new Uint8Array(550);
+                    for(let i = 0; i <caas.length;i++){
+                        caas[i] = Math.floor(Math.random()*278);
+                        sck += caas[i]
+                    }
+                }
+                ws.send(caas);
+            }, 110);
+            setTimeout( () => {
+                doNewSend(["5", [primary, true]]);
+                doNewSend(["c", [0, null]]);
+                doNewSend(["13c", [0, 6, 0]]);
+                doNewSend(["13c", [0, 0, 1]]);
+                doNewSend(["13c", [0, 19, 1]]);
+                autoaim = false;
+            },instaSpeed);
+        }
+        if (ReverseInsta == 1) {
+            autoaim = true;
+            doNewSend(["ch", ["Reverse Lag insta."]]);
+            doNewSend(["5", [secondary, true]]);
+            doNewSend(["13c", [0, 53, 0]]);
+            doNewSend(["13c", [0, 0, 1]]);
+            doNewSend(["13c", [0, 19, 1]]);
+            doNewSend(["c", [1]]);
+            setTimeout( () => {
+                doNewSend(["5", [primary, true]]);
+                doNewSend(["13c", [0, 7, 0]]);
+                doNewSend(["13c", [0, 0, 1]]);
+                doNewSend(["13c", [0, 18, 1]]);
+            }, instaSpeed - 130);
+            setTimeout( () => {
+                var sck = "";
+                for(let i = 0; i < 750; i++){
+                    let caas = new Uint8Array(550);
+                    for(let i = 0; i <caas.length;i++){
+                        caas[i] = Math.floor(Math.random()*278);
+                        sck += caas[i]
+                    }
+                }
+                ws.send(caas);
+            }, 110);
+            setTimeout( () => {
+                doNewSend(["5", [primary, true]]);
+                doNewSend(["c", [0, null]]);
+                doNewSend(["13c", [0, 6, 0]]);
+                doNewSend(["13c", [0, 0, 1]]);
+                doNewSend(["13c", [0, 21, 1]]);
+                autoaim = false;
+            }, instaSpeed);
+        }
+    }
+
+    var lasthat,lastacc;
+    if(e.keyCode == 76 && document.activeElement.id.toLowerCase() !== 'chatbox') {
+        lasthat = myPlayer.hat
+        lastacc = myPlayer.accessory
+        doNewSend(["5", [secondary, true]]);
+        doNewSend(["c", [1]]);
+        doNewSend(["2", [nearestEnemyAngle]]);
+        doNewSend(["13c", [0, 53, 0]]);
+        doNewSend(["13c", [0, 19, 1]]);
+        setTimeout(() => {
+            doNewSend(["6", [12]]);
+            doNewSend(["2", [nearestEnemyAngle]]);
+        },100);
+        setTimeout(() => {
+            doNewSend(["6", [15]]);
+            doNewSend(["2", [nearestEnemyAngle]]);
+        },200);
+        setTimeout(() => {
+            doNewSend(["c", [null]]);
+            doNewSend(["5", [primary, true]]);
+            hat(lasthat)
+            acc(lastacc)
+        },300);
+        setTimeout(() => {
+            doNewSend(["2", [null]]);
+        },310);
+        setTimeout(() => {
+            lasthat = myPlayer.hat
+            lastacc = myPlayer.accessory
+            doNewSend(["5", [secondary, true]]);
+            doNewSend(["c", [1]]);
+            doNewSend(["2", [nearestEnemyAngle]]);
+            doNewSend(["13c", [0, 53, 0]]);
+            doNewSend(["13c", [0, 19, 1]]);
+        },0);
+        setTimeout(() => {
+            doNewSend(["6", [12]]);
+            doNewSend(["2", [nearestEnemyAngle]]);
+        },100);
+        setTimeout(() => {
+            doNewSend(["6", [15]]);
+            doNewSend(["2", [nearestEnemyAngle]]);
+        },200);
+        setTimeout(() => {
+            doNewSend(["c", [null]]);
+            doNewSend(["5", [primary, true]]);
+            hat(lasthat)
+            acc(lastacc)
+        },300);
+        setTimeout(() => {
+            doNewSend(["2", [null]]);
+        },310);
+    }
+    if(e.keyCode == 32 && document.activeElement.id.toLowerCase() !== 'chatbox') {
+        autoaim = true;
+        doNewSend(["2", [nearestEnemyAngle]]);
+        doNewSend(["5", [primary, true]]);
+        hat(7);
+        acc(18);
+        doNewSend(["c", [1]]);
+        setTimeout( () => {
+            hat(53);
+            acc(21);
+            doNewSend(["2", [nearestEnemyAngle]]);
+            doNewSend(["5", [secondary, true]]);
+            doNewSend(["c", [1]]);;
+        },148);
+        setTimeout( () => {
+            doNewSend(["5", [primary, true]]);
+            hat(6);
+            acc(19);
+            autoaim = false;
+        },240);
+        setTimeout(() => {
+            place(spikeType, nearestEnemyAngle + toRad(45));
+            place(spikeType, nearestEnemyAngle - toRad(45));
+        },330);
+    }
+
+    if(e.keyCode == 38 && document.activeElement.id.toLowerCase() !== 'chatbox') {
+        messageToggle = (messageToggle + 1) % 2;
+    }
+
+    if(e.keyCode == 40 && document.activeElement.id.toLowerCase() !== 'chatbox') {
+        clanToggle = (clanToggle + 1) % 2;
+    }
+
+    if(e.keyCode == 17 && document.activeElement.id.toLowerCase() !== 'chatbox') {
+        healToggle = (healToggle + 1) % 2;
+        if(healToggle == 0) {
+            if(hatToggle == 0) {
+                document.title = "AutoHeal: OFF ~ AutoHat: OFF"
+            } else {
+                document.title = "AutoHeal: OFF ~ AutoHat: ON"
+            }
+        } else {
+            if(hatToggle == 0) {
+                document.title = "AutoHeal: ON ~ AutoHat: OFF"
+            } else {
+                document.title = "AutoHeal: ON ~ AutoHat: ON"
+            }
+        }
+    }
+    if(e.keyCode == 113 && document.activeElement.id.toLowerCase() !== 'chatbox') {
+        if (autoaim == false) {
+            autoaim = true;
+            document.title = "Aim : On";
+        } else {
+            document.title = "Aim : Off";
+            autoaim = false;
+        }
+    }
+
+    if(e.keyCode == 76 && document.activeElement.id.toLowerCase() !== 'chatbox') {
+        autoaim = true;
+        doNewSend(["5", [secondary, true]]);
+        doNewSend(["13c", [0, 53, 0]]);
+        doNewSend(["c", [1]]);
+
+        setTimeout( () => {
+            doNewSend(["6", [12]]);
+        }, 300);
+
+        setTimeout( () => {
+            doNewSend(["6", [15]]);
+        }, 300);
+
+        setTimeout( () => {
+            doNewSend(["c", [0]]);
+            doNewSend(["13c", [0, 6, 0]]);
+            doNewSend(["5", [primary, true]]);
+            autoaim = false;
+        }, 300);
+    }
+
+    if(e.keyCode == 97 && document.activeElement.id.toLowerCase() !== 'chatbox') {
+        doNewSend(["6", [4]]);
+    }
+
+    if(e.keyCode == 98 && document.activeElement.id.toLowerCase() !== 'chatbox') {
+        doNewSend(["6", [15]]);
+    }
+    if(e.keyCode == 99 && document.activeElement.id.toLowerCase() !== 'chatbox') {
+        doNewSend(["6", [28]]);
+    }
+    if(e.keyCode == 105 && document.activeElement.id.toLowerCase() !== 'chatbox') {
+        doNewSend(["6", [28]]);
+        doNewSend(["6", [25]]);
+    }
+    if(e.keyCode == 9 && document.activeElement.id.toLowerCase() !== 'chatbox') {
+        hatToggle = (hatToggle + 1) % 2;
+        if(healToggle == 0) {
+            if(hatToggle == 0) {
+                document.title = "AutoHeal: OFF ~ AutoHat: OFF"
+            } else {
+                document.title = "AutoHeal: OFF ~ AutoHat: ON"
+            }
+        } else {
+            if(hatToggle == 0) {
+                document.title = "AutoHeal: ON ~ AutoHat: OFF"
+            } else {
+                document.title = "AutoHeal: ON ~ AutoHat: ON"
+            }
+        }
+    }
+})
+
+document.addEventListener('keyup', (e)=>{
+    spikePlacer.stop(e.keyCode);
+    boostPlacer.stop(e.keyCode);
+    boostSpiker.stop(e.keyCode);
+    boostmiller.stop(e.keyCode);
+    millPlacer.stop(e.keyCode);
+    turretPlacer.stop(e.keyCode);
+    healer.stop(e.keyCode);
+    if(e.keyCode == 71 && document.activeElement.id.toLowerCase() !== 'chatbox') {
+        setTimeout( () => {
+            doNewSend(["33", [null]]);
+            boostDir = null;
+        }, 10);
+    }
+    if(e.keyCode == 72 && document.activeElement.id.toLowerCase() !== 'chatbox') {
+        setTimeout( () => {
+            doNewSend(["33", [null]]);
+            boostDir = null;
+        }, 10);
+    }
+})
+
+
+function isElementVisible(e) {
+    return (e.offsetParent !== null);
+}
+
+
+function toRad(angle) {
+    return angle * 0.01745329251;
+}
+
+function dist(a, b){
+    return Math.sqrt( Math.pow((b.y-a[2]), 2) + Math.pow((b.x-a[1]), 2) );
+}
+
+function animate(space, chance) {
+    let result = '';
+    let characters;
+    if(space) {
+        characters = 'SUB TO lol';
+    } else {
+        characters = 'YP'
+    }
+    if(space) {
+        characters = characters.padStart((30 - characters.length) / 2 + characters.length)
+        characters = characters.padEnd(30);
+    }
+    let count = 0;
+    for (let i = 0; i < characters.length; i++ ) {
+        if(Math.floor(Math.random() * chance) == 1 && characters.charAt(i) != "-" && count < 2 && characters.charAt(i) != " ") {
+            result += "_";
+            count++
+        } else {
+            result += characters.charAt(i);
+        }
+    }
+    return result;
+}
+
+document.title = "☠ ๖̶ζ͜͡RadarMod ☠"
+
+function update() {
+    for (let i=0;i<9;i++){
+        if (isElementVisible(document.getElementById("actionBarItem" + i.toString()))){
+            primary = i;
+        }
+    }
+
+    for (let i=9;i<16;i++){
+        if (isElementVisible(document.getElementById("actionBarItem" + i.toString()))){
+            secondary = i;
+        }
+    }
+
+    for (let i=16;i<19;i++){
+        if (isElementVisible(document.getElementById("actionBarItem" + i.toString()))){
+            foodType = i - 16;
+        }
+    }
+
+    for (let i=19;i<22;i++){
+        if (isElementVisible(document.getElementById("actionBarItem" + i.toString()))){
+            wallType = i - 16;
+        }
+    }
+
+    for (let i=22;i<26;i++){
+        if (isElementVisible(document.getElementById("actionBarItem" + i.toString()))){
+            spikeType = i - 16;
+        }
+    }
+
+    for (let i=26;i<29;i++){
+        if (isElementVisible(document.getElementById("actionBarItem" + i.toString()))){
+            millType = i - 16;
+        }
+    }
+
+    for (let i=29;i<31;i++){
+        if (isElementVisible(document.getElementById("actionBarItem" + i.toString()))){
+            mineType = i - 16;
+        }
+    }
+
+    for (let i=31;i<33;i++){
+        if (isElementVisible(document.getElementById("actionBarItem" + i.toString()))){
+            boostType = i - 16;
+        }
+    }
+
+    for (let i=33;i<39;i++){
+        if (isElementVisible(document.getElementById("actionBarItem" + i.toString())) && i != 36){
+            turretType = i - 16;
+        }
+    }
+
+    spawnpadType = 36;
+}
+
+var ID_WinterCap = 15;
+var ID_FlipperHat = 31;
+var ID_MarksmanCap = 1;
+var ID_BushGear = 10;
+var ID_SoldierHelmet = 6;
+var ID_AntiVenomGear = 23;
+var ID_MusketeerHat = 32;
+var ID_MedicGear = 13;
+var ID_BullHelmet = 7;
+var ID_EmpHelmet = 22;
+var ID_BoosterHat = 12;
+var ID_BarbarianArmor = 26;
+var ID_BullMask = 46;
+var ID_Hat = 14;
+var ID_SpikeGear = 11;
+var ID_BushidoArmor = 16;
+var ID_SamuraiArmor = 20;
+var ID_ScavengerGear = 27;
+var ID_TankGear = 40;
+var ID_TurretGear = 53;
+
+// Keys
+var TankGearKey = 90;
+var BullHelmetKey = 74;
+var SoldierHelmetKey = 67;
+var TurretKey = 75;
+var BoosterHatKey = 66;
+var uneqiup = 16;
+var SpikeGearKey = 89;
+var EmpKey = 84;
+var SamuKey = 79;
+var SpikeKey = 86;
+var PitKey = 70;
+var PikeKey = 86;
+var WindKey = 78;
+
+
+try {
+    document.getElementById("moomooio_728x90_home").style.display = "none";
+    $("moomooio728x90_home").parent().css({display: "none"});
+} catch (e) {
+    console.log("There was an error removing the ads.");
+}
+
+var
+menuChange = document.createElement("div");
+menuChange.className = "menuCard";
+menuChange.id = "mainSettings";
+menuChange.innerHTML = `
+<div id="simpleModal" class="modal">
+<div class="modal-content">
+<div class="modal-header">
+<span class="closeBtn">&times;</span>
+<h2 style="font-size: 17px;">๖̶ζ͜͡RadarModv9</h2>
+</div>
+<div class="modal-body" style="font-size: 17px;">
+<div class="flexControl">
+<br><h3 class="menuPrompt">Tank Gear: </h3> <input value="${String.fromCharCode(TankGearKey)}" id="tankGear" class="keyPressLow" onkeyup="this.value = this.value.toUpperCase();" maxlength="1" type="text"/>
+<h3 class="menuPrompt">Bull Helmet: </h3> <input value="${String.fromCharCode(BullHelmetKey)}" id="bullHelm" class="keyPressLow" onkeyup="this.value = this.value.toUpperCase();" maxlength="1" type="text"/><br>
+<br><h3 class="menuPrompt">Soldier Helmet: </h3> <input value="${String.fromCharCode(SoldierHelmetKey)}" id="soldier" class="keyPressLow"onkeyup="this.value = this.value.toUpperCase();"  maxlength="1" type="text"/>
+<h3 class="menuPrompt">Turret Gear: </h3> <input value="${String.fromCharCode(TurretKey)}" id="turret" class="keyPressLow" maxlength="1" onkeyup="this.value = this.value.toUpperCase();" type="text"/><br>
+<br><h3 class="menuPrompt">Booster Hat: </h3> <input value="${String.fromCharCode(BoosterHatKey)}" id="booster" class="keyPressLow" maxlength="1" onkeyup="this.value = this.value.toUpperCase();" type="text"/>
+<h3 class="menuPrompt">Spike Gear: </h3> <input value="${String.fromCharCode(SpikeGearKey)}" id="spikeg" class="keyPressLow" maxlength="1" onkeyup="this.value = this.value.toUpperCase();" type="text"/><br>
+<br><h3 class="menuPrompt">Emp Helmet: </h3> <input value="${String.fromCharCode(EmpKey)}" id="emp" class="keyPressLow" onkeyup="this.value = this.value.toUpperCase();" maxlength="1" type="text"/>
+<h3 class="menuPrompt">Samurai Armor:</h3> <input value="${String.fromCharCode(SamuKey)}" id="samu" class="keyPressLow" onkeyup="this.value = this.value.toUpperCase();" maxlength="1" type="text"/><br>
+<br><h3 class="menuPrompt">Put Pit on: </h3> <input value="${String.fromCharCode(PitKey)}" id="pit" class="keyPressLow" onkeyup="this.value = this.value.toUpperCase();" maxlength="1" type="text"/>
+<h3 class="menuPrompt">Put Pike on: </h3> <input value="${String.fromCharCode(PikeKey)}" id="pike" class="keyPressLow" onkeyup="this.value = this.value.toUpperCase();" maxlength="1" type="text"/><br>
+<h3 class="menuPrompt">Put Windmill on: </h3> <input value="${String.fromCharCode(WindKey)}" id="wind" class="keyPressLow" onkeyup="this.value = this.value.toUpperCase();" maxlength="1" type="text"/>
+<h3 style="font-size: 17px;"> Settings </h3>
+<label class="container">Show biomes on the map ?(Snow, Plains, desert)
+<input type="checkbox" id="myCheck">
+<span class="checkmark"></span>
+</label>
+<label class="container">Melee Mod | op? test it out!
+<input type="checkbox" id="m">
+<span class="checkmark"></span>
+</label>
+<label class="container">Change wing | yes yes yes
+<input type="checkbox" id="n">
+<span class="checkmark"></span>
+</label>
+<label class="container">Lag Insta | nice LMAO
+<input type="checkbox" id="LI">
+<span class="checkmark"></span>
+</label>
+<label class="container">Reverse Lag Insta | in v7 have it
+<input type="checkbox" id="RLI">
+<span class="checkmark"></span>
+</label>
+<label class="container">Invisible Insta | :O
+<input type="checkbox" id="II">
+<span class="checkmark"></span>
+</label>
+<h3 style="font-size: 17px;"> Autochat settings </h3>
+<br>AutoChat:<input type="text" value="1" id="ach1" width="100" height="50"/><br>
+</div>
+</div>
+<div class="modal-footer">
+<h3 style="font-size: 17px;">mod BY ๖̶ζ͜͡Radar</h3>
+<p>LMAO</p>
+</div>
+</div>
+</div>
+`
+document.body.appendChild(menuChange)
+
+$("#tankGear").on("input", () => {
+    var cval = $("#tankGear").val();
+    if (cval){
+        TankGearKey = cval.toUpperCase();
+        TankGearKey = TankGearKey.charCodeAt(0);
+        console.log(TankGearKey);
+    }
+});
+
+$("#bullHelm").on("input", () => {
+    var cval = $("#bullHelm").val();
+    if (cval){
+        BullHelmetKey = cval.toUpperCase();
+        BullHelmetKey = BullHelmetKey.charCodeAt(0);
+        console.log(BullHelmetKey);
+    }
+});
+
+$("#soldier").on("input", () => {
+    var cval = $("#soldier").val();
+    if (cval){
+        SoldierHelmetKey = cval.toUpperCase();
+        SoldierHelmetKey = SoldierHelmetKey.charCodeAt(0);
+        console.log(SoldierHelmetKey);
+    }
+});
+
+$("#turret").on("input", () => {
+    var cval = $("#turret").val();
+    if (cval){
+        TurretKey = cval.toUpperCase();
+        TurretKey = TurretKey.charCodeAt(0);
+        console.log(TurretKey);
+    }
+});
+
+
+
+$("#emp").on("input", () => {
+    var cval = $("#emp").val();
+    if (cval){
+        EmpKey = cval.toUpperCase();
+        EmpKey = EmpKey.charCodeAt(0);
+        console.log(EmpKey);
+    }
+});
+
+$("#samu").on("input", () => {
+    var cval = $("#samu").val();
+    if (cval){
+        SamuKey = cval.toUpperCase();
+        SamuKey = SamuKey.charCodeAt(0);
+        console.log(SamuKey);
+    }
+});
+$("#pit").on("input", () => {
+    var cval = $("#pit").val();
+    if (cval){
+        PitKey = cval.toUpperCase();
+        PitKey = PitKey.charCodeAt(0);
+        console.log(PitKey);
+    }
+});
+$("#pike").on("input", () => {
+    var cval = $("#pike").val();
+    if (cval){
+        PikeKey = cval.toUpperCase();
+        PikeKey = PikeKey.charCodeAt(0);
+        console.log(PikeKey);
+    }
+});
+$("#wind").on("input", () => {
+    var cval = $("#wind").val();
+    if (cval){
+        WindKey = cval.toUpperCase();
+        WindKey = WindKey.charCodeAt(0);
+        console.log(WindKey);
+    }
+});
+$("#booster").on("input", () => {
+    var cval = $("#booster").val();
+    if (cval){
+        BoosterHatKey = cval.toUpperCase();
+        BoosterHatKey = BoosterHatKey.charCodeAt(0);
+        console.log(BoosterHatKey);
+    }
+});
+
+$("#spikeg").on("input", () => {
+    var cval = $("#spikeg").val();
+    if (cval){
+        SpikeGearKey = cval.toUpperCase();
+        SpikeGearKey = SpikeGearKey.charCodeAt(0);
+        console.log(SpikeGearKey);
+    }
+});
+
+$("#trap").on("input", () => {
+    var cval = $("#trap").val();
+    if (cval){
+        TrapKey = cval.toUpperCase();
+        TrapKey = TrapKey.charCodeAt(0);
+        console.log(TrapKey);
+    }
+});
+
+var styleItem = document.createElement("style");
+styleItem.type = "text/css";
+styleItem.appendChild(document.createTextNode(`
+.keyPressLow {
+margin-left: 8px;
+font-size: 16px;
+margin-right: 8px;
+height: 25px;
+width: 50px;
+background-color: #fcfcfc;
+border-radius: 3.5px;
+border: none;
+text-align: center;
+color: #4A4A4A;
+border: 0.5px solid #f2f2f2;
+}
+.menuPrompt {
+font-size: 17px;
+font-family: 'Hammersmith One';
+color: #4A4A4A;
+flex: 0.2;
+text-align: center;
+margin-top: 10px;
+display: inline-block;
+}
+
+.modal {
+display: none;
+position: fixed;
+z-index: 1;
+left: 0;
+top: 0;
+overflow: auto;
+height: 100%;
+width: 100%;
+}
+
+.modal-content {
+margin: 10% auto;
+width: 40%;
+box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.17);
+font-size: 14px;
+line-height: 1.6;
+}
+
+.modal-header h2,
+.modal-footer h3 {
+margin: 0;
+}
+
+.modal-header {
+background: #cf2727;
+padding: 15px;
+color: #fff;
+border-top-left-radius: 5px;
+border-top-right-radius: 5px;
+}
+
+.modal-body {
+padding: 10px 20px;
+background: #fff;
+}
+
+.modal-footer {
+background: #cf2727;
+padding: 10px;
+color: #fff;
+text-align: center;
+border-bottom-left-radius: 5px;
+border-bottom-right-radius: 5px;
+}
+
+.closeBtn {
+color: #ccc;
+float: right;
+font-size: 30px;
+color: #fff;
+}
+
+.closeBtn:hover,
+.closeBtn:focus {
+color: #000;
+text-decoration: none;
+cursor: pointer;
+}
+
+/* Customize the label (the container) */
+.container {
+display: block;
+position: relative;
+padding-left: 35px;
+margin-bottom: 12px;
+cursor: pointer;
+font-size: 16px;
+-webkit-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.container input {
+position: absolute;
+opacity: 0;
+cursor: pointer;
+height: 0;
+width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+position: absolute;
+top: 0;
+left: 0;
+height: 25px;
+width: 25px;
+background-color: #eee;
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a red background */
+.container input:checked ~ .checkmark {
+background-color: #cf2727;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+content: "";
+position: absolute;
+display: none;
+}
+
+/* Show the checkmark when checked */
+.container input:checked ~ .checkmark:after {
+display: block;
+}
+
+/* Style the checkmark/indicator */
+.container .checkmark:after {
+left: 9px;
+top: 5px;
+width: 5px;
+height: 10px;
+border: solid white;
+border-width: 0 3px 3px 0;
+-webkit-transform: rotate(45deg);
+-ms-transform: rotate(45deg);
+transform: rotate(45deg);
+}
+
+`))
+document.head.appendChild(styleItem);
+
+
+$("#adCard").css({display: "none"});
+$("#pre-content-container").css({display: "none"});
+
+
+document.addEventListener('keydown', function(e) {
+    if (e.keyCode == uneqiup && document.activeElement.id.toLowerCase() !== 'chatbox'){
+        console.log("done")
+        storeEquip(0);
+    } else if (e.keyCode == 27){
+        if (modal.style.display = "none") {
+            modal.style.display = "block";
+        } else {
+            modal.style.display = "none";
+        }
+    } else if (e.keyCode == TankGearKey && document.activeElement.id.toLowerCase() !== 'chatbox'){
+        storeEquip(ID_TankGear);
+        doNewSend(["ch",["TankGear:ON"]]);
+        doNewSend(["13c", [0, 21, 1]]);
+    } else if (e.keyCode == SoldierHelmetKey && document.activeElement.id.toLowerCase() !== 'chatbox'){
+        storeEquip(ID_SoldierHelmet);
+        doNewSend(["ch",["SoldierHelmet:ON"]]);
+        doNewSend(["13c", [0, 19, 1]]);
+    } else if (e.keyCode == BullHelmetKey && document.activeElement.id.toLowerCase() !== 'chatbox'){
+        storeEquip(ID_BullHelmet);
+        doNewSend(["ch",["BullHelmet:ON"]]);
+        doNewSend(["13c", [0, 18, 1]]);
+    } else if (e.keyCode == BoosterHatKey && document.activeElement.id.toLowerCase() !== 'chatbox'){
+        storeEquip(ID_BoosterHat);
+    } else if (e.keyCode == EmpKey && document.activeElement.id.toLowerCase() !== 'chatbox'){
+        storeEquip(ID_EmpHelmet);
+    } else if (e.keyCode == SamuKey && document.activeElement.id.toLowerCase() !== 'chatbox'){
+        storeEquip(ID_SamuraiArmor);
+        doNewSend(["ch",["SamuraiArmor:ON"]]);
+        doNewSend(["13c", [0, 21, 1]]);
+    } else if (e.keyCode == SpikeGearKey && document.activeElement.id.toLowerCase() !== 'chatbox'){
+        storeEquip(ID_SpikeGear);
+    } else if (e.keyCode == TurretKey && document.activeElement.id.toLowerCase() !== 'chatbox'){
+        storeEquip(ID_TurretGear);
+        doNewSend(["ch",["TurretGear:ON"]]);
+        doNewSend(["13c", [0, 19, 1]]);
+    } else if (e.keyCode == PitKey && document.activeElement.id.toLowerCase() !== 'chatbox'){
+        place(boostType)
+    } else if (e.keyCode == PikeKey && document.activeElement.id.toLowerCase() !== 'chatbox'){
+        place(spikeType)
+    } else if (e.keyCode == WindKey && document.activeElement.id.toLowerCase() !== 'chatbox'){
+        place(millType)
+        if (e.keyCode == 79 && document.activeElement.id.toLowerCase() !== 'chatbox') {
+            for (let i=0;i<5;i++){
+                let angle = myPlayer.dir + toRad(i * 72);
+                place(millType, angle)
+            }
+        }
+        if (e.keyCode == 78 && document.activeElement.id.toLowerCase() !== 'chatbox') {
+            place(millType, myPlayer.dir + toRad(90));
+            place(millType, myPlayer.dir + toRad(270));
+            place(millType, myPlayer.dir + toRad(0));
+        }
+    }
+})
+
+// Get modal element
+var modal = document.getElementById("simpleModal");
+// Get close button
+var closeBtn = document.getElementsByClassName('closeBtn')[0];
+
+// Events
+closeBtn.addEventListener('click', closeModal);
+window.addEventListener('click', outsideClick);
+
+// Close
+function closeModal() {
+    modal.style.display = 'none';
+}
+
+// Close If Outside Click
+function outsideClick(e) {
+    if (e.target == modal) {
+        modal.style.display = 'none';
+    }
+}
+var a = document.querySelector("#m")
+
+a.addEventListener('change', function() {
+    if (this.checked) {
+        changehat = true
+        doNewSend(["ch", [" ON | Melee Mod"]]);
+    } else {
+        changehat = false
+        doNewSend(["ch", [" OFF |Melee Mod"]]);
+    }
+})
+var a1 = document.querySelector("#n")
+
+a1.addEventListener('change', function () {
+    if (this.checked) {
+        wingmod = true
+        doNewSend(["ch", [" ON | Wing Change"]]);
+    } else {
+        wingmod = false
+        doNewSend(["ch", [" OFF | Wing Change"]]);
+    }
+})
+var LI = document.querySelector("#LI")
+
+LI.addEventListener('change', function () {
+    if (this.checked) {
+        LagInsta = true
+        doNewSend(["ch", [" ON | LagInsta"]]);
+    } else {
+        LagInsta = false
+        doNewSend(["ch", [" OFF | LagInsta"]]);
+    }
+})
+var RLI = document.querySelector("#RLI")
+
+RLI.addEventListener('change', function () {
+    if (this.checked) {
+        ReverseInsta = true
+        doNewSend(["ch", [" ON | ReverseLagInsta"]]);
+    } else {
+        ReverseInsta = false
+        doNewSend(["ch", [" OFF | ReverseLagInsta"]]);
+    }
+})
+var II = document.querySelector("#II")
+
+II.addEventListener('change', function () {
+    if (this.checked) {
+        InvisibleInsta = true
+        doNewSend(["ch", [" ON | InvisibleInsta"]]);
+    } else {
+        InvisibleInsta = false
+        doNewSend(["ch", [" OFF | InvisibleInsta"]]);
+    }
+})
+
+var checkbox = document.querySelector("#myCheck")
+
+checkbox.addEventListener('change', function() {
+    if (this.checked) {
+        $("#mapDisplay").css({background: `url('https://i.imgur.com/fgFsQJp.png')`});
+        console.log('checked')
+    } else {
+        $("#mapDisplay").css({background: `rgba(0, 0, 0, 0.25)`})
+        console.log('unchecked')
+    }
+})
+var lel = false;
+function nothig() {
+    var lel = false;
+    console.log("fOlS");
+}
+setInterval(() => {
+    var ach = document.getElementById("ach1").value;
+    if(ach == 1) {
+        nothig();
+    } else {
+        doNewSend(["ch", [ach]]);
+    }
+}, 1000);
+
+unsafeWindow.admob = {
+    requestInterstitialAd: ()=>{},
+    showInterstitialAd: ()=>{}
+}
+function ichat(space, chance) {
+    var ach1 = document.getElementById("ach2").value;
+    let result = '';
+    let characters;
+    if(space) {
+        characters = ach1;
+    }
+    if(space) {
+        characters = characters.padStart((30 - characters.length) / 2 + characters.length)
+        characters = characters.padEnd(30);
+    }
+    let count = 0;
+    for (let i = 0; i < characters.length; i++ ) {
+        if(Math.floor(Math.random() * chance) == 0 && characters.charAt(i) != "-" && count < 0 && characters.charAt(i) != " ") {
+            result += "";
+            count++
+        } else {
+            result += characters.charAt(i);
+        }
+    }
+    return result;
+}
+
+// ==UserScript==
+// @name        VISUALS TESTER
+// @version      12.7666
+// @author       Mojaster-X
+// @match        *://moomoo.io/*
+// @match        *://dev.moomoo.io/*
+// @match        *://sandbox.moomoo.io/*
+// @grant        none
+// @require https://greasyfork.org/scripts/368273-msgpack/code/msgpack.js?version=598723
+// @require http://code.jquery.com/jquery-3.3.1.min.js
+// @require https://code.jquery.com/ui/1.12.0/jquery-ui.min.js
+// @require https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.0/jquery-confirm.min.js
+
+// @downloadURL none
+// ==/UserScript==
+
+// --GRAPHIC++ NOT FINISHED YET--
+
+$("#ageBarContainer").append('</br><div id="hacktext"></div><div style="width: 100%;position: absolute;bottom: 94px;text-align: center;color:blue;font-size: 24px;" id="freetext"></div><div style="width: 100%;position: absolute;bottom: 144px;text-align: center;color: #ed3f00;font-size: 24px;" id="ptext"></div><div style="width: 100%;position: absolute;bottom: 224px;text-align: center;color: #9a008b;font-size: 24px;" id="ctext"></div><div style="width: 100%;position: absolute;top: 100px;text-align: center;color: white;font-size: 12px;" id="bilgitext">Keys ➜ ║ AUTO HEAL- Q ║ ║ MOD SETTINGS - ESC ║ ║ INSTAKILL - R ║ ║ SPIKE - V ║ ║ TRAP- F ║ ║ GET MORE FPS ║ ║ BOOST + SPIKE - G ║ ║ WINDMILL - N ║ ║ MACRO HAT ║ ║ PREMIUM MAP ║ ║ 4 TRAPS / BOOSTPADS - I ║ ║ CX INSTA - SPACE ║ ║ 4 SPIKES - ;(:) ║ ║ AIM CURSOR ║ ║ BIG SHOP ║ AND MORE!</div><div style="width: 100%;position: absolute;bottom: 170px;text-align: center;color: #fff;font-size: 24px;" id="atext"></div><div style="width: 100%;position: absolute;bottom: 196px;text-align: center;color: black;font-size: 24px;" id="mtext"></div>');
+(function() {var css = [
+    "div#adCard, ",
+    "  #twitterFollow, ",
+    "  #youtubeFollow, ",
+    "  #downloadButtonContainer, ",
+    "  #followText, ",
+    "  #promoImg:hover {",
+    "  display: none;",
+    "  background: rgba(0, 0, 0, 0.6);",
+    "  }",
+    "",
+    "  #featuredYoutube > a.ytLink, ",
+    "  a {",
+    "    color: #fff !important;",
+    "    font-size: 0px;",
+    "    margin-top: 0px;",
+    "    padding: 6px;",
+    "    top: 100px;",
+    "    transition: 1s;",
+    "  }",
+    "",
+    "  a:hover {",
+    "    color: blue!important;",
+    "  }",
+    "",
+    "  #youtuberOf, ",
+    "  #linksContainer2, ",
+    "  .partyWrap {",
+    "    background-color: rgba(0, 0, 0, 0.6) !important;",
+    "    border: 1px solid rgb(255, 0, 0);",
+    "    border-radius: 10px;",
+    "    padding: 10px;",
+    "    font-size: 10px;",
+    "    position: absolute;",
+    "    color: #fff;",
+    "  }",
+    "",
+    "  .partyWrap {",
+    "    min-height: 80px;",
+    "    min-width: 160px;",
+    "    top: 10px;",
+    "    right: 10px;",
+    "  }",
+    "",
+    "  #youtuberOf {",
+    "    top: 10px;",
+    "    left: 10px;",
+    "  }",
+    "",
+    "  #followText {",
+    "    min-height: 200px;",
+    "    bottom: 10px;",
+    "    left: 10px;",
+    "  }",
+    "",
+    "  #linksContainer2 {",
+    "    bottom: 10px;",
+    "    right: 10px;",
+    "    color: transparent;",
+    "  }",
+    "",
+    "  .menuCard {",
+    "    background-color: rgba(0, 0, 0, 0.3) !important;",
+    "    border: 1px solid rgb(255, 0, 0);",
+    "    border-radius: 20px;",
+    "    box-shadow: none;",
+    "    overflow:auto;",
+    "   transition: 1.5s;",
+    "  }",
+    "    .menucard:hover {",
+    "    box-shadow: 0 5px 50px 0 #32ff00 inset, 0 5px 50px 0 #32ff00;",
+    "               0 5px 50px 0 #32ff00 inset, 0 5px 50px 0 #32ff00;",
+    "    text-shadow: 0 0 5px #32ff00, 0 0 5px #32ff00;",
+    "    background: #0b3800;",
+    "    color: green;",
+    "   }",
+    "",
+    "    FPS:hover {",
+    "    box-shadow: 0 5px 50px 0 #32ff00 inset, 0 5px 50px 0 #32ff00;",
+    "               0 5px 50px 0 #32ff00 inset, 0 5px 50px 0 #32ff00;",
+    "    text-shadow: 0 0 5px #32ff00, 0 0 5px #32ff00;",
+    "    background: #0b3800;",
+    "    color: green;",
+    "   }",
+    "",
+    "",
+    "  ::-webkit-scrollbar {",
+    "    width: 10px;",
+    "    border-right: 1px solid rgb(255, 0, 0);",
+    "  }",
+    "",
+    "  ::-webkit-scrollbar-thumb {",
+    "    border: 1px solid white;",
+    "  }",
+    "",
+    "  ::-webkit-scrollbar-thumb:hover {",
+    "    background: rgb(255, 0, 0);",
+    "  }",
+    "",
+    "  ::-webkit-scrollbar-thumb:active {",
+    "    background: black;",
+    "    border: 1px solid rgb(255, 0, 0);",
+    "  }",
+    "",
+    "  .menuHeader {",
+    "    font-size: 24px;",
+    "    color: #fff;",
+    "    margin-bottom: 1px;",
+    "    border-bottom: 1px solid rgb(255, 0, 0);",
+    "  }",
+    "",
+    "  .menuHeader:first-child {",
+    "    margin-bottom: 30px;",
+    "  }",
+    "",
+    "  .menuText {",
+    "    font-size: 18px;",
+    "    color: black;",
+    "    margin-bottom: 10px;",
+    "  }",
+    "  .menuText {",
+    "    font-size: 18px;",
+    "    color: red;",
+    "    margin-bottom: 10px;",
+    "  }",
+    "",
+    "  .ytLink {",
+    "    color: white;",
+    "    font-size: 24px;",
+    "    text-decoration: none;",
+    "    transition: 0.5s;",
+    "  }",
+    "",
+    "  #gameName {",
+    "  margin: 0;",
+    "  min-height: 1vh;",
+    "  font-family: 'Poppin', sans-serif;",
+    "  position: relative;",
+    "   text-shadow: 0 0 15px rgb(255, 0, 0), 0 0 15px rgb(255, 0, 0);",
+    "  }",
+    "",
+    "  #pingDisplay {",
+    "  margin: 0;",
+    "  min-height: 1vh;",
+    "  font-family: 'Poppin', sans-serif;",
+    "  }",
+    "  #pingDisplay:hover {",
+    "   text-shadow: 0 0 15px rgb(255, 0, 0), 0 0 15px rgb(255, 0, 0);",
+    "  }",
+    "",
+    "  #Hammersmith One {",
+    "   text-shadow: 0 0 15px rgb(255, 0, 0), 0 0 15px rgb(255, 0, 0);",
+    "  }",
+    "  .globalAlpha {",
+    "   background: #115400;",
+    "  }",
+    "",
+    "  #leaderboard {",
+    "  margin: 0;",
+    "  background: rgba(0, 0, 0, 0.3);",
+    "  font-family: Arial, Helvetica, sans-serif;",
+    "  position: relative;",
+    "  }",
+    "  #leaderboard:hover {",
+    "   box-shadow: 0 5px 50px 0 rgb(255, 0, 0) inset, 0 5px 50px 0 rgb(255, 0, 0);",
+    "               0 5px 50px 0 rgb(255, 0, 0) inset, 0 5px 50px 0 rgb(255, 0, 0);",
+    "   text-shadow: 0 0 15px rgb(255, 0, 0), 0 0 15px rgb(255, 0, 0);",
+    "    background: #0b3800;",
+    "    color: green;",
+    "  }",
+    "",
+    "  #actionBarItem:hover {",
+    "   box-shadow: 0 5px 50px 0 rgb(255, 0, 0) inset, 0 5px 50px 0 rgb(255, 0, 0);",
+    "               0 5px 50px 0 rgb(255, 0, 0) inset, 0 5px 50px 0 rgb(255, 0, 0);",
+    "   text-shadow: 0 0 5px rgb(255, 0, 0), 0 0 5px rgb(255, 0, 0);",
+    "    background: #0b3800;",
+    "    color: black;",
+    "  }",
+    "",
+    "  .menuButton {", //Mojaster-X Best in css!
+    "   top: 50%;",
+    "   left: 50%;",
+    "   transform: translate(-0%, -0%);",
+    "   text-align: center;",
+    "   font-size: 23px;",
+    "   padding: 25px;",
+    "   color: darkred;",
+    "   border: 3px solid red;",
+    "   font-family: poppins;",
+    "   font-weight: 400;",
+    "   background: rgb(58, 0, 0);",
+    "   text-transform: uppercase;",
+    "   letter-spacing: 15px;",
+    "   cursor: pointer;",
+    "   border-radius: 100px;",
+    "   transition: 1.5s;",
+    "  }",
+    "  .menuButton:hover {", //Mojaster-X Best in css! if u edit it u gay understand?
+    "   box-shadow: 0 5px 50px 0 rgb(255, 0, 0) inset, 0 5px 50px 0 rgb(255, 0, 0);",
+    "               0 5px 50px 0 rgb(255, 0, 0) inset, 0 5px 50px 0 rgb(255, 0, 0);",
+    "   text-shadow: 0 0 2px rgb(255, 0, 0), 0 0 2px rgb(255, 0, 0);",
+    "    background: rgba(0, 0, 0, 0.3);",
+    "  }",
+    "",
+    "  .menuCard span {",
+    "    margin: 1px;",
+    "  }",
+    "",
+    "  #promoHolderImg > img {",
+    "    width: 300px;",
+    "    height: 94px;",
+    "  }",
+    "",
+    "  #guideCard {",
+    "    max-height: 282px;",
+    "   transition: 1.5s;",
+    "  }",
+    "  #guideCard:hover {",
+    "   box-shadow: 0 5px 50px 0 rgb(255, 0, 0) inset, 0 5px 50px 0 rgb(255, 0, 0);",
+    "               0 5px 50px 0 rgb(255, 0, 0) inset, 0 5px 50px 0 rgb(255, 0, 0);",
+    "   text-shadow: 0 0 2px white, 0 0 2px white;",
+    "    background: rgba(0, 0, 0, 0.3);",
+    "    color: rgba(0, 0, 0, 0.3);",
+    "  }",
+    "",
+    "  .skinColorItem {",
+    "    transition: 3s;",
+    "    border: 1px solid red;",
+    "  }",
+    "",
+    "  select {",
+    "    background: rgba(0, 0, 0, 0.6);",
+    "    border-radius: 5px;",
+    "    border: 1px solid rgb(255, 0, 0);",
+    "    margin-bottom: 10px;",
+    "    color: #fff;",
+    "    transition: 0.5s;",
+    "  }",
+    "",
+    "  select:hover {",
+    "    border: 1px solid red;",
+    "   box-shadow: 0 5px 50px 0 rgb(255, 0, 0) inset, 0 5px 50px 0 rgb(255, 0, 0);",
+    "               0 5px 50px 0 rgb(255, 0, 0) inset, 0 5px 50px 0 rgb(255, 0, 0);",
+    "    text-shadow: 0 0 5px red, 0 0 5px red;",
+    "    background: rgba(0, 0, 0, 0.6);",
+    "  }",
+    "",
+    "  #pre-content-container {",
+    "    display: none!important;",
+    "  }",
+    "",
+    "  .uiElement, ",
+    "  .resourceDisplay, ",
+    "  .actionBarItem {",
+    "    background-color: rgba(0, 0, 0, 0.6) !important;",
+    "    border: 1px solid red;",
+    "    color: red;",
+    "    transition: 0.5s;",
+    "  }",
+    "  .uiElement:hover {", //Mojaster-X Best in css! if u edit it u gay understand?
+    "   box-shadow: 0 5px 50px 0 rgb(255, 0, 0) inset, 0 5px 50px 0 rgb(255, 0, 0);",
+    "               0 5px 50px 0 rgb(255, 0, 0) inset, 0 5px 50px 0 rgb(255, 0, 0);",
+    "   text-shadow: 0 0 5px red, 0 0 5px red;",
+    "   color: #32ff00;",
+    "  }",
+    "",
+    "  .uiElement:hover, ",
+    "  .resourceDisplay:hover, ",
+    "  .actionBarItem:hover {",
+    "    background-color: rgba(0,0,0,0.6) !important;",
+    "   box-shadow: 0 5px 50px 0 rgb(255, 0, 0) inset, 0 5px 50px 0 rgb(255, 0, 0);",
+    "               0 5px 50px 0 rgb(255, 0, 0) inset, 0 5px 50px 0 rgb(255, 0, 0);",
+    "   text-shadow: 0 0 5px red, 0 0 5px red;",
+    "    border: 1px solid red;",
+    "    border-radius: 50px !important;",
+    "    color: rgba(0,0,0,0.6);",
+    "  }",
+    "",
+    "  #topInfoHolder, #itemInfoHolder, #mapDisplay, #chatBox  { ",
+    "    background-color: rgba(0,0,0,0.6) !important;",
+    "    border: 1px solid red;",
+    "    border-radius: 10px !important;",
+    "    color: red;",
+    "  }",
+    "",
+    "  #itemInfoHolder { ",
+    "    -webkit-text-stroke: transparent;",
+    "  }",
+    "",
+    "  .material-icons { ",
+    "    color: rgba(41, 0, 0, 1);",
+    "    font-size: 315px;",
+    "    -webkit-text-stroke: 2px rgba(0,0,0,0.6);",
+    "  }",
+    "",
+    "  #altServer > a > i {",
+    "    font-size: 30px !important;",
+    "    -webkit-text-stroke: transparent !important;",
+    "  }",
+    "",
+    "  #ageText { ",
+    "    font-size: 30px !important;",
+    "    color: #fff;",
+    "    -webkit-text-stroke: 1.5px #black;",
+    "    margin-bottom: 30px;",
+    "  }",
+    "",
+    "  #ageBarBody {",
+    "    background-color: rgba(0,0,0,0.6) !important;",
+    "    border: 1px solid #fff",
+    "  }",
+    "  #ageBarBody:hover {",
+    "   box-shadow: 0 5px 50px 0 rgb(255, 0, 0) inset, 0 5px 50px 0 rgb(255, 0, 0);",
+    "               0 5px 50px 0 rgb(255, 0, 0) inset, 0 5px 50px 0 rgb(255, 0, 0);",
+    "   text-shadow: 0 0 5px red, 0 0 5px red;",
+    "    background: #0b3800!important;",
+    "  }",
+    "",
+    "  #ageBar {",
+    "    background-color: rgba(0,0,0,0.6) !important;",
+    "    border: 1px solid #32ff00;",
+    "    height: 5px;",
+    "    padding-bottom: 5px;",
+    "    margin-bottom: 3px;",
+    "  }",
+    "  #ageBar:hover {",
+    "    background-color: #32ff00 !important;",
+    "    border: 1px solid black;",
+    "    height: 5px;",
+    "    padding-bottom: 5px;",
+    "    margin-bottom: 3px;",
+    "  }",
+    "",
+    "  .actionBarItem {",
+    "    width: 55px;",
+    "    height: 55px;",
+    "    background-position: center; ",
+    "    background-size: 50px 50px;",
+    "  }",
+    "",
+    "  #aBox {",
+    "    color: #fff!important;",
+    "    transition: 5s;",
+    "  }",
+    "",
+    "  #chatBox::placeholder {",
+    "    color: #fff!important;",
+    "  }",
+    "",
+    "  #chatBox:hover {",
+    "   box-shadow: 0 5px 50px 0 rgb(255, 0, 0) inset, 0 5px 50px 0 rgb(255, 0, 0);",
+    "               0 5px 50px 0 rgb(255, 0, 0) inset, 0 5px 50px 0 rgb(255, 0, 0);",
+    "   text-shadow: 0 0 5px red, 0 0 5px red;",
+    "    background: red !important;",
+    "    transition: 5s;",
+    "  }",
+    "",
+    "  #chatBox:hover::placeholder {",
+    "    color: #fff!important;",
+    "  }",
+    "",
+    "  #leaderboard, .leaderboardItem[style*=\"color: rgba(0,0,0,0.3);\"] {",
+    "    color: #32ff00 !important;",
+    "  }",
+    "",
+    "  .ytLink:hover {",
+    "    color: #fff;",
+    "  }",
+    "",
+    "  #nameInput {",
+    "    background: rgba(0,0,0,0.6);",
+    "    border: 1px solid red;",
+    "    transition: 3s;",
+    "  }",
+    "",
+    "  #nameInput::placeholder {",
+    "    color: rgba(0,0,0,0.6);",
+    "    transition: 0.5s;",
+    "  }",
+    "",
+    "  #nameInput:hover {",
+    "   box-shadow: 0 5px 50px 0 rgb(255, 0, 0) inset, 0 5px 50px 0 rgb(255, 0, 0);",
+    "               0 5px 50px 0 rgb(255, 0, 0) inset, 0 5px 50px 0 rgb(255, 0, 0);",
+    "   text-shadow: 0 0 5px red, 0 0 5px red;",
+    "    background: rgba(0,0,0,0.6) !important;",
+    "    color: black;",
+    "  }",
+    "",
+    "  #nameInput:hover::placeholder {",
+    "    background: rgba(0,0,0,0.6);",
+    "    color: #085909;",
+    "  }",
+    "",
+    "  #linksContainer2 {",
+    "    max-height: 500px;",
+    "    width: 250px;",
+    "  }",
+    "",
+    "  #linksContainer2 > * {",
+    "    display:table-cell;",
+    "    vertical-align:middle;",
+    "    text-align: center;",
+    "    width:700px;",
+    "  }",
+    "  ",
+    "  .storeTab, ",
+    "  #storeHolder, ",
+    "  #allianceHolder, ",
+    "  #allianceInput, ",
+    "  .allianceButtonM {",
+    "    background: rgba(0,0,0,0.6);",
+    "    border: 1px solid red;",
+    "  }",
+    "",
+    "  .storeItem, ",
+    "  .storeTab, ",
+    "  .allianceButtonM, ",
+    "  #allianceInput::placeholder, ",
+    "  .allianceItem {",
+    "    color: red !important;",
+    "  }",
+    "",
+    "  .storeItem, ",
+    "  .storeTab, ",
+    "  .allianceButtonM, ",
+    "  #allianceInput::placeholder, ",
+    "  .allianceItem, ",
+    "  .joinAlBtn {",
+    "    color: #32ff00 !important;",
+    "  }",
+    "",
+    "  .storeItem:hover, ",
+    "  .storeTab:hover, ",
+    "  .allianceButtonM:hover,",
+    "  .allianceItem:hover, ",
+    "  .joinAlBtn:hover {",
+    "   box-shadow: 0 5px 70px 0 rgba(41, 0, 0, 1) inset, 0 5px 70px 0 red;",
+    "               0 5px 70px 0 rgba(41, 0, 0, 1) inset, 0 5px 70px 0 red;",
+    "   text-shadow: 0 0 5px #32ff00, 0 0 5px white;",
+    "    background: rgba(41, 0, 0, 1) !important;",
+    "  }",
+    "",
+    "  #scoreDisplay, ",
+    "  #stoneDisplay, ",
+    "  #foodDisplay, ",
+    "  #woodDisplay, ",
+    "  #allianceInput, ",
+    "  #killCounter {",
+    "  color: #32ff00;",
+    "  }",
+    "  #promoImgHolder {",
+    "   box-shadow: 0 5px 70px 0 rgba(41, 0, 0, 1) inset, 0 5px 70px 0 red;",
+    "               0 5px 70px 0 rgba(41, 0, 0, 1) inset, 0 5px 70px 0 red;",
+    "   text-shadow: 0 0 5px #32ff00, 0 0 5px white;",
+    "    background: rgba(41, 0, 0, 1) !important;",
+    "  }",
+    "",
+    "  #scoreDisplay, ",
+    "  #stoneDisplay, ",
+    "  #foodDisplay, ",
+    "  #woodDisplay, ",
+    "  #allianceInput, ",
+    "  #killCounter {",
+    "  #allianceInput:hover {",
+    "   box-shadow: 0 5px 70px 0 #32ff00 inset, 0 5px 70px 0 #32ff00;",
+    "               0 5px 70px 0 #32ff00 inset, 0 5px 70px 0 #32ff00;",
+    "   text-shadow: 0 0 5px #32ff00, 0 0 5px #085909;",
+    "    background: #0b3800 !important;",
+    "    color: #f50202;",
+    "  }",
+    "",
+    "  #allianceInput:hover::placeholder{",
+    "   box-shadow: 0 5px 70px 0 #32ff00 inset, 0 5px 70px 0 #32ff00;",
+    "               0 5px 70px 0 #32ff00 inset, 0 5px 70px 0 #32ff00;",
+    "   text-shadow: 0 0 5px #32ff00, 0 0 5px #085909;",
+    "    background: #0b3800 !important;",
+    "    color: #32ff00;",
+    "  }",
+    "",
+    "  #linksContainer2 > *:first-child {",
+    "    border-bottom: 1px solid #fff;",
+    "  }",
+    "",
+    "  #moddedMenu {",
+    "    position: absolute;",
+    "    top: 3.25%;",
+    "    left: 0px;",
+    "    width: 3%;",
+    "    height: 45.0%;",
+    "    background: rgba(0,0,0,0.6);",
+    "    border: 1px solid rgba(0,0,0,0.9);",
+    "    border-top-right-radius: 30px;",
+    "    border-bottom-right-radius: 30px;",
+    "    transition: 1s;",
+    "    z-index: 999;",
+    "  }",
+    "",
+    "  #moddedMenu:hover {",
+    "    width: 20%;",
+    "  }",
+    "",
+    "  #youtuberOf {",
+    "    bottom: 10px;",
+    "    top: auto;",
+    "  }",
+    "",
+    "  .titleMM {",
+    "    color: #fff;",
+    "    border-bottom: 3px solid #FF8C00;",
+    "    font-size: 32px;",
+    "    transform: rotate(90deg);",
+    "    white-space: nowrap;",
+    "    margin-top: 250%;",
+    "    transition: 1s;",
+    "  }",
+    "",
+    "  #moddedMenu:hover > .titleMM {",
+    "    transform: rotate(0deg) translate(0,-1580%)",
+    "  }",
+    "",
+    "  .switch {",
+    "    margin-top: 5px;",
+    "    margin-left: 10px;",
+    "    position: absolute;",
+    "    width: 60px;",
+    "    height: 34px;",
+    "    transition: opacity 1s;",
+    "    opacity: 0;",
+    "  }",
+    "",
+    "  .text {",
+    "    bottom: 76%;",
+    "    position: absolute;",
+    "    color: #fff;",
+    "    font-size: 20px;",
+    "    left: 0%;",
+    "    display: none;",
+    "    transition: 20s;",
+    "  }",
+    "",
+    "  .text > b { ",
+    "    font-size: 20px;",
+    "    color: #fff;",
+    "  }",
+    "",
+    "  b:hover { ",
+    "    color: gray;",
+    "  }",
+    "",
+    "  .one > .text {",
+    "    top: 5.5%;",
+    "  }",
+    "",
+    "  .two > .text {",
+    "    top: 10.7%;",
+    "  }",
+    "",
+    "  .three > .text {",
+    "    top: 37.5%;",
+    "  }",
+    "",
+    "  .four > .text {",
+    "    top: 47.5%;",
+    "  }",
+    "",
+    "  .five > .text {",
+    "    top: 57.5%;",
+    "  }",
+    "",
+    "  .six > .text {",
+    "    top: 67.5%;",
+    "  }",
+    "",
+    "  .seven > .text {",
+    "    top: 77.5%;",
+    "  }",
+    "",
+    "  .eight > .text {",
+    "    top: 87.5%;",
+    "  }",
+    "",
+    "  #moddedMenu:hover .switch {",
+    "    opacity: 1;",
+    "  }",
+    "",
+    "  #moddedMenu:hover .text {",
+    "    display: block;",
+    "  }",
+    "",
+    "  .one > .switch {",
+    "    top: 15%;",
+    "  }",
+    "",
+    "  .two > .switch {",
+    "    top: 25%;",
+    "  }",
+    "",
+    "  .three > .switch {",
+    "    top: 35%;",
+    "  }",
+    "",
+    "  .four > .switch {",
+    "    top: 45%;",
+    "  }",
+    "",
+    "  .five > .switch {",
+    "    top: 55%;",
+    "  }",
+    "",
+    "  .six > .switch {",
+    "    top: 65%;",
+    "  }",
+    "",
+    "  .seven > .switch {",
+    "    top: 75%;",
+    "  }",
+    "",
+    "  .eight > .switch {",
+    "    top: 85%;",
+    "  }",
+    "",
+    "  .switch input {",
+    "    display:none;",
+    "  }",
+    "",
+    "  .slider {",
+    "    position: absolute;",
+    "    cursor: pointer;",
+    "    top: 0;",
+    "    left: 0;",
+    "    right: 0;",
+    "    bottom: 0;",
+    "    background-color: #888;",
+    "    -webkit-transition: .4s;",
+    "    transition: .4s;",
+    "  }",
+    "",
+    "  .slider:before {",
+    "    position: absolute;",
+    "    content: \"\";",
+    "    height: 26px;",
+    "    width: 26px;",
+    "    left: 4px;",
+    "    bottom: 4px;",
+    "    background-color: white;",
+    "    -webkit-transition: .4s;",
+    "    transition: .4s;",
+    "  }",
+    "",
+    "  input:checked + .slider {",
+    "    background-color: #FF8C00;",
+    "  }",
+    "  ",
+    "  input:focus + .slider {",
+    "    box-shadow: 0 0 1px #59ff00;",
+    "  }",
+    "",
+    "  input:checked + .slider:before {",
+    "    -webkit-transform: translateX(26px);",
+    "    -ms-transform: translateX(26px);",
+    "    transform: translateX(26px);",
+    "  }",
+    "",
+    "  .slider.round {",
+    "    border-radius: 34px;",
+    "  }",
+    "",
+    "  .slider.round:before {",
+    "    border-radius: 50%;",
+    "  }"
+].join("\n");
+             if (typeof GM_addStyle != "undefined") {
+                 GM_addStyle(css);
+             } else if (typeof PRO_addStyle != "undefined") {
+                 PRO_addStyle(css);
+             } else if (typeof addStyle != "undefined") {
+                 addStyle(css);
+             } else {
+                 var node = document.createElement("style");
+                 node.type = "text/css";
+                 node.appendChild(document.createTextNode(css));
+                 var heads = document.getElementsByTagName("head");
+                 if (heads.length > 0) {
+                     heads[0].appendChild(node);
+                 } else {
+                     // no head yet, stick it whereever
+                     document.documentElement.appendChild(node);
+                 }
+             }
+            })();
+
+if(gameName = true){
+    setTimeout( () => {
+        document.getElementById("gameName").innerHTML = "1";
+    }, 0);
+    setTimeout( () => {
+        document.getElementById("gameName").innerHTML = "2";
+    }, 100);
+    setTimeout( () => {
+        document.getElementById("gameName").innerHTML = "3";
+    }, 200);
+    setTimeout( () => {
+        document.getElementById("gameName").innerHTML = "4";
+    }, 300);
+    setTimeout( () => {
+        document.getElementById("gameName").innerHTML = "5";
+    }, 400);
+    setTimeout( () => {
+        document.getElementById("gameName").innerHTML = "6";
+    }, 500);
+    setTimeout( () => {
+        document.getElementById("gameName").innerHTML = "7";
+    }, 600);
+    setTimeout( () => {
+        document.getElementById("gameName").innerHTML = "8";
+    }, 700);
+    setTimeout( () => {
+        document.getElementById("gameName").innerHTML = "9";
+    }, 800);
+    setTimeout( () => {
+        document.getElementById("gameName").innerHTML = "10";
+    }, 900);
+    setTimeout( () => {
+        document.getElementById("gameName").innerHTML = "ツ";
+    }, 1000);
+    setTimeout( () => {
+        document.getElementById("gameName").innerHTML = "๖̶ζ͜͡R";
+    }, 1100);
+    setTimeout( () => {
+        document.getElementById("gameName").innerHTML = "๖̶ζ͜͡Ra";
+    }, 1200);
+    setTimeout( () => {
+        document.getElementById("gameName").innerHTML = "๖̶ζ͜͡Rad";
+    }, 1300);
+    setTimeout( () => {
+        document.getElementById("gameName").innerHTML = "๖̶ζ͜͡Rada";
+    }, 1400);
+    setTimeout( () => {
+        document.getElementById("gameName").innerHTML = "๖̶ζ͜͡Radar";
+    }, 1500);
+    setTimeout( () => {
+        document.getElementById("gameName").innerHTML = "๖̶ζ͜͡RadarM";
+    }, 1600);
+    setTimeout( () => {
+        document.getElementById("gameName").innerHTML = "๖̶ζ͜͡RadarModツ";
+    }, 1700);
+    setTimeout( () => {
+        document.getElementById("gameName").innerHTML = "๖̶ζ͜͡RadarM";
+    }, 1800);
+    setTimeout( () => {
+        document.getElementById("gameName").innerHTML = "๖̶ζ͜͡Radar";
+    }, 1900);
+    setTimeout( () => {
+        document.getElementById("gameName").innerHTML = "๖̶ζ͜͡Rada";
+    }, 2000);
+    setTimeout( () => {
+        document.getElementById("gameName").innerHTML = "๖̶ζ͜͡Rad";
+    }, 2100);
+    setTimeout( () => {
+        document.getElementById("gameName").innerHTML = "๖̶ζ͜͡Ra";
+    }, 2200);
+    setTimeout( () => {
+        document.getElementById("gameName").innerHTML = "๖̶ζ͜͡R";
+    }, 2300);
+    setTimeout( () => {
+        document.getElementById("gameName").innerHTML = "๖̶ζ͜͡R";
+    }, 2400);
+    setTimeout( () => {
+        document.getElementById("gameName").innerHTML = "10";
+    }, 2500);
+    setTimeout( () => {
+        document.getElementById("gameName").innerHTML = "9";
+    }, 2600);
+    setTimeout( () => {
+        document.getElementById("gameName").innerHTML = "8";
+    }, 2700);
+    setTimeout( () => {
+        document.getElementById("gameName").innerHTML = "7";
+    }, 2800);
+    setTimeout( () => {
+        document.getElementById("gameName").innerHTML = "6";
+    }, 2900);
+    setTimeout( () => {
+        document.getElementById("gameName").innerHTML = "5";
+    }, 3000);
+    setTimeout( () => {
+        document.getElementById("gameName").innerHTML = "4";
+    }, 3100);
+    setTimeout( () => {
+        document.getElementById("gameName").innerHTML = "3";
+    }, 3200);
+    setTimeout( () => {
+        document.getElementById("gameName").innerHTML = "2";
+    }, 3300);
+    setTimeout( () => {
+        document.getElementById("gameName").innerHTML = "ツ";
+    }, 3400);
+    setTimeout( () => {
+        document.getElementById("gameName").innerHTML = "๖̶ζ͜͡RadarModツ";
+    }, 3500);
+}
