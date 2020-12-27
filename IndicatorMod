@@ -1,0 +1,405 @@
+// ==UserScript==
+// @name         IndicatorMod
+// @namespace    IndicatorMod
+// @version      v2.0
+// @description  FPS, Clock, Keystrokes, Ping Counter
+// @author       Proe
+// @match        *.moomoo.io/*
+// @grant        GM_addStyle
+// ==/UserScript==
+
+
+setInterval(function() {
+    //Anti Ad
+    document.querySelector("#pre-content-container").style.display = "none";
+    //more fps
+    window.location.native_resolution = true;
+}, 1000)
+
+
+var Cps = 0;
+
+function createElement(type) {
+  const Element = document.createElement(type);
+  Element.className = "Keys_div";
+  Element.style.display = "block";
+  Element.style.top = "0px";
+  Element.style.left = "0px";
+  document.body.appendChild(Element);
+
+  return Element;
+}
+
+function dragElement(elmnt) {
+    //drag function
+  var Pos = {};
+  elmnt.onmousedown = function(e) {
+    e.preventDefault();
+    Pos.pos3 = e.clientX;
+    Pos.pos4 = e.clientY;
+    elmnt.onmouseup = () => {
+      elmnt.onmouseup = null;
+      elmnt.onmousemove = null;
+    };
+    elmnt.onmousemove = e => {
+      e.preventDefault();
+      Pos.pos1 = Pos.pos3 - e.clientX;
+      Pos.pos2 = Pos.pos4 - e.clientY;
+      Pos.pos3 = e.clientX;
+      Pos.pos4 = e.clientY;
+      elmnt.style.top = elmnt.offsetTop - Pos.pos2 + "px";
+      elmnt.style.left = elmnt.offsetLeft - Pos.pos1 + "px";
+    };
+  };
+}
+
+// modified for IndicatorMod
+const Element = new createElement("div");
+Element.innerHTML = `
+<div class="keyboard">
+  <div class="keyboardRow">
+    <span id="q" class="key">Q</span>
+    <span id="w" class="key">W</span>
+    <span id="r" class="key">R</span>
+  </div>
+  <div class="keyboardRow">
+    <span id="a" class="key">A</span>
+    <span id="s" class="key">S</span>
+    <span id="d" class="key">D</span>
+  </div>
+  <div class="keyboardRow">
+    <span id="1" class="key">1</span>
+    <span id="2" class="key">2</span>
+    <span id="3" class="key">3</span>
+  </div>
+    <div class="keyboardRow">
+    <span id="4" class="key">4</span>
+    <span id="5" class="key">5</span>
+    <span id="6" class="key">6</span>
+  </div>
+    <div class="keyboardRow">
+    <span id="7" class="key">7</span>
+    <span id="8" class="key">8</span>
+    <span id="9" class="key">9</span>
+  </div>
+</div>
+<h1 id=" " class="SpaceBar">____</h1>
+<h5 id="Cps" class="cps">Cps: 0</h5>
+`;
+
+const css = `
+.cps {
+  background: rgb(0, 0, 0, 0.45);
+  border: 0.5px solid black;
+  height: 50px;
+  font-size: 26px
+}
+
+.SpaceBar {
+  background: rgb(0, 0, 0, 0.45);
+  border: 1px solid black;
+  text-align: center;
+  border-radius: 5.5%;
+  height: 50px;
+}
+.keyboard {
+  display: table;
+  width: 325px;
+  height: 140px;
+
+}
+
+.keyboardRow {
+  display: table-row;
+  border: 1px solid red;
+  text-align: center;
+font-size:20px
+}
+
+.key {
+  background: rgb(0, 0, 0, 0.45);
+  display: table-cell;
+  border: 1px solid black;
+  text-align: center;
+  border-radius: 30%;
+}
+.Keys_div {
+  background: none;
+  color: yellow;
+  font: 16px Arial;
+  padding: 5px;
+  position: fixed;
+max-width: 500px
+}`;
+
+dragElement(Element);
+GM_addStyle(css);
+
+document.addEventListener("keydown", function(e) {
+  if (document.getElementById(e.key) == null) return;
+
+  document.getElementById(e.key).style.background = "#eee";
+});
+
+document.addEventListener("keyup", function(e) {
+  if (document.getElementById(e.key) == null) return;
+
+  document.getElementById(e.key).style.background = "rgb(0, 0, 0, .45)";
+});
+
+WebSocket.prototype.Send = WebSocket.prototype.send;
+WebSocket.prototype.send = function(e) {
+  this.Send(e);
+
+  if (
+    e[0] == 146 &&
+    e[1] == 161 &&
+    e[2] == 99 &&
+    e[3] == 146 &&
+    e[4] == 1 &&
+    e[5] == 192
+  ) {
+    Cps++;
+    document.getElementById("Cps").innerText = "Cps: " + Cps;
+    setTimeout(function() {
+      Cps--;
+      document.getElementById("Cps").innerText = "Cps: " + Cps;
+    }, 900);
+  }
+};
+
+document.querySelector("#leaderboard").appendChild(
+  (function() {
+    let text = ".";
+    let oldPing = 0;
+    const pingSpan = document.createElement("span");
+    pingSpan.id = "pingTime";
+    pingSpan.textContent = text;
+    pingSpan.style.display = "block";
+    setInterval(function() {
+      typeof pingTime !== "undefined" &&
+        oldPing !== pingTime &&
+        ((oldPing = pingTime),
+        (pingSpan.textContent = text + oldPing),
+        (function() {
+          if (oldPing <= 30) {
+            pingSpan.style.color = "cyan";
+          }
+          if (oldPing >= 31 && oldPing <= 100) {
+            pingSpan.style.color = "lime";
+          }
+          if (oldPing >= 101 && oldPing <= 125) {
+            pingSpan.style.color = "#7db304";
+          }
+          if (oldPing >= 126 && oldPing <= 155) {
+            pingSpan.style.color = "#cfcc03";
+          }
+          if (oldPing >= 156 && oldPing <= 200) {
+           pingSpan.style.color = "#c1e401";
+          }
+          if (oldPing >= 201 && oldPing <= 275) {
+           pingSpan.style.color = "yellow";
+          }
+          if (oldPing >= 276 && oldPing <= 350) {
+           pingSpan.style.color = "#e66d02";
+          }
+          if (oldPing >= 351 && oldPing <= 500) {
+           pingSpan.style.color = "#ff3203";
+          }
+          if (oldPing >= 501 && oldPing <= 850) {
+           pingSpan.style.color = "#f00";
+          }
+          if (oldPing >= 851 && oldPing <= 1500) {
+           pingSpan.style.color = "#cc0000";
+          }
+          if (oldPing >= 1501 && oldPing <= 2350) {
+           pingSpan.style.color = "#990000";
+          }
+          if (oldPing >= 2351 && oldPing <= 4000) {
+           pingSpan.style.color = "#660000";
+          }
+          if (oldPing >= 4001 && oldPing <= 40000) {
+           pingSpan.style.color = "#660000";
+          }
+        })());
+    });
+    return pingSpan;
+  })()
+);
+
+document.querySelector("#leaderboard").appendChild(
+  (function() {
+    let text = "ping: ";
+    let oldPing = 0;
+    const pingSpan = document.createElement("span");
+    pingSpan.id = "pingTime2";
+    pingSpan.textContent = text;
+    pingSpan.style.display = "block";
+    setInterval(function() {
+      typeof pingTime !== "undefined" &&
+        oldPing !== pingTime &&
+        ((oldPing = pingTime),
+        (pingSpan.textContent = text + oldPing),
+        (function() {
+          if (oldPing <= 30) {
+            document.getElementById("pingTime").innerHTML = "VERY GOOD!";
+            pingSpan.style.color = "cyan";
+          }
+          if (oldPing >= 31 && oldPing <= 100) {
+            document.getElementById("pingTime").innerHTML = "Good Ping Here";
+            pingSpan.style.color = "lime";
+          }
+          if (oldPing >= 101 && oldPing <= 125) {
+            document.getElementById("pingTime").innerHTML = "Ping still good";
+            pingSpan.style.color = "#7db304";
+          }
+          if (oldPing >= 126 && oldPing <= 155) {
+            document.getElementById("pingTime").innerHTML = "Ping Okay Here";
+            pingSpan.style.color = "#cfcc03";
+          }
+          if (oldPing >= 156 && oldPing <= 200) {
+           document.getElementById("pingTime").innerHTML = "Ping still Okay";
+           pingSpan.style.color = "#c1e401";
+          }
+          if (oldPing >= 201 && oldPing <= 275) {
+           document.getElementById("pingTime").innerHTML = "Delays...";
+           pingSpan.style.color = "yellow";
+          }
+          if (oldPing >= 276 && oldPing <= 350) {
+           document.getElementById("pingTime").innerHTML = "Be careful!";
+           pingSpan.style.color = "#e66d02";
+          }
+          if (oldPing >= 351 && oldPing <= 500) {
+           document.getElementById("pingTime").innerHTML = "Big Delays :/";
+           pingSpan.style.color = "#ff3203";
+          }
+          if (oldPing >= 501 && oldPing <= 850) {
+           document.getElementById("pingTime").innerHTML = "Teleport Warning";
+           pingSpan.style.color = "#f00";
+          }
+          if (oldPing >= 851 && oldPing <= 1500) {
+           document.getElementById("pingTime").innerHTML = "Annoying Teleport...";
+           pingSpan.style.color = "#cc0000";
+          }
+          if (oldPing >= 1501 && oldPing <= 2350) {
+           document.getElementById("pingTime").innerHTML = "Server Might Crash...";
+           pingSpan.style.color = "#990000";
+          }
+          if (oldPing >= 2351 && oldPing <= 4000) {
+           document.getElementById("pingTime").innerHTML = "Insane Ping Time!!";
+           pingSpan.style.color = "#660000";
+          }
+          if (oldPing >= 4001 && oldPing <= 40000) {
+           document.getElementById("pingTime").innerHTML = "Now this is crazy.";
+           pingSpan.style.color = "#660000";
+          }
+        })());
+    });
+    return pingSpan;
+  })()
+);
+
+(function() {
+    var UPDATE_DELAY = 700;
+
+    var lastUpdate = 0;
+    var frames = 0;
+
+    var displayElement = document.createElement("div");
+    displayElement.style.padding = "3px";
+    displayElement.style.font = "26px Arial";
+    displayElement.style.display = "block";
+    displayElement.style.position = "fixed";
+    displayElement.style.bottom = "215px";
+    displayElement.style.left = "20px";
+    displayElement.textContent = "Loading...";
+    document.body.appendChild(displayElement);
+
+    function cssColorToRGB(color) {
+        var values;
+
+        if (color.startsWith("rgba")) {
+            values = color.substring(5, color.length - 1).split(",");
+        } else if (color.startsWith("rgb")) {
+            values = color.substring(4, color.length - 1).split(",");
+        } else if (color.startsWith("#") && color.length === 4) {
+            values = [];
+            values[0] = "" + parseInt("0x" + color.substr(1, 1));
+            values[1] = "" + parseInt("0x" + color.substr(2, 1));
+            values[2] = "" + parseInt("0x" + color.substr(3, 1));
+        } else if (color.startsWith("#") && color.length === 7) {
+            values = [];
+            values[0] = "" + parseInt("0x" + color.substr(1, 2));
+            values[1] = "" + parseInt("0x" + color.substr(3, 2));
+            values[2] = "" + parseInt("0x" + color.substr(5, 2));
+        } else {
+            return {r : 255, g : 255, b : 255};
+        }
+
+        return {
+            r : Number(values[0]),
+            g : Number(values[1]),
+            b : Number(values[2])
+        };
+    }
+
+    function getInvertedRGB(values) {
+        return "rgb(" + (255 - values.r) + "," + (9 - values.g) + ","
+            + (9 - values.b) + ")";
+    }
+
+    function getOpaqueRGB(values) {
+        return "rgba(" + values.r + "," + values.g + "," + values.b + ",0.7)";
+    }
+
+    function updateCounter() {
+        var bgColor = getComputedStyle(document.body, null).getPropertyValue(
+            "background-color");
+        var bgColorValues = cssColorToRGB(bgColor);
+        var textColor = getInvertedRGB(bgColorValues);
+        var displayBg = getOpaqueRGB(bgColorValues);
+        displayElement.style.color = "#fff";
+        displayElement.style.background = "rgba(0, 0, 0, 0.3)";
+
+        var now = Date.now();
+        var elapsed = now - lastUpdate;
+        if (elapsed < UPDATE_DELAY) {
+            ++frames;
+        } else {
+            var fps = Math.round(frames / (elapsed / 1000));
+            displayElement.textContent = fps + " FPS";
+            frames = 0;
+            lastUpdate = now;
+        }
+
+        requestAnimationFrame(updateCounter);
+    }
+
+    lastUpdate = Date.now();
+    requestAnimationFrame(updateCounter);
+})();
+
+document.getElementById('pingTime').style.fontSize='27px'
+document.getElementById('pingTime2').style.fontSize='27px'
+document.getElementById('leaderboard').style.textAlign='center'
+document.title = "You need to know stuff!"
+
+alert(`Judging by the name of this mod, this is not a hack. This script shows keystrokes, fps, ping, and more.`)
+alert(`Press the Right Bracket Key for script info, press the "n" key to hide the leaderboard, and also press the Backslash key for a secret!`)
+
+document.addEventListener("keydown", function(e) {
+    if (e.keyCode == 221) {
+        alert(`IndicatorMod v2.0. (11/08/2020, and also the latest Update) Before v2.0 the name of this script was "Fps, Clock, and ping stats" (10/29/2020)`)
+        }
+});
+
+document.getElementById("leaderboard").style.backgroundImage = "url(https://img.freepik.com/free-photo/old-grunge-cement-wall-backgrounds_34552-195.jpg?size=626&ext=jpg)";
+
+document.addEventListener('keydown', function (e) {
+        if (e.key === "n") {
+            $('#leaderboard').toggle();
+            //if (ext == true) {$('#leaderboard').hide();
+            //if (ext == false) {$('#leaderboard').show();
+            ext = !ext;
+        };
+    });
