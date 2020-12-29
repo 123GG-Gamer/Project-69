@@ -1,0 +1,15 @@
+// ==UserScript==
+// @name         Krunker Name Tags
+// @author       Someone
+// @match        *.krunker.io/*
+// @grant        none
+// ==/UserScript==
+
+window.Function = new Proxy(window.Function,{
+    construct(target,args) {
+        if (args.length === 3 && args[2]) {
+            args[2] = args[2].replace(/(&&!\w\['\w+']&&\w\['\w+'\]&&)\w\['(\w+)'](\){)/,'$1!0$3')
+        };
+        return new target(...args);
+    }
+});
